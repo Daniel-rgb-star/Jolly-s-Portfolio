@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Purest Co. — Case Study — Jolly Daniel Tenorio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF8; --card:#FFFFFF; --ink:#17181B; --ink-dim:#54575D; --ink-faint:#8B8E93;
+    --line:#E6E4DD; --accent:#DA4B2A; --accent-dim:#F3DDD5; --radius:12px;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  h1,h2,h3{ font-family:'Space Grotesk',sans-serif; letter-spacing:-0.01em; margin:0; }
+  a{ color:var(--accent); }
+  .wrap{ max-width:720px; margin:0 auto; padding:0 28px 100px; }
+  p{ margin:0 0 16px; color:var(--ink-dim); font-size:15.5px; }
+  header{ border-bottom:1px solid var(--line); margin-bottom:44px; }
+  .nav{ max-width:720px; margin:0 auto; padding:22px 28px; }
+  .back{ font-size:14px; font-weight:600; text-decoration:none; color:var(--ink-dim); }
+  .back:hover{ color:var(--accent); }
+  .title-block{ margin-bottom:48px; }
+  .tag{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); font-weight:600; display:block; margin-bottom:14px; }
+  h1{ font-size:34px; margin-bottom:10px; }
+  .sub{ font-size:16px; color:var(--ink-faint); }
+  section{ margin-bottom:48px; }
+  h2{ font-size:22px; margin-bottom:16px; }
+  h3{ font-size:16px; margin-bottom:8px; }
+  .findings{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .finding{ border:1px solid var(--line); border-radius:var(--radius); padding:18px; background:var(--card); }
+  .finding .num{ font-family:'JetBrains Mono',monospace; color:var(--accent); font-size:12px; font-weight:600; }
+  .finding h3{ font-size:14.5px; margin:8px 0 6px; }
+  .finding p{ font-size:13px; margin:0; }
+  blockquote{
+    font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:500; color:var(--ink);
+    border-left:3px solid var(--accent); padding:2px 0 2px 20px; margin:0 0 20px; max-width:560px;
+  }
+  .flow{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:18px 0 24px; }
+  .flow-step{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:7px 16px; font-size:13.5px; font-weight:600; }
+  .flow-arrow{ color:var(--ink-faint); font-size:15px; }
+  .concept-box{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; margin-bottom:16px; }
+  .concept-meta{ display:flex; gap:20px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-faint); margin-bottom:16px; }
+  .concept-meta b{ color:var(--ink); }
+  ol.beats{ margin:0; padding-left:20px; }
+  ol.beats li{ margin-bottom:10px; font-size:14.5px; color:var(--ink-dim); }
+  ol.beats b{ color:var(--ink); }
+  .scene{ border-top:1px solid var(--line); padding:28px 0; }
+  .scene:first-of-type{ border-top:none; padding-top:0; }
+  .scene-label{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:.05em; font-weight:600; margin-bottom:8px; display:block; }
+  .scene h3{ font-size:18px; margin-bottom:14px; }
+  .scene-visual{ font-size:13.5px; color:var(--ink-faint); font-style:italic; margin-bottom:14px; }
+  .scene-note{ background:var(--accent-dim); border-radius:8px; padding:12px 14px; font-size:13.5px; color:var(--ink); margin-top:14px; }
+  .offer{ display:flex; align-items:baseline; gap:12px; font-family:'JetBrains Mono',monospace; margin-bottom:14px; }
+  .offer .was{ text-decoration:line-through; color:var(--ink-faint); font-size:15px; }
+  .offer .now{ color:var(--accent); font-size:20px; font-weight:700; }
+  .whywork{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+  .whywork .card{ border:1px solid var(--line); border-radius:var(--radius); padding:20px; background:var(--card); }
+  .whywork h3{ font-size:15px; }
+  .whywork p{ font-size:13.5px; margin:0; }
+  @media (max-width:640px){
+    .findings, .whywork{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav"><a href="../index.html" class="back">← Back to portfolio</a></div>
+</header>
+
+<div class="wrap">
+  <div class="title-block">
+    <span class="tag">CASE STUDY — DTC SUPPLEMENTS</span>
+    <h1>The Purest Co.</h1>
+    <p class="sub">Competitor research and a proposed creative concept, built around one question: what does it actually take to earn trust in a crowded supplement category?</p>
+  </div>
+
+  <section>
+    <h2>Objective</h2>
+    <p>Conduct competitor research to identify strengths, weaknesses, and opportunities across positioning, messaging, creative, and customer journey.</p>
+  </section>
+
+  <section>
+    <h2>Key Findings</h2>
+    <div class="findings">
+      <div class="finding">
+        <span class="num">01</span>
+        <h3>Social Proof</h3>
+        <p>Strongest around established hero products, while newer SKUs have considerably less review volume.</p>
+      </div>
+      <div class="finding">
+        <span class="num">02</span>
+        <h3>Transparency</h3>
+        <p>A major positioning pillar, reinforced through the brand's Purest Promise, PurestLabs, and lab-testing information.</p>
+      </div>
+      <div class="finding">
+        <span class="num">03</span>
+        <h3>Customer Journey</h3>
+        <p>Incorporates guided selling, subscriptions, and loyalty mechanisms to move customers toward purchase and repeat purchasing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Customer Insight</h2>
+    <blockquote>The customer isn't simply looking for a supplement — they need a reason to trust one.</blockquote>
+    <p>Purest repeatedly addresses skepticism through transparency, testimonials, product demonstrations, and testing information.</p>
+
+    <h3 style="margin-top:28px;">Strategic Opportunity</h3>
+    <p>Skepticism can be treated as a creative opportunity rather than something to avoid. Instead of immediately telling customers "our product works," the creative can acknowledge their skepticism and let the customer's own journey and available evidence build trust.</p>
+    <div class="flow">
+      <div class="flow-step">Skepticism</div><span class="flow-arrow">→</span>
+      <div class="flow-step">Trial</div><span class="flow-arrow">→</span>
+      <div class="flow-step">Experience</div><span class="flow-arrow">→</span>
+      <div class="flow-step">Proof</div><span class="flow-arrow">→</span>
+      <div class="flow-step">Purchase</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Creative Concept: "The Skeptic"</h2>
+    <div class="concept-box">
+      <div class="concept-meta">Format: <b>UGC</b> &nbsp;·&nbsp; Objective: <b>Turn skepticism into the hook</b></div>
+      <ol class="beats">
+        <li><b>Hook:</b> "I know this probably isn't going to work... but I'm trying it anyway."</li>
+        <li><b>Set Up:</b> The creator explains why they're skeptical and decides to try the product.</li>
+        <li><b>Journey:</b> Show product usage, daily routine, and progress.</li>
+        <li><b>Payoff:</b> "Okay... I actually didn't expect this."</li>
+        <li><b>Proof:</b> Genuine customer experiences, testimonials, or substantiated product evidence.</li>
+        <li><b>CTA:</b> "See what Purest is about."</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Execution</h2>
+
+    <div class="scene">
+      <span class="scene-label">Scene 01 — Problem Recognition</span>
+      <h3>Four need-states, one question</h3>
+      <blockquote style="font-size:16px;">"Looking for support with menopause, clearer-looking skin, breakouts, or bloating?"</blockquote>
+      <div class="scene-visual">Introduce four different customers, each representing one need-state.</div>
+      <div class="scene-note">Purpose: make the viewer recognize their own problem before the product ever appears.</div>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Scene 02 — Product Relevance</span>
+      <h3>The product enters — briefly</h3>
+      <blockquote style="font-size:16px;">"The Purest Co. created targeted formulas designed to support each of these needs."</blockquote>
+      <div class="scene-visual">Each person holds the relevant product; the line briefly communicates what it's designed to support before moving to evidence.</div>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Scene 03 — Proof</span>
+      <h3>Evidence, not claims</h3>
+      <blockquote style="font-size:16px;">"Don't just take our word for it. See what customers experienced for themselves."</blockquote>
+      <div class="scene-visual">Customer testimonials, product demonstrations, reviews, and testing information.</div>
+      <div class="scene-note">Purpose: directly address the trust barrier identified in research.</div>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Scene 04 — Offer</span>
+      <h3>Present the verified offer</h3>
+      <div class="offer"><span class="was">₱5,100</span><span class="now">₱4,300</span></div>
+      <blockquote style="font-size:16px;">"Start your 30-day routine today."</blockquote>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why This Creative Could Work</h2>
+    <div class="whywork">
+      <div class="card">
+        <h3>Problem before product</h3>
+        <p>Most supplement advertising opens with the product. This concept opens with the customer's problem, so the viewer identifies with the situation first.</p>
+      </div>
+      <div class="card">
+        <h3>Addresses skepticism directly</h3>
+        <p>The creative acknowledges skepticism instead of pretending it doesn't exist, then answers it with testimonials and evidence.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
