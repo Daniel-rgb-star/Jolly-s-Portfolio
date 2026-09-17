@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jolly Daniel Tenorio — Direct Response Copywriter &amp; Creative Strategist</title>
+<meta name="description" content="Customer research, creative strategy, and persuasive copy for SaaS and eCommerce brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF8;
+    --card:#FFFFFF;
+    --ink:#17181B;
+    --ink-dim:#54575D;
+    --ink-faint:#8B8E93;
+    --line:#E6E4DD;
+    --accent:#DA4B2A;
+    --accent-dim:#F3DDD5;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Space Grotesk',sans-serif; letter-spacing:-0.01em; margin:0; }
+  a{ color:inherit; }
+  .wrap{ max-width:860px; margin:0 auto; padding:0 28px; }
+  p{ margin:0 0 16px; color:var(--ink-dim); font-size:16px; }
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(250,250,248,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 28px; max-width:860px; margin:0 auto; }
+  .mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px;
+    text-decoration:none; color:var(--ink);
+  }
+  .mark .glyph{
+    width:30px; height:30px; border-radius:8px; background:var(--ink);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:12px; font-weight:700; letter-spacing:0;
+  }
+  .navlinks{ display:flex; gap:28px; align-items:center; }
+  .navlinks a{ font-size:14px; font-weight:500; text-decoration:none; color:var(--ink-dim); }
+  .navlinks a:hover{ color:var(--ink); }
+  .navlinks .cta{
+    background:var(--ink); color:#fff; padding:8px 16px; border-radius:8px; font-weight:600;
+  }
+  .navlinks .cta:hover{ background:var(--accent); }
+  .navlinks-mobile{ display:none; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:76px 0 64px; }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent);
+    font-weight:600; margin-bottom:16px; display:block;
+  }
+  .hero h1{ font-size:40px; line-height:1.2; margin-bottom:20px; max-width:620px; }
+  .hero .lede{ font-size:17.5px; color:var(--ink-dim); max-width:560px; margin-bottom:28px; }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px; border-radius:9px; font-weight:600; font-size:14.5px;
+    text-decoration:none; border:1px solid var(--line);
+  }
+  .btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .btn.primary:hover{ background:var(--accent); border-color:var(--accent); }
+  .btn.ghost{ color:var(--ink); }
+  .btn.ghost:hover{ border-color:var(--ink); }
+
+  .method-strip{
+    display:flex; gap:0; margin-top:56px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .method-cell{ flex:1; padding:20px 20px 20px 0; border-right:1px solid var(--line); }
+  .method-cell:last-child{ border-right:none; padding-left:20px; }
+  .method-cell:first-child{ padding-left:0; }
+  .method-num{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); font-weight:600; }
+  .method-cell h3{ font-size:15px; margin:8px 0 4px; }
+  .method-cell p{ font-size:13.5px; margin:0; }
+
+  /* ---------- sections ---------- */
+  section{ padding:64px 0; }
+  section.alt{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .sec-label{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); font-weight:600; margin-bottom:10px; display:block; }
+  .sec-title{ font-size:28px; margin-bottom:14px; }
+  .sec-intro{ max-width:560px; margin-bottom:40px; font-size:15.5px; }
+
+  /* ---------- case studies ---------- */
+  .case{
+    border:1px solid var(--line); border-radius:var(--radius); background:var(--card);
+    padding:32px; margin-bottom:24px;
+  }
+  .case:last-child{ margin-bottom:0; }
+  .case-top{ display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+  .case-avatar{
+    width:44px; height:44px; border-radius:9px; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif;
+    font-weight:700; font-size:14px; flex-shrink:0;
+  }
+  .case-top h3{ font-size:19px; margin-bottom:2px; }
+  .case-top .tag{ font-size:13px; color:var(--ink-faint); }
+  .case-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:20px; }
+  .case-block h4{
+    font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--ink-faint); margin:0 0 8px; font-weight:600;
+  }
+  .case-block p{ font-size:14.5px; margin:0; }
+  .case-note{
+    margin-top:20px; padding:14px 16px; background:var(--accent-dim); border-radius:8px;
+    font-size:13.5px; color:var(--ink);
+  }
+  .case-link, .teardown-link{
+    display:inline-block; margin-top:18px; font-size:13.5px; font-weight:600;
+    color:var(--accent); text-decoration:none;
+  }
+  .case-link:hover, .teardown-link:hover{ text-decoration:underline; }
+
+  /* ---------- teardowns ---------- */
+  .teardown-intro{ margin:40px 0 20px; }
+  .teardown-intro h3{ font-size:16px; margin-bottom:6px; }
+  .teardown-intro p{ font-size:13.5px; margin:0; max-width:520px; }
+  .teardown-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .teardown-card{ border:1px solid var(--line); border-radius:var(--radius); padding:18px; background:var(--card); }
+  .teardown-card .tag{ font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--accent); text-transform:uppercase; letter-spacing:.03em; font-weight:600; }
+  .teardown-card h4{ font-size:15.5px; margin:8px 0 6px; }
+  .teardown-card p{ font-size:13px; margin:0; }
+
+  /* ---------- writing samples ---------- */
+  .sample{
+    display:flex; gap:18px; padding:20px 0; border-bottom:1px solid var(--line);
+  }
+  .sample:last-child{ border-bottom:none; }
+  .sample-num{ font-family:'JetBrains Mono',monospace; color:var(--ink-faint); font-size:13px; padding-top:2px; }
+  .sample h4{ font-size:15.5px; margin-bottom:5px; }
+  .sample .role{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; display:block; font-weight:600; }
+  .sample p{ font-size:14px; margin:0; }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; }
+  .skill-group{ margin-bottom:22px; }
+  .skill-group h4{ font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); margin-bottom:10px; font-family:'JetBrains Mono',monospace; font-weight:600; }
+  .pills{ display:flex; flex-wrap:wrap; gap:8px; }
+  .pill{ font-size:13px; background:var(--paper); border:1px solid var(--line); padding:5px 12px; border-radius:20px; color:var(--ink-dim); }
+
+  /* ---------- contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:32px; }
+  .contact-card{
+    border:1px solid var(--line); border-radius:var(--radius); padding:20px; background:var(--card);
+    text-decoration:none; color:var(--ink);
+  }
+  .contact-card:hover{ border-color:var(--accent); }
+  .contact-card h4{ font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); margin-bottom:8px; font-weight:600; }
+  .contact-card .val{ font-size:15px; font-weight:600; word-break:break-word; }
+
+  footer{ padding:32px 0 48px; text-align:center; }
+  footer p{ font-size:13px; color:var(--ink-faint); margin:0; }
+
+  @media (max-width: 720px){
+    .navlinks{ display:none; }
+    .hero h1{ font-size:30px; }
+    .method-strip{ flex-direction:column; }
+    .method-cell{ border-right:none; border-bottom:1px solid var(--line); padding:16px 0; }
+    .method-cell:first-child{ padding-top:0; }
+    .method-cell:last-child{ border-bottom:none; padding-bottom:0; }
+    .case-grid{ grid-template-columns:1fr; }
+    .teardown-grid{ grid-template-columns:1fr; }
+    .about-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="mark"><span class="glyph">JT</span> Jolly Tenorio</a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="cta">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<div id="top" class="wrap">
+  <div class="hero">
+    <span class="eyebrow">DIRECT RESPONSE COPYWRITER &amp; CREATIVE STRATEGIST</span>
+    <h1>I help SaaS and eCommerce brands find the message that actually converts.</h1>
+    <p class="lede">I research the customer first, build the strategy second, and write the copy last — competitor teardowns, positioning, and creative concepts, built the way I'd approach a real client's account.</p>
+    <div class="hero-ctas">
+      <a href="#work" class="btn primary">See the case studies</a>
+      <a href="#contact" class="btn ghost">Get in touch</a>
+    </div>
+
+    <div class="method-strip">
+      <div class="method-cell">
+        <span class="method-num">01</span>
+        <h3>Customer Research</h3>
+        <p>Reddit, reviews, and competitor messaging — finding the actual language customers use.</p>
+      </div>
+      <div class="method-cell">
+        <span class="method-num">02</span>
+        <h3>Creative Strategy</h3>
+        <p>Marketing angles, offer positioning, and a messaging hierarchy built from that research.</p>
+      </div>
+      <div class="method-cell">
+        <span class="method-num">03</span>
+        <h3>Copy &amp; Concepts</h3>
+        <p>Ads, emails, and full creative concepts — scene-by-scene, ready to test.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <span class="sec-label">SELECTED WORK</span>
+    <h2 class="sec-title">Case studies</h2>
+    <p class="sec-intro">Independent research projects, not paid client work — I picked real DTC brands and ran the same process I'd use for a client: research, strategy, then a creative concept.</p>
+
+    <div class="case">
+      <div class="case-top">
+        <div class="case-avatar">PC</div>
+        <div>
+          <h3>The Purest Co.</h3>
+          <span class="tag">DTC Supplements — Competitor Research &amp; Creative Concept</span>
+        </div>
+      </div>
+      <p>Competitor research across positioning, messaging, and customer journey, built around a core tension: trust vs. skepticism in a crowded supplements category.</p>
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>Ad Analysis</h4>
+          <p>Broke down one of their Meta/UGC ads — the relatable-problem-to-social-proof progression, and the strategic takeaway for supplement brands.</p>
+        </div>
+        <div class="case-block">
+          <h4>Proposed Concept</h4>
+          <p>A "Skeptic" UGC concept addressing distrust head-on, with a full scene-by-scene execution.</p>
+        </div>
+      </div>
+      <a href="./case-studies/purest-co.html" class="case-link">Read the full case study →</a>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <div class="case-avatar">MM</div>
+        <div>
+          <h3>MarsMen</h3>
+          <span class="tag">DTC Men's Health &amp; Wellness — Research, Strategy &amp; Creative Concept</span>
+        </div>
+      </div>
+      <p>Research into dosing friction and creator relationships, a reworked creative strategy, and "I Want My Drive Back" — a full 5-scene concept with a testing system.</p>
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>Customer Research</h4>
+          <p>Target audience and emotional state, the two biggest purchase barriers, aspiration vs. relatability, and the insight behind why people actually buy.</p>
+        </div>
+        <div class="case-block">
+          <h4>Creative Concept</h4>
+          <p>"I Want My Drive Back" — 5-scene execution built to test directly against their current creative.</p>
+        </div>
+      </div>
+      <a href="./case-studies/marsmen.html" class="case-link">Read the full case study →</a>
+      <div class="case-note">Revisited this one later with a full ad-library teardown (format mix, messaging patterns, creative velocity) — see below.</div>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <div class="case-avatar">WH</div>
+        <div>
+          <h3>Wheyl Supplements</h3>
+          <span class="tag">Philippines — Creative Strategy</span>
+        </div>
+      </div>
+      <p>Customer barriers around choice overload, addressed with a "Find Your First Wheyl Product" quiz concept — designed to cut decision friction and guide customers to the right product.</p>
+    </div>
+
+    <div class="teardown-intro">
+      <h3>Brand teardowns</h3>
+      <p>Full competitive and ad-library analyses — format breakdowns, messaging patterns, positioning, and a weaknesses-and-opportunities read, each delivered as a standalone report.</p>
+    </div>
+    <div class="teardown-grid">
+      <div class="teardown-card">
+        <span class="tag">SaaS — Work Management</span>
+        <h4>monday.com</h4>
+        <p>Five years of campaign history, ad format and creative-velocity analysis, and positioning against Asana, ClickUp, and Smartsheet.</p>
+        <a href="./case-studies/monday-com.html" class="teardown-link">Read the report →</a>
+      </div>
+      <div class="teardown-card">
+        <span class="tag">DTC — Longevity Supplements</span>
+        <h4>AgeMate</h4>
+        <p>Live ad-account data, real running ad copy, and a revenue/AOV estimate pulled from third-party tools — plus the NMN category's regulatory risk.</p>
+        <a href="./case-studies/agemate.html" class="teardown-link">Read the report →</a>
+      </div>
+      <div class="teardown-card">
+        <span class="tag">DTC — Men's Health (Part 2)</span>
+        <h4>MarsMen, revisited</h4>
+        <p>A deeper follow-up to the case study above — ad velocity, messaging patterns, and the gap between their curated and independent reviews.</p>
+        <a href="./case-studies/marsmen-teardown.html" class="teardown-link">Read the report →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="alt">
+  <div class="wrap">
+    <span class="sec-label">WRITING SAMPLES</span>
+    <h2 class="sec-title">Copywriting</h2>
+    <p class="sec-intro">A 3-email sequence for a content-creator coaching offer — welcome, objection-handling, and urgency.</p>
+
+    <div class="sample">
+      <div class="sample-num">01</div>
+      <div>
+        <span class="role">Welcome</span>
+        <h4>You're in the 7-Day Bootcamp</h4>
+        <p>Welcomes new subscribers, previews the 4-day content roadmap, and introduces the VIP upgrade offer.</p>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-num">02</div>
+      <div>
+        <span class="role">Value / Objection</span>
+        <h4>More Videos Doesn't Mean More Views</h4>
+        <p>Reframes a common misconception, delivers three real teaching points, then bridges into the coaching program with a social proof stat.</p>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-num">03</div>
+      <div>
+        <span class="role">Urgency / Close</span>
+        <h4>The Chair Won't Stay Empty</h4>
+        <p>Closes the sequence with loss-aversion framing, a countdown, and a final direct call to action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <span class="sec-label">ABOUT</span>
+    <h2 class="sec-title">A bit about my process</h2>
+    <div class="about-grid">
+      <div>
+        <p>I'm studying at Panpacific University College in Urdaneta City, Philippines, expected to graduate in 2030. For the past six months I've gone all in on this: breaking down 100+ ad creatives to figure out what's actually winning, and building full creative strategies for DTC and SaaS brands I'm not (yet) working with — treating each one like a real account. Most of what I know about direct response comes from doing that work and studying under people who've actually done it, including Tyson 4D's courses and breakdowns.</p>
+        <p>I'm early in my career and I'd rather be upfront about that than pad this page with claims I can't back up yet. What's here is real independent work, done to the same standard I'd bring to a paying client.</p>
+        <p><a href="./resume.pdf" class="btn ghost" style="margin-top:8px;">Download resume (PDF)</a></p>
+      </div>
+      <div>
+        <div class="skill-group">
+          <h4>Copywriting</h4>
+          <div class="pills">
+            <span class="pill">Email marketing</span>
+            <span class="pill">VSLs</span>
+            <span class="pill">Sales pages</span>
+            <span class="pill">Meta ads</span>
+            <span class="pill">Headlines</span>
+            <span class="pill">CTA optimization</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Creative Strategy</h4>
+          <div class="pills">
+            <span class="pill">Messaging strategy</span>
+            <span class="pill">Angle development</span>
+            <span class="pill">Offer positioning</span>
+            <span class="pill">Audience segmentation</span>
+            <span class="pill">Customer research</span>
+            <span class="pill">Benchmarking</span>
+            <span class="pill">Split-testing</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="pills">
+            <span class="pill">English</span>
+            <span class="pill">Filipino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <span class="sec-label">CONTACT</span>
+    <h2 class="sec-title">Let's talk about your next creative.</h2>
+    <p class="sec-intro">If you need someone to dig into your customer research and turn it into a creative strategy that converts, I'd like to hear about it.</p>
+    <div class="contact-grid">
+      <a href="mailto:tjollydaniel@gmail.com" class="contact-card">
+        <h4>Email</h4>
+        <div class="val">tjollydaniel@gmail.com</div>
+      </a>
+      <a href="tel:+639274532006" class="contact-card">
+        <h4>Phone</h4>
+        <div class="val">+63 927 453 2006</div>
+      </a>
+      <a href="https://www.linkedin.com/in/dan-undefined-94a239416" class="contact-card">
+        <h4>LinkedIn</h4>
+        <div class="val">Jolly Daniel Tenorio</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Jolly Daniel Tenorio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
