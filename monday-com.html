@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>monday.com — Creative &amp; Competitive Analysis</title>
+<title>monday.com · Creative &amp; Competitive Analysis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -188,10 +188,10 @@
     border-radius:20px;
     white-space:nowrap;
   }
-  .tag.verified{ background:var(--signal-bg); color:var(--signal); }
-  .tag.proxy{ background:var(--gold-bg); color:var(--gold); }
-  .tag.analyst{ background:var(--analyst-bg); color:var(--analyst); }
-  .tag.gap{ background:var(--gap-bg); color:var(--gap); }
+  .tag.observed{ background:var(--signal-bg); color:var(--signal); }
+  .tag.estimated{ background:var(--gold-bg); color:var(--gold); }
+  .tag.interp{ background:var(--analyst-bg); color:var(--analyst); }
+  .tag.unavailable{ background:var(--gap-bg); color:var(--gap); }
   .tag-inline{ margin-left:8px; vertical-align:2px; }
 
   /* ---------- methodology box ---------- */
@@ -393,6 +393,7 @@
 
 <div class="layout">
   <aside id="sidebar">
+    <a href="index.html" style="display:inline-block; font-size:12.5px; font-weight:600; color:var(--ink-faint); text-decoration:none; margin-bottom:14px;">&larr; Back to portfolio</a>
     <div class="side-brand">monday.com</div>
     <div class="side-sub">Creative &amp; Competitive Analysis<br>Prepared by Jolly Daniel Tenorio</div>
     <nav id="toc">
@@ -410,17 +411,17 @@
     </nav>
     <div class="side-legend">
       <div class="side-legend-title">Evidence key</div>
-      <div style="margin-bottom:6px;"><span class="tag verified">Verified</span></div>
-      <div style="margin-bottom:6px;"><span class="tag proxy">Proxy</span></div>
-      <div style="margin-bottom:6px;"><span class="tag analyst">Analyst read</span></div>
-      <div><span class="tag gap">Data gap</span></div>
+      <div style="margin-bottom:6px;"><span class="tag observed">Observed</span></div>
+      <div style="margin-bottom:6px;"><span class="tag estimated">Estimated</span></div>
+      <div style="margin-bottom:6px;"><span class="tag interp">My interpretation</span></div>
+      <div><span class="tag unavailable">Not available</span></div>
     </div>
   </aside>
 
   <main>
     <div class="hero">
-      <h1>monday.com — Creative <span>&amp;</span> Competitive Analysis</h1>
-      <p>A research-driven teardown of monday.com's positioning, messaging, and ad creative — built the way a real diagnosis should be: graded by how solid the evidence actually is, not just how confident it sounds.</p>
+      <h1>monday.com <span>·</span> Creative &amp; Competitive Analysis</h1>
+      <p>A research-driven teardown of monday.com's positioning, messaging, and ad creative, built the way a real diagnosis should be: graded by how solid the evidence actually is, not just how confident it sounds.</p>
       <div class="hero-meta">
         <span>PREPARED SEP 04, 2026</span>
         <span>SUBJECT: MONDAY.COM (NASDAQ: MNDY)</span>
@@ -430,19 +431,20 @@
 
     <div class="method-box">
       <h3>How to read this report</h3>
-      <p>Every stat and claim below is tagged by how solid the evidence is. That's not a hedge — it's the actual output of the research. Meta blocks automated access to its own Ad Library (robots.txt), so a few of the ad-specific asks (exact impressions-per-ad, the precise partnership-vs-brand ratio) couldn't be pulled directly. Rather than invent numbers to fill those gaps, they're marked <strong>Data gap</strong> below, with the exact 10-minute manual method to get them yourself in Section 11.</p>
+      <p>Every claim below carries a label showing how solid the evidence behind it is. This is competitive intelligence built entirely from publicly available and third party sources. I have never had access to monday.com's ad account, analytics, or internal numbers, and nothing here should be read as if I did.</p>
+      <p>Meta blocks automated access to its own Ad Library, so some ad level detail could not be pulled directly: exact impressions per ad, and the precise split between partnership and brand ads. Rather than invent numbers to fill those gaps, they are marked Not available, with the manual method to collect them in the final section.</p>
       <div class="method-grid">
-        <div class="method-cell"><span class="tag verified">Verified</span>From monday.com's own site, press releases, or a named, checkable source (G2, IR filings).</div>
-        <div class="method-cell"><span class="tag proxy">Proxy</span>Real data, but indirect or a single-source snapshot — treat as directional, not exact.</div>
-        <div class="method-cell"><span class="tag analyst">Analyst read</span>My own strategic interpretation, clearly separated from sourced fact.</div>
-        <div class="method-cell"><span class="tag gap">Data gap</span>Couldn't be accessed with the tools available here. Manual method provided.</div>
+        <div class="method-cell"><span class="tag observed">Observed</span>Published or publicly visible. From monday.com's own site, press releases, or a named public source such as G2 or investor filings. You can check any of it yourself.</div>
+        <div class="method-cell"><span class="tag estimated">Estimated</span>A third-party tool's estimate, or a single snapshot in time. Directional, not exact, and flagged wherever tools disagreed.</div>
+        <div class="method-cell"><span class="tag interp">My interpretation</span>My own strategic read. Kept deliberately separate from anything sourced above.</div>
+        <div class="method-cell"><span class="tag unavailable">Not available</span>Not obtainable from public sources. Where this appears, the manual method to get it is in the final section.</div>
       </div>
     </div>
 
     <!-- ============ 01 OVERVIEW ============ -->
     <section id="overview">
       <div class="sec-head"><span class="sec-num">01</span><h2>Company Overview</h2></div>
-      <p class="sec-dek">A B2B "Work OS" that just declared 2026 the year it becomes an AI Work Platform. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">A B2B "Work OS" that just declared 2026 the year it becomes an AI Work Platform. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="stat-strip">
         <div class="stat-cell"><span class="stat-num">2012</span><div class="stat-label">Founded, Tel Aviv (as "daPulse")</div></div>
@@ -452,15 +454,15 @@
         <div class="stat-cell"><span class="stat-num">200+</span><div class="stat-label">Countries &amp; territories served</div></div>
       </div>
 
-      <p>Founded by Roy Mann and Eran Zinman, renamed from daPulse to monday.com in 2017, and listed on Nasdaq (MNDY) on June 10, 2021. Now a multi-product suite — Work Management, CRM, Dev, Service, Campaigns — sold per-seat across four regional HQs (Tel Aviv, New York, Sydney, London).</p>
-      <p>The single biggest thing happening to this company right now: in April 2026 it formally repositioned from a "Work Management Platform" to an <strong>"AI Work Platform,"</strong> framed as "the biggest transformation in company history." monday CRM alone crossed $100M ARR in August 2025. It's also been named a Gartner Magic Quadrant Leader for Adaptive Project Management four years running, and for Collaborative Work Management three years running — real analyst validation, not just internal messaging.</p>
+      <p>Founded by Roy Mann and Eran Zinman, renamed from daPulse to monday.com in 2017, and listed on Nasdaq (MNDY) on June 10, 2021. Now a multi-product suite (Work Management, CRM, Dev, Service, Campaigns) sold per-seat across four regional HQs (Tel Aviv, New York, Sydney, London).</p>
+      <p>The single biggest thing happening to this company right now: in April 2026 it formally repositioned from a "Work Management Platform" to an <strong>"AI Work Platform,"</strong> framed as "the biggest transformation in company history." monday CRM alone crossed $100M ARR in August 2025. It's also been named a Gartner Magic Quadrant Leader for Adaptive Project Management four years running, and for Collaborative Work Management three years running. That is real analyst validation, not just internal messaging.</p>
       <p style="color:var(--ink-faint); font-size:12.5px;">Sources: monday.com "Our Story," investor press releases, businesswire.com.</p>
     </section>
 
     <!-- ============ 02 AUDIENCE ============ -->
     <section id="audience">
       <div class="sec-head"><span class="sec-num">02</span><h2>Target Audience</h2></div>
-      <p class="sec-dek">Reconstructed from monday.com's own segment messaging, product lineup, and case-study mix — not from individual ad-targeting data, which advertisers don't disclose publicly. <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">Reconstructed from monday.com's own segment messaging, product lineup, and case-study mix, not from individual ad-targeting data, which advertisers don't disclose publicly. <span class="tag interp tag-inline">My interpretation</span></p>
 
       <div class="grid-3">
         <div class="persona">
@@ -499,7 +501,7 @@
     <!-- ============ 03 OFFER ============ -->
     <section id="offer">
       <div class="sec-head"><span class="sec-num">03</span><h2>Offer</h2></div>
-      <p class="sec-dek">Per-seat, per-product, with AI now sold as a metered add-on across every tier. <span class="tag verified tag-inline">Verified</span> — pulled live from monday.com/pricing.</p>
+      <p class="sec-dek">Per-seat, per-product, with AI now sold as a metered add-on across every tier. <span class="tag observed tag-inline">Observed</span>, pulled live from monday.com/pricing.</p>
 
       <svg viewBox="0 0 700 210" style="width:100%; max-width:700px; font-family:'JetBrains Mono',monospace;">
         <!-- Work Management -->
@@ -539,7 +541,7 @@
       <div class="grid-2" style="margin-top:20px;">
         <div class="card">
           <h3>What's actually in the offer</h3>
-          <p style="font-size:13.5px;">Free plan (2 seats, 3 boards) and a 14-day Pro trial with no credit card. Every paid tier now bundles an "AI credits" allowance (Sidekick assistant, AI agent workforce, Vibe app builder) — AI isn't a separate SKU, it's metered consumption stacked on top of seat price. 18% discount for annual billing; discounted nonprofit pricing available.</p>
+          <p style="font-size:13.5px;">Free plan (2 seats, 3 boards) and a 14-day Pro trial with no credit card. Every paid tier now bundles an "AI credits" allowance (Sidekick assistant, AI agent workforce, Vibe app builder). AI isn't a separate SKU, it's metered consumption stacked on top of seat price. 18% discount for annual billing; discounted nonprofit pricing available.</p>
         </div>
         <div class="card">
           <h3>Proof the offer converts</h3>
@@ -551,7 +553,7 @@
     <!-- ============ 04 POSITIONING ============ -->
     <section id="positioning">
       <div class="sec-head"><span class="sec-num">04</span><h2>Positioning</h2></div>
-      <p class="sec-dek">monday.com's own comparison page names its real competitive set. Where each one sits is my read, not a scored ranking. <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">monday.com's own comparison page names its real competitive set. Where each one sits is my read, not a scored ranking. <span class="tag interp tag-inline">My interpretation</span></p>
 
       <svg viewBox="0 0 640 380" style="width:100%; max-width:640px; font-family:'JetBrains Mono',monospace;">
         <line x1="40" y1="20" x2="40" y2="340" stroke="#DFDDD4" stroke-width="1"/>
@@ -590,14 +592,14 @@
         <text x="430" y="154" font-size="11" fill="#565A5F">Workfront</text>
       </svg>
 
-      <p>monday.com names Asana, Trello, Smartsheet, Airtable, Wrike, Basecamp, Jira, and Workfront as its comparison set <span class="tag verified tag-inline">Verified</span> — and positions itself as the most horizontal, least technical option of the group: "the most holistic work management solution for any type of team, fully customizable to their preferred way of working." That's a deliberate trade: broad and visual over deep and specialized in any one function.</p>
-      <p>The bigger positioning move is the one happening right now — the April 2026 shift from "Work Management Platform" to "AI Work Platform." That's not a repositioning against Asana or Jira anymore; it's a bid to be compared against AI-native tools, with "agents working alongside people" as the new frame. It's brand new, which means it's still ownable if they keep repeating it — and vulnerable if they don't.</p>
+      <p>monday.com names Asana, Trello, Smartsheet, Airtable, Wrike, Basecamp, Jira, and Workfront as its comparison set. <span class="tag observed tag-inline">Observed</span> It positions itself as the most horizontal, least technical option of the group: "the most holistic work management solution for any type of team, fully customizable to their preferred way of working." That's a deliberate trade: broad and visual over deep and specialized in any one function.</p>
+      <p>The bigger positioning move is the one happening right now, the April 2026 shift from "Work Management Platform" to "AI Work Platform." That's not a repositioning against Asana or Jira anymore; it's a bid to be compared against AI-native tools, with "agents working alongside people" as the new frame. It's brand new, which means it's still ownable if they keep repeating it, and vulnerable if they don't.</p>
     </section>
 
     <!-- ============ 05 MESSAGING ============ -->
     <section id="messaging">
       <div class="sec-head"><span class="sec-num">05</span><h2>Messaging</h2></div>
-      <p class="sec-dek">Five patterns repeat across four years of campaigns. <span class="tag verified tag-inline">Verified</span> — each tied to a dated, named campaign.</p>
+      <p class="sec-dek">Five patterns repeat across four years of campaigns. <span class="tag observed tag-inline">Observed</span>, each tied to a dated, named campaign.</p>
 
       <div class="timeline-wrap">
         <svg viewBox="0 0 900 130" style="width:100%; font-family:'JetBrains Mono',monospace;">
@@ -652,34 +654,34 @@
       <div class="grid-2" style="margin-top:10px;">
         <div class="card">
           <h3>1. Make B2B software feel emotionally warm</h3>
-          <p style="font-size:13.5px;">Singing llamas, a llama-farm dashboard easter egg since 2019, "Love to Use" as a campaign name — an unusual amount of whimsy for project-management software.</p>
+          <p style="font-size:13.5px;">Singing llamas, a llama-farm dashboard easter egg since 2019, "Love to Use" as a campaign name, an unusual amount of whimsy for project-management software.</p>
         </div>
         <div class="card">
           <h3>2. Buy attention at consumer scale</h3>
-          <p style="font-size:13.5px;">A Super Bowl spot and Vogue's first-ever software brand partnership (Met Gala) are consumer-marketing moves, not typical B2B SaaS plays — they sell category confidence more than any one feature.</p>
+          <p style="font-size:13.5px;">A Super Bowl spot and Vogue's first-ever software brand partnership (Met Gala) are consumer-marketing moves, not typical B2B SaaS plays. They sell category confidence more than any one feature.</p>
         </div>
         <div class="card">
           <h3>3. Flexibility is the one constant hero</h3>
-          <p style="font-size:13.5px;">"Work without limits," "for whatever you run," "fully customizable" — every era of messaging returns to the same core wedge: no-code customization for any team.</p>
+          <p style="font-size:13.5px;">"Work without limits," "for whatever you run," "fully customizable." Every era of messaging returns to the same core wedge: no-code customization for any team.</p>
         </div>
         <div class="card">
           <h3>4. Every proof point is a number</h3>
-          <p style="font-size:13.5px;">Case studies are never just "customers love it" — it's always 25%, 40%, $250K, 517%. A disciplined, consistent proof format.</p>
+          <p style="font-size:13.5px;">Case studies are never just "customers love it". It's always 25%, 40%, $250K, 517%. A disciplined, consistent proof format.</p>
         </div>
       </div>
       <div class="card" style="margin-top:16px;">
         <h3>5. (2026, and accelerating) AI as a teammate, not a feature</h3>
-        <p style="font-size:13.5px;">"Sidekick," "digital worker," "humans and agents working together," AI agents that can literally sign up and log in as platform users — AI is being framed as a new category of user, not a bullet point on a features page. This is the newest pattern and the one worth watching most closely.</p>
+        <p style="font-size:13.5px;">"Sidekick," "digital worker," "humans and agents working together," AI agents that can literally sign up and log in as platform users. AI is being framed as a new category of user, not a bullet point on a features page. This is the newest pattern and the one worth watching most closely.</p>
       </div>
     </section>
 
     <!-- ============ 06 CREATIVE STRATEGY ============ -->
     <section id="creative">
       <div class="sec-head"><span class="sec-num">06</span><h2>Creative Strategy</h2></div>
-      <p class="sec-dek">This is where the original ad-library asks live. Some of it is real data; some of it hit a hard access wall. Both are marked plainly.</p>
+      <p class="sec-dek">The ad level analysis. Some of this is solid public data and some of it hit a hard access wall. Both are marked plainly.</p>
 
-      <h3>Format breakdown <span class="tag proxy tag-inline">Proxy</span></h3>
-      <p>A third-party ad-tracking tool (Opus, querying Meta's Ad Library via the ScrapeCreators API) had a snapshot from <strong>April 30, 2026</strong> showing 50 active monday.com creatives, all classified as Carousel format. I'd treat the "100% Carousel" figure with real skepticism — it's one tool's read, four months stale, and out of step with monday.com's known heavy investment in video (Super Bowl spot, singing-llama campaign, Singapore 360° film). The likely real picture is a two-tier system: big-budget hero video for brand campaigns, plus always-on carousel/static for everyday Meta demand-gen — but I can't confirm that split with confidence from what's accessible here.</p>
+      <h3>Format breakdown <span class="tag estimated tag-inline">Estimated</span></h3>
+      <p>A third-party ad-tracking tool (Opus, querying Meta's Ad Library via the ScrapeCreators API) had a snapshot from <strong>April 30, 2026</strong> showing 50 active monday.com creatives, all classified as Carousel format. I'd treat the "100% Carousel" figure with real skepticism. It's one tool's read, four months stale, and out of step with monday.com's known heavy investment in video (Super Bowl spot, singing-llama campaign, Singapore 360° film). The likely real picture is a two-tier system: big-budget hero video for brand campaigns, plus always-on carousel/static for everyday Meta demand-gen, but I can't confirm that split with confidence from what's accessible here.</p>
 
       <svg viewBox="0 0 500 90" style="width:100%; max-width:500px; font-family:'JetBrains Mono',monospace;">
         <text x="0" y="14" font-size="11" fill="#16181C" font-weight="600">Avg. run time</text>
@@ -691,27 +693,27 @@
       </svg>
       <p class="timeline-caption">50 active creatives tracked as of the April 30, 2026 snapshot. Source: opus.pro ad-library tracker, citing Meta Ad Library via ScrapeCreators API.</p>
 
-      <h3 style="margin-top:26px;">Partnership vs. brand ad ratio <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>I could not pull this. Meta's own Ad Library site disallows automated fetching (its robots.txt blocks it outright), and no accessible mirror gave me a per-ad list with visible creator handles. What I can confirm: monday.com has a real, ongoing influencer-marketing practice — a 2020–21 campaign with TopRank Marketing generated 17.9M in potential reach from remote-work-expert partnerships — and the company currently has an open "Influencer Marketing Manager" role covering Facebook, LinkedIn, Instagram, X, and TikTok. So the practice exists; the current on-Meta ratio of "with @creator" posts to straight brand ads is a real, gettable number — just not one I could get automatically. Section 11 has the exact 10-minute manual method.</p>
+      <h3 style="margin-top:26px;">Partnership vs. brand ad ratio <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>I could not pull this. Meta's own Ad Library site disallows automated fetching (its robots.txt blocks it outright), and no accessible mirror gave me a per-ad list with visible creator handles. What I can confirm: monday.com has a real, ongoing influencer-marketing practice, a 2020–21 campaign with TopRank Marketing generated 17.9M in potential reach from remote-work-expert partnerships, and the company currently has an open "Influencer Marketing Manager" role covering Facebook, LinkedIn, Instagram, X, and TikTok. So the practice exists; the current on-Meta ratio of "with @creator" posts to straight brand ads is a real, gettable number, just not one I could get automatically. Section 11 has the exact 10-minute manual method.</p>
 
-      <h3 style="margin-top:26px;">Top 10 ads by impressions <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>This is now genuinely possible to get — more possible than it's ever been. As of January 2026, Meta's Ad Library started publishing impression-range buckets (under 1K, 1K–5K, 5K–10K, 10K–50K, 50K–100K, 100K–500K, 500K–1M, 1M+) for <em>every</em> commercial ad, not just political ones, plus a "Low impression count" badge under 100. That's a real, recent, and useful upgrade. But the library itself is a JavaScript-rendered tool that blocks automated access, so getting an actual ranked top 10 means a human sorting it live — about 10 minutes of work, walked through in Section 11. I didn't want to hand you a fabricated top-10 list with invented ad copy and made-up numbers; that would actively work against the research skill you're building.</p>
+      <h3 style="margin-top:26px;">Top 10 ads by impressions <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>This is now genuinely possible to get, more possible than it's ever been. As of January 2026, Meta's Ad Library started publishing impression-range buckets (under 1K, 1K–5K, 5K–10K, 10K–50K, 50K–100K, 100K–500K, 500K–1M, 1M+) for <em>every</em> commercial ad, not just political ones, plus a "Low impression count" badge under 100. That's a real, recent, and useful upgrade. But the library itself is a JavaScript-rendered tool that blocks automated access, so getting an actual ranked top 10 means a human sorting it live, about 10 minutes of work, walked through in Section 11. A fabricated top ten, with invented ad copy and made up numbers, would make every other finding in this report worth less. So it is marked as a gap instead.</p>
 
-      <h3 style="margin-top:26px;">Longest-running ads &amp; trend summary <span class="tag proxy tag-inline">Proxy</span></h3>
-      <p>Per the same April 2026 snapshot, the single longest-running active creative had been live 79 days against a 71-day average — a narrow spread, which reads as a fairly disciplined account (not a huge pile of long-dead zombie ads still spending). The standard read on "longest running = likely winner" still applies as a heuristic, with the caveat that cost-cap/bid-cap buying can leave losers live longer than they deserve, so runtime alone shouldn't be the only signal — pair it with the impression-range bucket once you pull it yourself.</p>
+      <h3 style="margin-top:26px;">Longest-running ads &amp; trend summary <span class="tag estimated tag-inline">Estimated</span></h3>
+      <p>Per the same April 2026 snapshot, the single longest-running active creative had been live 79 days against a 71-day average, a narrow spread, which reads as a fairly disciplined account (not a huge pile of long-dead zombie ads still spending). The standard read on "longest running = likely winner" still applies as a heuristic, with the caveat that cost-cap/bid-cap buying can leave losers live longer than they deserve, so runtime alone shouldn't be the only signal. Pair it with the impression-range bucket once you pull it yourself.</p>
 
-      <h3 style="margin-top:26px;">Creative velocity <span class="tag verified tag-inline">Verified</span> (campaign level) / <span class="tag gap tag-inline">Data gap</span> (day-to-day)</h3>
-      <p>At the brand-campaign level, the cadence is verifiable and telling: roughly one major campaign every 12–18 months from 2022–2023, then four distinct campaigns/positioning moves in the 18 months from mid-2024 to late-2025 (see the timeline in Section 05). That acceleration is real. Day-to-day performance-ad upload cadence — how many new Meta variants per week, and the exact date of monday.com's most recent upload — needs the live library; I don't have a reliable way to state a "last upload was on X date" without fabricating it.</p>
+      <h3 style="margin-top:26px;">Creative velocity <span class="tag observed tag-inline">Observed</span> (campaign level) / <span class="tag unavailable tag-inline">Not available</span> (day-to-day)</h3>
+      <p>At the brand-campaign level, the cadence is verifiable and telling: roughly one major campaign every 12–18 months from 2022–2023, then four distinct campaigns/positioning moves in the 18 months from mid-2024 to late-2025 (see the timeline in Section 05). That acceleration is real. Day-to-day performance ad upload cadence (how many new Meta variants per week, and the exact date of the most recent upload) needs the live library; I don't have a reliable way to state a "last upload was on X date" without fabricating it.</p>
     </section>
 
     <!-- ============ 07 CUSTOMER JOURNEY ============ -->
     <section id="journey">
       <div class="sec-head"><span class="sec-num">07</span><h2>Customer Journey</h2></div>
-      <p class="sec-dek">A textbook product-led-growth funnel, with a parallel sales-assisted lane for anything over ~40 seats. <span class="tag verified tag-inline">Verified</span> / <span class="tag analyst tag-inline">Analyst read</span> on the funnel framing.</p>
+      <p class="sec-dek">A textbook product-led-growth funnel, with a parallel sales-assisted lane for anything over ~40 seats. <span class="tag observed tag-inline">Observed</span> / <span class="tag interp tag-inline">My interpretation</span> on the funnel framing.</p>
       <div class="steps">
         <div class="step"><h4>Free entry, zero friction</h4><p>Free plan (2 seats) or a 14-day Pro trial, no credit card required. 200+ templates shortcut time-to-first-value.</p></div>
-        <div class="step"><h4>In-product AI metering nudges upgrade</h4><p>AI credits are attached to every paid tier and consumed by normal use — "need more? add credits anytime" is a built-in upgrade trigger, not just a sales pitch.</p></div>
-        <div class="step"><h4>Cross-sell across the suite</h4><p>Work Management customers get funneled toward CRM, Dev, Campaigns, and Service — a shared seat/billing infrastructure makes each one an easy add, not a new vendor decision.</p></div>
+        <div class="step"><h4>In-product AI metering nudges upgrade</h4><p>AI credits are attached to every paid tier and consumed by normal use, "need more? add credits anytime" is a built-in upgrade trigger, not just a sales pitch.</p></div>
+        <div class="step"><h4>Cross-sell across the suite</h4><p>Work Management customers get funneled toward CRM, Dev, Campaigns, and Service, a shared seat/billing infrastructure makes each one an easy add, not a new vendor decision.</p></div>
         <div class="step"><h4>Enterprise breaks off into "Contact sales"</h4><p>Past ~40 seats, self-serve signup disappears in favor of a quote request, dedicated onboarding, and a named Customer Success Manager.</p></div>
       </div>
     </section>
@@ -719,11 +721,11 @@
     <!-- ============ 08 SOCIAL PROOF ============ -->
     <section id="proof">
       <div class="sec-head"><span class="sec-num">08</span><h2>Social Proof</h2></div>
-      <p class="sec-dek">Logos, analyst validation, and review-platform ratings — all independently checkable. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">Logos, analyst validation, and review-platform ratings, all independently checkable. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="card" style="margin-bottom:18px;">
         <h3>Named customers</h3>
-        <p style="font-size:13.5px;">McDonald's, Canva, Coca-Cola, Lionsgate, Carrefour, Glossier, Universal Music Group, HoltCat, BD, Oxy, VML — spanning retail, entertainment, CPG, and industrial. Over 70% of customers work in traditionally non-tech industries, per monday.com's own reporting — a deliberately horizontal customer base, not a tech-company echo chamber.</p>
+        <p style="font-size:13.5px;">McDonald's, Canva, Coca-Cola, Lionsgate, Carrefour, Glossier, Universal Music Group, HoltCat, BD, Oxy, and VML. They span retail, entertainment, CPG, and industrial. Over 70% of customers work in traditionally non-tech industries, per monday.com's own reporting, a deliberately horizontal customer base, not a tech-company echo chamber.</p>
       </div>
 
       <h3>G2 review distribution</h3>
@@ -743,7 +745,7 @@
         <text x="0" y="124" font-size="11" fill="#565A5F">1 star</text>
         <text x="65" y="124" font-size="11" fill="#8B8F94">~0%</text>
       </svg>
-      <p class="timeline-caption">Aggregated from 3,795 G2 reviews via SoftwareFinder — 4.5/5 average, with Ease of Use, Value for Money, Support, and Functionality each scoring 9/10.</p>
+      <p class="timeline-caption">Aggregated from 3,795 G2 reviews via SoftwareFinder. The average is 4.5/5, with Ease of Use, Value for Money, Support, and Functionality each scoring 9/10.</p>
 
       <div class="card" style="margin-top:18px;">
         <h3>Analyst &amp; employer validation</h3>
@@ -754,7 +756,7 @@
     <!-- ============ 09 CUSTOMER RESEARCH ============ -->
     <section id="research">
       <div class="sec-head"><span class="sec-num">09</span><h2>Customer Research</h2></div>
-      <p class="sec-dek">Real, dated reviewer language — not paraphrased marketing copy. <span class="tag verified tag-inline">Verified</span> — pulled from G2 reviews (via AWS Marketplace mirror) and SoftwareFinder.</p>
+      <p class="sec-dek">Real, dated reviewer language, not paraphrased marketing copy. <span class="tag observed tag-inline">Observed</span>, pulled from G2 reviews (via AWS Marketplace mirror) and SoftwareFinder.</p>
 
       <div class="rev-cols">
         <div class="rev-col love">
@@ -765,32 +767,32 @@
         </div>
         <div class="rev-col friction">
           <h4>Where the friction is</h4>
-          <div class="rev-item">"Even the most basic plan with no guest access costs $8/month" — pricing is the single most repeated complaint across years of reviews.</div>
-          <div class="rev-item">"The paid plans only allow a minimum of three seats" — teams of one or two pay for a seat they don't use.</div>
+          <div class="rev-item">"Even the most basic plan with no guest access costs $8/month", pricing is the single most repeated complaint across years of reviews.</div>
+          <div class="rev-item">"The paid plans only allow a minimum of three seats", teams of one or two pay for a seat they don't use.</div>
           <div class="rev-item">"When using it for the first time, the abundance of features can be overwhelming, necessitating a significant learning curve."</div>
-          <div class="rev-item">"The name causes confusion leading to unproductive misunderstandings" — one reviewer flagged the generic "Monday" name itself as a real cost.</div>
+          <div class="rev-item">"The name causes confusion leading to unproductive misunderstandings", one reviewer flagged the generic "Monday" name itself as a real cost.</div>
         </div>
       </div>
-      <p style="margin-top:6px; font-size:12.5px; color:var(--ink-faint);">That last point tracks with something I ran into directly while researching this report: "Monday" also names an unrelated Australian haircare brand with its own large influencer program. Search-and-brand confusion isn't a hypothetical here — I had to actively filter it out of these findings.</p>
+      <p style="margin-top:6px; font-size:12.5px; color:var(--ink-faint);">That last point tracks with something I ran into directly while researching this report: "Monday" also names an unrelated Australian haircare brand with its own large influencer program. Search-and-brand confusion isn't a hypothetical here. I had to actively filter it out of these findings.</p>
     </section>
 
     <!-- ============ 10 WEAKNESSES & OPPORTUNITIES ============ -->
     <section id="weaknesses">
       <div class="sec-head"><span class="sec-num">10</span><h2>Weaknesses &amp; Opportunities</h2></div>
-      <p class="sec-dek">Synthesized from everything above. <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">Synthesized from everything above. <span class="tag interp tag-inline">My interpretation</span></p>
 
       <div class="wo-grid">
         <div class="wo-col weak">
           <h3>Weaknesses</h3>
-          <div class="wo-item"><h4>Pricing is the #1 recurring complaint</h4><p>Per-seat cost, a 3-seat minimum on paid tiers, and steep jumps between tiers show up in reviews spanning 2022 through 2023 — a durable, not one-off, friction point.</p></div>
-          <div class="wo-item"><h4>A genuinely collision-prone brand name</h4><p>"Monday" is generic enough to share search real estate with unrelated brands (a haircare company among them) — a real SEO and brand-recall tax that a more distinctive name wouldn't carry.</p></div>
-          <div class="wo-item"><h4>Feature sprawl creates its own onboarding tax</h4><p>The flexibility that's the core sell doubles as the most-cited learning curve complaint — reviewers repeatedly note "overwhelming" feature depth at first use.</p></div>
+          <div class="wo-item"><h4>Pricing is the #1 recurring complaint</h4><p>Per-seat cost, a 3-seat minimum on paid tiers, and steep jumps between tiers show up in reviews spanning 2022 through 2023, a durable, not one-off, friction point.</p></div>
+          <div class="wo-item"><h4>A genuinely collision-prone brand name</h4><p>"Monday" is generic enough to share search real estate with unrelated brands (a haircare company among them), a real SEO and brand-recall tax that a more distinctive name wouldn't carry.</p></div>
+          <div class="wo-item"><h4>Feature sprawl creates its own onboarding tax</h4><p>The flexibility that's the core sell doubles as the most-cited learning curve complaint, reviewers repeatedly note "overwhelming" feature depth at first use.</p></div>
         </div>
         <div class="wo-col opp">
           <h3>Opportunities</h3>
-          <div class="wo-item"><h4>The "AI Work Platform" repositioning is brand new</h4><p>Announced April 2026 — the message is still fresh enough to be ownable if repeated consistently before a competitor claims the same territory.</p></div>
+          <div class="wo-item"><h4>The "AI Work Platform" repositioning is brand new</h4><p>Announced April 2026, the message is still fresh enough to be ownable if repeated consistently before a competitor claims the same territory.</p></div>
           <div class="wo-item"><h4>A deep case-study bank is underused as performance creative</h4><p>Specific stats (25% faster, $250K saved, 517% growth) are proven ad material, but the visible creative supply (per the proxy data in Section 06) still leans generic-carousel rather than stat-led direct response.</p></div>
-          <div class="wo-item"><h4>The llama is a genuinely ownable, low-cost creative asset</h4><p>Recurring since 2019 and still deployed in 2025 campaigns — most B2B SaaS competitors have nothing this distinctive, and it's cheap to keep reusing in always-on creative, not just hero spots.</p></div>
+          <div class="wo-item"><h4>The llama is a genuinely ownable, low-cost creative asset</h4><p>Recurring since 2019 and still deployed in 2025 campaigns, most B2B SaaS competitors have nothing this distinctive, and it's cheap to keep reusing in always-on creative, not just hero spots.</p></div>
         </div>
       </div>
     </section>
@@ -798,21 +800,21 @@
     <!-- ============ 11 BONUS ============ -->
     <section id="bonus">
       <div class="sec-head"><span class="sec-num">11</span><h2>Bonus: Data You CAN Collect</h2></div>
-      <p class="sec-dek">The exact, free, no-login methods to close the three "Data gap" items above yourself — reusable on any future brand teardown.</p>
+      <p class="sec-dek">The exact, free, no-login methods to close the three "Data gap" items above yourself, reusable on any future brand teardown.</p>
 
       <h3>Pull monday.com's live Meta ad set (~10 minutes)</h3>
       <div class="steps">
-        <div class="step"><h4>Open the Ad Library</h4><p>Go to <code>facebook.com/ads/library</code> in any browser — no login needed. Set Country to your target market (or "All"), and Ad category to "All ads."</p></div>
+        <div class="step"><h4>Open the Ad Library</h4><p>Go to <code>facebook.com/ads/library</code> in any browser, no login needed. Set Country to your target market (or "All"), and Ad category to "All ads."</p></div>
         <div class="step"><h4>Search the exact Page name</h4><p>Search "monday.com." Confirm you're on their verified Page, not a lookalike or reseller.</p></div>
-        <div class="step"><h4>Read the impression-range bucket on each ad</h4><p>Since January 2026, every commercial ad shows a bucket — under 1K, 1K–5K, 5K–10K, 10K–50K, 50K–100K, 100K–500K, 500K–1M, or 1M+ — plus a "Low impression count" badge under 100. Sort your own shortlist by this before runtime; delivery is a stronger signal than age.</p></div>
+        <div class="step"><h4>Read the impression-range bucket on each ad</h4><p>Since January 2026, every commercial ad shows a bucket (under 1K, 1K to 5K, 5K to 10K, 10K to 50K, 50K to 100K, 100K to 500K, 500K to 1M, or 1M+) plus a "Low impression count" badge under 100. Sort your own shortlist by this before runtime; delivery is a stronger signal than age.</p></div>
         <div class="step"><h4>Scan ad copy for "with @" to tag partnership vs. brand</h4><p>Open each ad's text and creator tags. Anything featuring a creator handle or "with [Name]" is a partnership ad; tally the two buckets yourself for the real current ratio.</p></div>
-        <div class="step"><h4>Note start dates for velocity and last-upload</h4><p>Each ad shows "Started running on [date]." The most recent start date across the set is your real "last upload" — sort newest-first to find it directly.</p></div>
+        <div class="step"><h4>Note start dates for velocity and last-upload</h4><p>Each ad shows "Started running on [date]." The most recent start date across the set is your real "last upload", sort newest-first to find it directly.</p></div>
       </div>
 
       <h3 style="margin-top:28px;">Other free, no-login transparency tools</h3>
       <table class="tool-table">
         <tr><th>Tool</th><th>Good for</th><th>Limitation</th></tr>
-        <tr><td>LinkedIn Ad Library</td><td>B2B-specific campaigns — highly relevant for monday.com</td><td>Coverage and history are thinner than Meta's</td></tr>
+        <tr><td>LinkedIn Ad Library</td><td>B2B-specific campaigns, highly relevant for monday.com</td><td>Coverage and history are thinner than Meta's</td></tr>
         <tr><td>TikTok Creative Center / Ad Library</td><td>Short-form and creator-style ads</td><td>Impression data is limited outside the EU</td></tr>
         <tr><td>Google Ads Transparency Center</td><td>Search, display, and YouTube ads</td><td>No impression or spend data on standard commercial ads</td></tr>
       </table>
@@ -821,7 +823,7 @@
       <p>Foreplay, BigSpy, and PowerAdSpy are paid ad-intelligence platforms that add spend estimates, cross-account replication tracking, and bulk export on top of what the free libraries show. None were needed for the findings above, but they're the natural next step if you're doing this kind of teardown regularly.</p>
 
       <h3 style="margin-top:28px;">What I used to build this report</h3>
-      <p style="font-size:13.5px;">monday.com's own site (pricing, about, alternative/compare pages), its investor-relations press releases, G2 reviews mirrored via AWS Marketplace and aggregated via SoftwareFinder, and one third-party ad-tracking snapshot (opus.pro, dated April 30, 2026) for the format/runtime proxy data in Section 06. Re-pull that last one fresh before using it for anything decision-critical — ad libraries shift week to week.</p>
+      <p style="font-size:13.5px;">monday.com's own site (pricing, about, alternative/compare pages), its investor-relations press releases, G2 reviews mirrored via AWS Marketplace and aggregated via SoftwareFinder, and one third-party ad-tracking snapshot (opus.pro, dated April 30, 2026) for the format/runtime proxy data in Section 06. Re-pull that last one fresh before using it for anything decision-critical, ad libraries shift week to week.</p>
     </section>
 
     <footer>

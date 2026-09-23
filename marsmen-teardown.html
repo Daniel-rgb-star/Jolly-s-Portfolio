@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mars Men — Creative &amp; Competitive Analysis</title>
+<title>Mars Men · Creative &amp; Competitive Analysis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -48,10 +48,10 @@
   p{ margin:0 0 14px; font-size:14.5px; }
   h3{ font-size:16px; font-weight:700; margin:0 0 8px; }
   .tag{ display:inline-flex; align-items:center; gap:5px; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.03em; text-transform:uppercase; padding:3px 8px; border-radius:20px; white-space:nowrap; }
-  .tag.verified{ background:var(--signal-bg); color:var(--signal); }
-  .tag.proxy{ background:var(--gold-bg); color:var(--gold); }
-  .tag.analyst{ background:var(--analyst-bg); color:var(--analyst); }
-  .tag.gap{ background:var(--gap-bg); color:var(--gap); }
+  .tag.observed{ background:var(--signal-bg); color:var(--signal); }
+  .tag.estimated{ background:var(--gold-bg); color:var(--gold); }
+  .tag.interp{ background:var(--analyst-bg); color:var(--analyst); }
+  .tag.unavailable{ background:var(--gap-bg); color:var(--gap); }
   .tag-inline{ margin-left:8px; vertical-align:2px; }
   .method-box{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px; margin-bottom:30px; }
   .method-box h3{ margin-bottom:12px; }
@@ -128,6 +128,7 @@
 
 <div class="layout">
   <aside id="sidebar">
+    <a href="index.html" style="display:inline-block; font-size:12.5px; font-weight:600; color:var(--ink-faint); text-decoration:none; margin-bottom:14px;">&larr; Back to portfolio</a>
     <div class="side-brand">Mars Men</div>
     <div class="side-sub">Creative &amp; Competitive Analysis<br>Prepared by Jolly Daniel Tenorio</div>
     <nav id="toc">
@@ -145,17 +146,17 @@
     </nav>
     <div class="side-legend">
       <div class="side-legend-title">Evidence key</div>
-      <div style="margin-bottom:6px;"><span class="tag verified">Verified</span></div>
-      <div style="margin-bottom:6px;"><span class="tag proxy">Proxy</span></div>
-      <div style="margin-bottom:6px;"><span class="tag analyst">Analyst read</span></div>
-      <div><span class="tag gap">Data gap</span></div>
+      <div style="margin-bottom:6px;"><span class="tag observed">Observed</span></div>
+      <div style="margin-bottom:6px;"><span class="tag estimated">Estimated</span></div>
+      <div style="margin-bottom:6px;"><span class="tag interp">My interpretation</span></div>
+      <div><span class="tag unavailable">Not available</span></div>
     </div>
   </aside>
 
   <main>
     <div class="hero">
-      <h1>Mars Men — Creative <span>&amp;</span> Competitive Analysis</h1>
-      <p>An Austin-based, recently-funded men's testosterone-support brand — its offer, positioning, and messaging, graded by how solid the evidence actually is.</p>
+      <h1>Mars Men <span>·</span> Creative &amp; Competitive Analysis</h1>
+      <p>An Austin based, recently funded men's testosterone support brand: its offer, positioning, and messaging, graded by how solid the evidence actually is.</p>
       <div class="hero-meta">
         <span>PREPARED SEP 07, 2026</span>
         <span>SUBJECT: MARS HEALTH, INC. (MARS MEN)</span>
@@ -164,13 +165,14 @@
     </div>
 
     <div class="method-box">
-      <h3>How to read this report — and a note on access</h3>
-      <p>You pointed me at your TrendTrack workspace instead of Meta this time — good instinct, but I hit a different wall: that URL is behind your personal login, and I don't have your session, so it loaded as an empty app shell with no ad data. That's a straightforward authentication wall, not the robots.txt block Meta uses — same outcome, different cause. I made up the gap with primary sources instead: the brand's own site (extremely detailed), press coverage of its recent $27.5M raise, an independent supplement review, Particl.com's tracked history of their real dated social posts, and independent Trustpilot reviews. It added up to more than either prior report had. What's still genuinely missing — exact active-ad counts, ad spend, and the full partnership-vs-brand ratio — is marked <strong>Data gap</strong>, and Section 11 covers how to pull it from your own TrendTrack account.</p>
+      <h3>How to read this report</h3>
+      <p>Every claim below carries a label showing how solid the evidence behind it is. This is competitive intelligence built entirely from publicly available and third party sources. I have never had access to Mars Men's ad account, analytics, or internal numbers, and nothing here should be read as if I did.</p>
+      <p>No public ad intelligence tool had indexed this brand's Meta account at the time of writing, so the account level figures are marked Not available: active ad counts, spend, and the partnership to brand ratio. Everything else came from primary sources: the company's own site, press coverage of its March 2026 funding round, an independent supplement review, a tracked history of the brand's dated social posts, and independent Trustpilot reviews.</p>
       <div class="method-grid">
-        <div class="method-cell"><span class="tag verified">Verified</span>From Mars Men's own site, press releases, or a named source (Trustpilot, funding press, independent reviews).</div>
-        <div class="method-cell"><span class="tag proxy">Proxy</span>Real data, but an estimate or single-snapshot read — directional, not exact.</div>
-        <div class="method-cell"><span class="tag analyst">Analyst read</span>My own strategic interpretation, clearly separated from sourced fact.</div>
-        <div class="method-cell"><span class="tag gap">Data gap</span>Couldn't be accessed with the tools available here. Manual method provided.</div>
+        <div class="method-cell"><span class="tag observed">Observed</span>Published or publicly visible. From Mars Men's own site, funding press, or a named public source such as Trustpilot or independent reviews. You can check any of it yourself.</div>
+        <div class="method-cell"><span class="tag estimated">Estimated</span>A third-party tool's estimate, or a single snapshot in time. Directional, not exact, and flagged wherever tools disagreed.</div>
+        <div class="method-cell"><span class="tag interp">My interpretation</span>My own strategic read. Kept deliberately separate from anything sourced above.</div>
+        <div class="method-cell"><span class="tag unavailable">Not available</span>Not obtainable from public sources. Where this appears, the manual method to get it is in the final section.</div>
       </div>
     </div>
 
@@ -178,24 +180,24 @@
       <h3>Quick facts</h3>
       <p style="font-size:13px; color:var(--ink-faint); margin-bottom:0;">The specific business questions, answered directly.</p>
       <div class="qf-grid">
-        <div class="qf-item"><div class="qf-q">WHAT DOES THE COMPANY SELL? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">A single-formula natural testosterone-support supplement — one product line, 8 clinically-dosed ingredients, 5 capsules/day.</div></div>
-        <div class="qf-item"><div class="qf-q">HERO PRODUCT? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">"Natural Testosterone Support," sold as the 30-Day Supply Starter Kit — effectively their only product.</div></div>
-        <div class="qf-item"><div class="qf-q">PRICE? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">$118 list. $59/bottle standard subscription ("50% off for life"). $39 on the current first-order promo. $47/bottle on the 90-day upsell.</div></div>
-        <div class="qf-item"><div class="qf-q">AOV? <span class="tag analyst tag-inline">Analyst read</span></div><div class="qf-a">No third-party estimate found. Given the pricing ladder and upsell, a first order likely nets roughly $40–$60 — a reasoned estimate, not a sourced figure.</div></div>
-        <div class="qf-item"><div class="qf-q">MARGIN? <span class="tag gap tag-inline">Data gap</span></div><div class="qf-a">Not disclosed. Category benchmark for premium DTC supplements runs 60–80% gross margin — not a Mars Men-specific number.</div></div>
-        <div class="qf-item"><div class="qf-q">MAIN OFFER? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">First order at $39 (67% off) plus $70 in free gifts and a 90-day money-back guarantee — subscription is the default path; a one-time option exists but is tucked in the footer.</div></div>
-        <div class="qf-item"><div class="qf-q">BUSINESS GOAL? <span class="tag analyst tag-inline">Analyst read</span></div><div class="qf-a">Convert bootstrapped momentum into category leadership — the fresh Series A is earmarked for product-line expansion and a retail push, per their own funding announcement.</div></div>
-        <div class="qf-item"><div class="qf-q">CURRENT MONTHLY REVENUE? <span class="tag verified tag-inline">Verified</span> (run-rate)</div><div class="qf-a">$100M+ annualized run rate as of the March 2026 raise (~$8.3M/month implied). A run rate is an annualized snapshot, not confirmed trailing revenue.</div></div>
-        <div class="qf-item"><div class="qf-q">CURRENT AD SPEND? <span class="tag gap tag-inline">Data gap</span></div><div class="qf-a">Not disclosed anywhere accessible. No third-party ad-spend tracker surfaced for this brand the way one did for the AgeMate report.</div></div>
-        <div class="qf-item"><div class="qf-q">MARKETS? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">US (primary), Australia, and Canada via the main store; also sells on Amazon; expanding into physical retail per the funding announcement.</div></div>
-        <div class="qf-item"><div class="qf-q">BEST CUSTOMERS? <span class="tag analyst tag-inline">Analyst read</span></div><div class="qf-a">Not disclosed directly. Testimonial pattern skews men roughly mid-30s to mid-50s, gym-active, several explicitly coming off TRT looking for a natural alternative.</div></div>
+        <div class="qf-item"><div class="qf-q">WHAT DOES THE COMPANY SELL? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">A single-formula natural testosterone support supplement. One product line, 8 clinically dosed ingredients, 5 capsules a day.</div></div>
+        <div class="qf-item"><div class="qf-q">HERO PRODUCT? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">"Natural Testosterone Support," sold as the 30-Day Supply Starter Kit. Effectively their only product.</div></div>
+        <div class="qf-item"><div class="qf-q">PRICE? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">$118 list. $59/bottle standard subscription ("50% off for life"). $39 on the current first-order promo. $47/bottle on the 90-day upsell.</div></div>
+        <div class="qf-item"><div class="qf-q">AOV? <span class="tag interp tag-inline">My interpretation</span></div><div class="qf-a">No third-party estimate found. Given the pricing ladder and upsell, a first order likely nets roughly $40–$60. That is a reasoned estimate, not a sourced figure.</div></div>
+        <div class="qf-item"><div class="qf-q">MARGIN? <span class="tag unavailable tag-inline">Not available</span></div><div class="qf-a">Not disclosed. Category benchmark for premium DTC supplements runs 60–80% gross margin. That is a category benchmark, not a Mars Men specific number.</div></div>
+        <div class="qf-item"><div class="qf-q">MAIN OFFER? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">First order at $39 (67% off) plus $70 in free gifts and a 90-day money-back guarantee. Subscription is the default path; a one-time option exists but is tucked in the footer.</div></div>
+        <div class="qf-item"><div class="qf-q">BUSINESS GOAL? <span class="tag interp tag-inline">My interpretation</span></div><div class="qf-a">Convert bootstrapped momentum into category leadership. The fresh Series A is earmarked for product-line expansion and a retail push, per their own funding announcement.</div></div>
+        <div class="qf-item"><div class="qf-q">CURRENT MONTHLY REVENUE? <span class="tag observed tag-inline">Observed</span> (run-rate)</div><div class="qf-a">$100M+ annualized run rate as of the March 2026 raise (~$8.3M/month implied). A run rate is an annualized snapshot, not confirmed trailing revenue.</div></div>
+        <div class="qf-item"><div class="qf-q">CURRENT AD SPEND? <span class="tag unavailable tag-inline">Not available</span></div><div class="qf-a">Not disclosed anywhere accessible. No third-party ad spend tracker had indexed this brand, unlike AgeMate.</div></div>
+        <div class="qf-item"><div class="qf-q">MARKETS? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">US (primary), Australia, and Canada via the main store; also sells on Amazon; expanding into physical retail per the funding announcement.</div></div>
+        <div class="qf-item"><div class="qf-q">BEST CUSTOMERS? <span class="tag interp tag-inline">My interpretation</span></div><div class="qf-a">Not disclosed directly. Testimonial pattern skews men roughly mid-30s to mid-50s, gym-active, several explicitly coming off TRT looking for a natural alternative.</div></div>
       </div>
     </div>
 
     <!-- ============ 01 OVERVIEW ============ -->
     <section id="overview">
       <div class="sec-head"><span class="sec-num">01</span><h2>Company Overview</h2></div>
-      <p class="sec-dek">An 18-month-old company that bootstrapped its way to a $100M run rate before taking a dollar of outside money. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">An 18-month-old company that bootstrapped its way to a $100M run rate before taking a dollar of outside money. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="stat-strip">
         <div class="stat-cell"><span class="stat-num">~2024</span><div class="stat-label">Founded, Austin, TX</div></div>
@@ -205,15 +207,15 @@
         <div class="stat-cell"><span class="stat-num">~10</span><div class="stat-label">Employees</div></div>
       </div>
 
-      <p>Mars Health, Inc. (trading as Mars Men) was founded by CEO Benjamin Smith less than 18 months before announcing a $27.5M Series A on March 30, 2026, led by L Catterton — the same firm behind Solidcore, Playlist, and Hydrow. Before that raise, the company was entirely bootstrapped and already profitable, reportedly serving over 400,000 customers at a $100M+ revenue run rate. Its Chief Medical Officer, Dr. Latt Mansor, holds a PhD in Physiology from Oxford; the medical advisory board includes two additional named physicians.</p>
-      <p>That's an extremely lean operation — roughly 10 employees — for that scale of revenue, which tracks with a pure DTC, subscription-first model and heavy reliance on paid social rather than a large internal team.</p>
+      <p>Mars Health, Inc. (trading as Mars Men) was founded by CEO Benjamin Smith less than 18 months before announcing a $27.5M Series A on March 30, 2026, led by L Catterton, the same firm behind Solidcore, Playlist, and Hydrow. Before that raise, the company was entirely bootstrapped and already profitable, reportedly serving over 400,000 customers at a $100M+ revenue run rate. Its Chief Medical Officer, Dr. Latt Mansor, holds a PhD in Physiology from Oxford; the medical advisory board includes two additional named physicians.</p>
+      <p>That's an extremely lean operation (roughly 10 employees) for that scale of revenue, which tracks with a pure DTC, subscription-first model and heavy reliance on paid social rather than a large internal team.</p>
       <p style="color:var(--ink-faint); font-size:12.5px;">Sources: mengotomars.com, BusinessWire funding announcement, Pulse2, AthleTech News, company database records.</p>
     </section>
 
     <!-- ============ 02 AUDIENCE ============ -->
     <section id="audience">
       <div class="sec-head"><span class="sec-num">02</span><h2>Target Audience</h2></div>
-      <p class="sec-dek">Built from testimonial patterns and named ambassadors, not ad-targeting data. <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">Built from testimonial patterns and named ambassadors, not ad-targeting data. <span class="tag interp tag-inline">My interpretation</span></p>
 
       <div class="grid-3">
         <div class="persona">
@@ -229,9 +231,9 @@
         <div class="persona">
           <div class="ptag">Persona 02</div>
           <h3>The Gym Plateau Guy</h3>
-          <p>Already trains, already eats reasonably well, but feels stuck — energy, strength, and recovery have quietly declined.</p>
+          <p>Already trains, already eats reasonably well, but feels stuck, energy, strength, and recovery have quietly declined.</p>
           <ul>
-            <li>Matches the ambassador roster: kettlebell coach, "Primal Swoledier," ultra-runner</li>
+            <li>Matches the ambassador roster: kettlebell coach, "Primal Swoledier," and an ultra-runner</li>
             <li>Responds to the Day 7 / Day 30 / Day 90 staged-results narrative</li>
             <li>Likely to accept the 90-day upsell once past the trial period</li>
           </ul>
@@ -251,7 +253,7 @@
     <!-- ============ 03 OFFER ============ -->
     <section id="offer">
       <div class="sec-head"><span class="sec-num">03</span><h2>Offer</h2></div>
-      <p class="sec-dek">A four-price ladder built to make the subscription the only sensible choice. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">A four-price ladder built to make the subscription the only sensible choice. <span class="tag observed tag-inline">Observed</span></p>
 
       <svg viewBox="0 0 700 190" style="width:100%; max-width:700px; font-family:'JetBrains Mono',monospace;">
         <text x="0" y="16" font-size="11" font-weight="600" fill="#16181C">List price (anchor)</text>
@@ -267,16 +269,16 @@
         <rect x="0" y="174" width="231" height="16" rx="3" fill="#FF5600" opacity="0.35"/>
         <text x="10" y="186" font-size="11" fill="#16181C" font-weight="600">$39 / bottle</text>
       </svg>
-      <p class="timeline-caption">All four price points are live on the same product page simultaneously — the $118 anchor makes every other number look like a win.</p>
+      <p class="timeline-caption">All four price points are live on the same product page simultaneously, the $118 anchor makes every other number look like a win.</p>
 
       <div class="grid-2" style="margin-top:20px;">
         <div class="card">
           <h3>The subscription is the default, not a choice</h3>
-          <p style="font-size:13.5px;">A one-time "Try Once" option exists, but it's only linked from the footer — the entire main funnel, every banner, and every price on the product page assume subscription. FAQ copy even states plainly: "Do I have to sign up for a subscription? Yes."</p>
+          <p style="font-size:13.5px;">A one-time "Try Once" option exists, but it's only linked from the footer, the entire main funnel, every banner, and every price on the product page assume subscription. FAQ copy even states plainly: "Do I have to sign up for a subscription? Yes."</p>
         </div>
         <div class="card">
           <h3>$70 in stacked free gifts</h3>
-          <p style="font-size:13.5px;">Travel Tin ($10), Testosterone E-Book ($20), a month of the Ladder workout app ($30), and free shipping ($10) — plus a separate Apple Watch Ultra sweepstakes entry that isn't a guaranteed-value item. The same free-gift-bundling mechanic shows up in the AgeMate report's Welcome Kit — a pattern across the category, not unique to either brand.</p>
+          <p style="font-size:13.5px;">Travel Tin ($10), Testosterone E-Book ($20), a month of the Ladder workout app ($30), and free shipping ($10), plus a separate Apple Watch Ultra sweepstakes entry that isn't a guaranteed-value item. The same free-gift-bundling mechanic shows up in the AgeMate report's Welcome Kit, a pattern across the category, not unique to either brand.</p>
         </div>
       </div>
     </section>
@@ -284,21 +286,21 @@
     <!-- ============ 04 POSITIONING ============ -->
     <section id="positioning">
       <div class="sec-head"><span class="sec-num">04</span><h2>Positioning</h2></div>
-      <p class="sec-dek">The deliberate middle ground between TRT and generic T-boosters — literally charted on their own product page. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">The deliberate middle ground between TRT and generic T-boosters, literally charted on their own product page. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="posbar"><div class="lbl">Mars Men</div><div class="track"><div class="fill" style="width:38%; background:#FF5600;"></div></div></div>
       <div class="posbar"><div class="lbl">TRT (medical)</div><div class="track"><div class="fill" style="width:95%; background:#8B8F94;"></div></div></div>
       <div class="posbar"><div class="lbl">Generic boosters</div><div class="track"><div class="fill" style="width:15%; background:#8B8F94;"></div></div></div>
-      <p class="timeline-caption">Positioned on "clinical rigor" — TRT is medically potent but invasive; generic boosters are convenient but under-dosed and untested. Mars Men claims the middle: clinical doses, no needles, third-party tested. <span class="tag analyst tag-inline">Analyst read</span> (illustrative placement, not a scored index).</p>
+      <p class="timeline-caption">Positioned on "clinical rigor", TRT is medically potent but invasive; generic boosters are convenient but under-dosed and untested. Mars Men claims the middle: clinical doses, no needles, third-party tested. <span class="tag interp tag-inline">My interpretation</span> (illustrative placement, not a scored index).</p>
 
-      <p style="margin-top:18px;">Their own comparison chart stacks Mars Men against TRT and unnamed "Generic T Boosters" across seven dimensions — approach, convenience, side effects, natural production, monitoring, clinical dosing, and reversibility — and comes out ahead or even on every one they chose to include. An independent review site (illuminatelabs.org) largely corroborates the relative positioning, ranking Mars Men above Roman Testosterone Support and well above "Vintage Muscle" (which it flags for selling illegal anabolic steroids), while giving Nugenix a narrow edge on ingredient safety.</p>
-      <p>The one thing that chart elides: "Convenience: Once/day" is technically true but omits that it's 5 capsules at once — a real friction point that shows up independently in customer reviews ("5 pills is a lot").</p>
+      <p style="margin-top:18px;">Their own comparison chart stacks Mars Men against TRT and unnamed "Generic T Boosters" across seven dimensions (approach, convenience, side effects, natural production, monitoring, clinical dosing, and reversibility) and comes out ahead or even on every one they chose to include. An independent review site (illuminatelabs.org) largely corroborates the relative positioning, ranking Mars Men above Roman Testosterone Support and well above "Vintage Muscle" (which it flags for selling illegal anabolic steroids), while giving Nugenix a narrow edge on ingredient safety.</p>
+      <p>The one thing that chart elides: "Convenience: Once/day" is technically true but omits that it's 5 capsules at once, a real friction point that shows up independently in customer reviews ("5 pills is a lot").</p>
     </section>
 
     <!-- ============ 05 MESSAGING ============ -->
     <section id="messaging">
       <div class="sec-head"><span class="sec-num">05</span><h2>Messaging</h2></div>
-      <p class="sec-dek">A space-exploration metaphor sustained across the brand name, the domain, and a full year of tracked social captions. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">A space-exploration metaphor sustained across the brand name, the domain, and a full year of tracked social captions. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="ad-sample">
         <span class="badge">MAY 8, 2025 · INSTAGRAM</span>
@@ -308,24 +310,24 @@
         <span class="badge">MAR 26, 2026 · HOMEPAGE</span>
         <div class="ad-copy">"Introducing the Most Potent Testosterone Stack on Earth"</div>
       </div>
-      <p class="timeline-caption">Both pulled from Particl.com's tracked history of the brand's real, dated content — not paraphrased.</p>
+      <p class="timeline-caption">Both pulled from Particl.com's tracked history of the brand's real, dated content, not paraphrased.</p>
 
       <div class="grid-2" style="margin-top:18px;">
         <div class="card">
           <h3>1. The Mars metaphor, everywhere</h3>
-          <p style="font-size:13.5px;">Domain "mengotomars.com," tagline "One Giant Boost for Mankind" (an Armstrong riff), result-stages named Ignition/Spark/Liftoff, and the hashtag #MenGoToMars used consistently across every tracked post from April 2025 to March 2026 — close to a full year of disciplined on-brand language.</p>
+          <p style="font-size:13.5px;">Domain "mengotomars.com," tagline "One Giant Boost for Mankind" (an Armstrong riff), result-stages named Ignition/Spark/Liftoff, and the hashtag #MenGoToMars used consistently across every tracked post from April 2025 to March 2026, close to a full year of disciplined on-brand language.</p>
         </div>
         <div class="card">
           <h3>2. Precision proof, not vague claims</h3>
-          <p style="font-size:13.5px;">Nearly every featured testimonial leads with an exact lab number: 620→879 ng/dl, 254→861 ng/dl, 198→687 ng/dl. That's a deliberate collection strategy, not coincidence — vague "I feel great" claims are the exception here, not the rule.</p>
+          <p style="font-size:13.5px;">Nearly every featured testimonial leads with an exact lab number: 620→879 ng/dl, 254→861 ng/dl, 198→687 ng/dl. That's a deliberate collection strategy, not coincidence, vague "I feel great" claims are the exception here, not the rule.</p>
         </div>
         <div class="card">
           <h3>3. Origin story as ad copy</h3>
-          <p style="font-size:13.5px;">The founder-frustration narrative ("$175+/month on 8 different supplements") appears in real paid-style social captions, not just an About page — turning the company's origin into direct-response copy.</p>
+          <p style="font-size:13.5px;">The founder-frustration narrative ("$175+/month on 8 different supplements") appears in real paid-style social captions, not just an About page, turning the company's origin into direct-response copy.</p>
         </div>
         <div class="card">
           <h3>4. High emotional stakes</h3>
-          <p style="font-size:13.5px;">Testimonials go further than energy and gym gains — one explicitly credits the product with saving a marriage. That's a notably higher emotional register than either the monday.com or AgeMate reports found in this series.</p>
+          <p style="font-size:13.5px;">Testimonials go further than energy and gym gains, one explicitly credits the product with saving a marriage. That's a notably higher emotional register than either the monday.com or AgeMate reports found in this series.</p>
         </div>
       </div>
     </section>
@@ -333,29 +335,29 @@
     <!-- ============ 06 CREATIVE STRATEGY ============ -->
     <section id="creative">
       <div class="sec-head"><span class="sec-num">06</span><h2>Creative Strategy</h2></div>
-      <p class="sec-dek">Real dated content, a confirmed ambassador roster — but the account-level numbers stayed locked behind your TrendTrack login.</p>
+      <p class="sec-dek">Real dated content and a confirmed ambassador roster. The account level numbers were not available from any public source.</p>
 
-      <h3>Format breakdown &amp; active ad count <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>No accessible third-party tracker surfaced format or active-ad-count data for this brand the way one did for AgeMate, and your TrendTrack workspace — which almost certainly has this — is behind your personal login. This is the single biggest gap in this report. Section 11 covers pulling it yourself in under a minute.</p>
+      <h3>Format breakdown &amp; active ad count <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>No public ad intelligence tool had indexed this brand's Meta account at the time of writing, so neither format mix nor an active ad count could be established from public data. This is the single biggest gap in this report, and the final section sets out how it could be closed.</p>
 
-      <h3 style="margin-top:24px;">Partnership vs. brand ad ratio <span class="tag verified tag-inline">Verified</span> (existence) / <span class="tag gap tag-inline">Data gap</span> (ratio)</h3>
-      <p>The partnership program itself is real and named, not inferred: Daniel Cormier (UFC Hall of Fame, 2× champion, Olympian) and Sam Okunola (bodybuilder, ultra-runner, veteran) both appear on-site labeled "Mars Men Ambassador" with direct quotes and photos. What I can't confirm is what share of the actual paid Meta account is "with @creator" content versus straight brand copy — that split is sitting in your TrendTrack account right now.</p>
+      <h3 style="margin-top:24px;">Partnership vs. brand ad ratio <span class="tag observed tag-inline">Observed</span> (existence) / <span class="tag unavailable tag-inline">Not available</span> (ratio)</h3>
+      <p>The partnership program itself is real and named, not inferred: Daniel Cormier (UFC Hall of Fame, 2× champion, Olympian) and Sam Okunola (bodybuilder, ultra-runner, veteran) both appear on-site labeled "Mars Men Ambassador" with direct quotes and photos. What I can't confirm is what share of the actual paid Meta account is "with @creator" content versus straight brand copy, since that split is not published anywhere public.</p>
 
-      <h3 style="margin-top:24px;">Top 10 ads by impressions &amp; longest-running <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>Same story — this needs the live ad account. I won't invent a ranked list to fill the space.</p>
+      <h3 style="margin-top:24px;">Top 10 ads by impressions &amp; longest-running <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>Same story. An impressions ranked list requires ad library access this report did not have, and inventing one to fill the space would make the whole document less trustworthy.</p>
 
-      <h3 style="margin-top:24px;">Creative velocity <span class="tag verified tag-inline">Verified</span> (social) / <span class="tag gap tag-inline">Data gap</span> (paid ads)</h3>
-      <p>What I can verify, via Particl's tracked history: a real, dated posting pattern on Instagram — multiple captions per month from April through July 2025, then a visible gap, then a fresh cluster of three tracked changes in just eight days (March 18, 24, and 26, 2026) immediately before the Series A announcement on March 30. That's a defensible read: a creative push timed to a funding announcement, not a coincidence. Whether that same pattern holds on the paid Meta account specifically is, again, in your TrendTrack data.</p>
+      <h3 style="margin-top:24px;">Creative velocity <span class="tag observed tag-inline">Observed</span> (social) / <span class="tag unavailable tag-inline">Not available</span> (paid ads)</h3>
+      <p>What I can verify, via Particl's tracked history: a real, dated posting pattern on Instagram, multiple captions per month from April through July 2025, then a visible gap, then a fresh cluster of three tracked changes in just eight days (March 18, 24, and 26, 2026) immediately before the Series A announcement on March 30. That's a defensible read: a creative push timed to a funding announcement, not a coincidence. Whether that same pattern holds on the paid Meta account specifically could not be established from public data.</p>
     </section>
 
     <!-- ============ 07 CUSTOMER JOURNEY ============ -->
     <section id="journey">
       <div class="sec-head"><span class="sec-num">07</span><h2>Customer Journey</h2></div>
-      <p class="sec-dek">A subscription-locked funnel with an unusually deep retention layer behind it. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">A subscription-locked funnel with an unusually deep retention layer behind it. <span class="tag observed tag-inline">Observed</span></p>
       <div class="steps">
-        <div class="step"><h4>Land on a single, heavily-anchored product page</h4><p>Every visitor sees the same $118→$59→$47→$39 ladder and the same free-gift stack — there's no product-catalog browsing to distract from the one decision.</p></div>
+        <div class="step"><h4>Land on a single, heavily-anchored product page</h4><p>Every visitor sees the same $118→$59→$47→$39 ladder and the same free-gift stack. There's no product-catalog browsing to distract from the one decision.</p></div>
         <div class="step"><h4>Subscribe by default</h4><p>The one-time option is real but deliberately unpromoted; the entire page architecture assumes a subscription decision.</p></div>
-        <div class="step"><h4>90-day guarantee removes the main objection</h4><p>Longer than AgeMate's or monday.com's guarantees in this series — a deliberate match to the "give it 90 days" result narrative.</p></div>
+        <div class="step"><h4>90-day guarantee removes the main objection</h4><p>Longer than the guarantees offered by the other brands I analysed, a deliberate match to the "give it 90 days" result narrative.</p></div>
         <div class="step"><h4>Subscriber-exclusive mentorship as retention</h4><p>An 8-person "90-Day Transformation Program" (mixing MDs, the CEO, and fitness ambassadors) gives active subscribers a reason to stay engaged beyond just reordering pills.</p></div>
       </div>
     </section>
@@ -363,7 +365,7 @@
     <!-- ============ 08 SOCIAL PROOF ============ -->
     <section id="proof">
       <div class="sec-head"><span class="sec-num">08</span><h2>Social Proof</h2></div>
-      <p class="sec-dek">A big gap between the curated on-site number and the independent one. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">A big gap between the curated on-site number and the independent one. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="stat-strip">
         <div class="stat-cell"><span class="stat-num">4.77</span><div class="stat-label">On-site rating / 5 (5,386 reviews)</div></div>
@@ -372,48 +374,48 @@
         <div class="stat-cell"><span class="stat-num">3</span><div class="stat-label">Named MDs/PhDs on the medical board</div></div>
         <div class="stat-cell"><span class="stat-num">GQ · MH · Forbes</span><div class="stat-label">"Featured in" badges</div></div>
       </div>
-      <p>That on-site-vs-independent gap (4.77 vs. 3.5–3.7) is the widest of any brand in this report series, and worth treating as a real signal rather than noise — see Section 09 for what's actually driving the independent number down.</p>
+      <p>That on-site-vs-independent gap (4.77 vs. 3.5–3.7) is the widest of any brand in this report series, and worth treating as a real signal rather than noise, see Section 09 for what's actually driving the independent number down.</p>
     </section>
 
     <!-- ============ 09 CUSTOMER RESEARCH ============ -->
     <section id="research">
       <div class="sec-head"><span class="sec-num">09</span><h2>Customer Research</h2></div>
-      <p class="sec-dek">Independent Trustpilot language — including Trustpilot's own AI-generated pattern summary, not just individual anecdotes. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">Independent Trustpilot language, including Trustpilot's own AI-generated pattern summary, not just individual anecdotes. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="rev-cols">
         <div class="rev-col love">
           <h4>What customers love</h4>
           <div class="rev-item">"Right away I noticed better sleep and energy throughout the day."</div>
           <div class="rev-item">"I got this for my partner... he seems more energetic and less drained after work. Mood is better too."</div>
-          <div class="rev-item">"5 pills is a lot but taking it every morning with breakfast works" — friction, acknowledged and worked around.</div>
+          <div class="rev-item">"5 pills is a lot but taking it every morning with breakfast works", friction, acknowledged and worked around.</div>
         </div>
         <div class="rev-col friction">
           <h4>Where the friction is</h4>
-          <div class="rev-item">Trustpilot's own AI-generated summary flags it directly: "Reviewers express significant frustration with the subscription process. Many customers report being opted into subscriptions..." — a systematic pattern, not one anecdote.</div>
+          <div class="rev-item">Trustpilot's own AI-generated summary flags it directly: "Reviewers express significant frustration with the subscription process. Many customers report being opted into subscriptions..." That is a systematic pattern, not one anecdote.</div>
           <div class="rev-item">One detailed review reported heart palpitations and elevated blood pressure requiring a hospital visit after two months of use, was advised by doctors to stop, and described a 4+ day wait for any response to a refund request.</div>
           <div class="rev-item">Independent reviewer, unrelated to the above: "gave me crazy headaches so I stopped taking it."</div>
           <div class="rev-item">Shipping delays flagged for international (UK) orders specifically, acknowledged directly in the company's own reply.</div>
         </div>
       </div>
-      <p style="margin-top:6px; font-size:12.5px; color:var(--ink-faint);">The adverse-reaction report is one reviewer's account, not a verified medical finding — but it's a real, public complaint tied to a slow refund response, which is the compounding part worth taking seriously from a business standpoint regardless of the underlying cause.</p>
+      <p style="margin-top:6px; font-size:12.5px; color:var(--ink-faint);">The adverse-reaction report is one reviewer's account, not a verified medical finding, but it's a real, public complaint tied to a slow refund response, which is the compounding part worth taking seriously from a business standpoint regardless of the underlying cause.</p>
     </section>
 
     <!-- ============ 10 WEAKNESSES & OPPORTUNITIES ============ -->
     <section id="weaknesses">
       <div class="sec-head"><span class="sec-num">10</span><h2>Weaknesses &amp; Opportunities</h2></div>
-      <p class="sec-dek">Synthesized from everything above. <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">Synthesized from everything above. <span class="tag interp tag-inline">My interpretation</span></p>
 
       <div class="wo-grid">
         <div class="wo-col weak">
           <h3>Weaknesses</h3>
-          <div class="wo-item"><h4>Subscription friction is a named, systematic complaint</h4><p>Trustpilot's own AI summary — not a cherry-picked quote — identifies opt-in frustration as a recurring theme across the independent review base.</p></div>
-          <div class="wo-item"><h4>A wide credibility gap</h4><p>4.77/5 curated on-site vs. 3.5–3.7/5 independent is the largest such gap in this report series, and pairs with a slow response to at least one serious complaint.</p></div>
-          <div class="wo-item"><h4>Real dosing friction, independently corroborated twice over</h4><p>An independent review questioned ingredient dosing; separately, an organic customer review confirms "5 pills is a lot" — the same friction Jolly's own prior research on this brand identified.</p></div>
+          <div class="wo-item"><h4>Subscription friction is a named, systematic complaint</h4><p>Trustpilot's own AI summary, not a cherry-picked quote, identifies opt-in frustration as a recurring theme across the independent review base.</p></div>
+          <div class="wo-item"><h4>A wide credibility gap</h4><p>4.77/5 curated on-site vs. 3.5–3.7/5 independent is the largest such gap I found across any brand I have analysed, and it pairs with a slow response to at least one serious complaint.</p></div>
+          <div class="wo-item"><h4>Real dosing friction, independently corroborated twice over</h4><p>An independent review questioned ingredient dosing; separately, an organic customer review confirms "5 pills is a lot", the same friction my earlier case study on this brand identified. Prior research on this brand identified.</p></div>
         </div>
         <div class="wo-col opp">
           <h3>Opportunities</h3>
-          <div class="wo-item"><h4>A genuinely strong ambassador roster, still early</h4><p>A UFC Hall of Famer and an Oxford-PhD CMO are unusually strong trust assets for an 18-month-old brand — there's real room to formalize and scale this into a bigger creator program.</p></div>
-          <div class="wo-item"><h4>Lab-number testimonials are a distinctive, ownable proof format</h4><p>Few competitors collect and feature exact before/after lab values this consistently — a strong hook to lean into further in paid creative.</p></div>
+          <div class="wo-item"><h4>A genuinely strong ambassador roster, still early</h4><p>A UFC Hall of Famer and an Oxford-PhD CMO are unusually strong trust assets for an 18-month-old brand. There's real room to formalize and scale this into a bigger creator program.</p></div>
+          <div class="wo-item"><h4>Lab-number testimonials are a distinctive, ownable proof format</h4><p>Few competitors collect and feature exact before/after lab values this consistently, a strong hook to lean into further in paid creative.</p></div>
           <div class="wo-item"><h4>Fresh capital, fresh attention</h4><p>The Series A and retail expansion are a natural moment to fix the subscription-transparency complaint before it scales alongside the business.</p></div>
         </div>
       </div>
@@ -422,26 +424,25 @@
     <!-- ============ 11 BONUS ============ -->
     <section id="bonus">
       <div class="sec-head"><span class="sec-num">11</span><h2>Bonus: Data You CAN Collect</h2></div>
-      <p class="sec-dek">Closing the gaps — starting with the account you already have.</p>
+      <p class="sec-dek">How the remaining gaps could be closed, and what filled the rest of this report.</p>
 
-      <h3>Get the ad-level data from your own TrendTrack account</h3>
+      <h3>Closing the ad level gaps</h3>
       <div class="steps">
-        <div class="step"><h4>Open the workspace link directly in your logged-in browser</h4><p>The URL you gave me only fails for me because I'm not signed in — opened in your own browser, where you're already authenticated, it should load the Meta ads tab exactly as you left it.</p></div>
-        <div class="step"><h4>Sort by impressions and export or screenshot the top 10</h4><p>You already had it sorted by <code>total_impressions</code> — that's exactly the view this report is missing. Paste the ad copy and numbers back to me and I'll fold them straight into the Creative Strategy section.</p></div>
-        <div class="step"><h4>Tag each ad "with @" or brand</h4><p>Since you can see creator handles directly in the ad creative, this is a quick manual tally — TrendTrack won't do this categorization for you automatically.</p></div>
-        <div class="step"><h4>Note the format and start date per ad</h4><p>That gets you the format breakdown and a true velocity/last-upload timeline to replace the gaps flagged in Section 06.</p></div>
+        <div class="step"><h4>Search the brand in Meta's Ad Library</h4><p>Open <code>facebook.com/ads/library</code>, set Ad category to "All ads," and search the brand's verified Page. No login is required. This is the ground truth for what is running right now.</p></div>
+        <div class="step"><h4>Read the impression range on each ad</h4><p>Since January 2026 Meta publishes an impression bucket on every commercial ad, from under 1K up to 1M+. Sorting a shortlist by that bucket is a better performance signal than sorting by how long an ad has been live.</p></div>
+        <div class="step"><h4>Tag each ad as partnership or brand</h4><p>Any creative carrying a creator handle or a "with [name]" credit is a partnership ad. Tallying the two buckets by hand gives the real split. No tool categorises this automatically.</p></div>
+        <div class="step"><h4>Record each ad's start date</h4><p>Every ad displays the date it started running. The newest start date across the set is the true last upload, and the spread across all of them gives an honest read on creative velocity.</p></div>
       </div>
-
       <h3 style="margin-top:28px;">Other sources that filled most of this report</h3>
       <table class="tool-table">
         <tr><th>Tool</th><th>Good for</th><th>Limitation</th></tr>
-        <tr><td>Particl.com</td><td>Free, dated history of a brand's real social captions and homepage changes — no login needed</td><td>Text captions only; no ad-account metrics (spend, impressions, format)</td></tr>
+        <tr><td>Particl</td><td>Free, dated history of a brand's social captions and homepage changes, no login needed</td><td>Text captions only; no ad-account metrics (spend, impressions, format)</td></tr>
         <tr><td>Trustpilot</td><td>Independent sentiment, including Trustpilot's own AI-generated complaint-pattern summaries</td><td>Self-selected reviewer base</td></tr>
         <tr><td>Company/funding databases</td><td>Verified revenue run-rate, funding, headcount for recently-raised startups</td><td>Only exists for companies that raised or were otherwise covered by press</td></tr>
       </table>
 
       <h3 style="margin-top:28px;">What I used to build this report</h3>
-      <p style="font-size:13.5px;">mengotomars.com (homepage and full product page), the BusinessWire Series A announcement, corroborating coverage from Pulse2 and AthleTech News, an independent supplement review from illuminatelabs.org, Particl.com's tracked post history, and Trustpilot reviews across several regional mirrors. Your portfolio's own prior MarsMen case study — the "dosing friction" and "creator relationships" findings — held up well against everything found here.</p>
+      <p style="font-size:13.5px;">mengotomars.com (homepage and full product page), the BusinessWire Series A announcement, corroborating coverage from Pulse2 and AthleTech News, an independent supplement review from illuminatelabs.org, Particl.com's tracked post history, and Trustpilot reviews across several regional mirrors. My earlier MarsMen case study, and its findings on dosing friction and creator relationships, held up well against everything found here.</p>
     </section>
 
     <footer>

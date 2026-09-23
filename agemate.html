@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgeMate — Creative &amp; Competitive Analysis</title>
+<title>AgeMate · Creative &amp; Competitive Analysis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -47,10 +47,10 @@
   p{ margin:0 0 14px; font-size:14.5px; }
   h3{ font-size:16px; font-weight:700; margin:0 0 8px; }
   .tag{ display:inline-flex; align-items:center; gap:5px; font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.03em; text-transform:uppercase; padding:3px 8px; border-radius:20px; white-space:nowrap; }
-  .tag.verified{ background:var(--signal-bg); color:var(--signal); }
-  .tag.proxy{ background:var(--gold-bg); color:var(--gold); }
-  .tag.analyst{ background:var(--analyst-bg); color:var(--analyst); }
-  .tag.gap{ background:var(--gap-bg); color:var(--gap); }
+  .tag.observed{ background:var(--signal-bg); color:var(--signal); }
+  .tag.estimated{ background:var(--gold-bg); color:var(--gold); }
+  .tag.interp{ background:var(--analyst-bg); color:var(--analyst); }
+  .tag.unavailable{ background:var(--gap-bg); color:var(--gap); }
   .tag-inline{ margin-left:8px; vertical-align:2px; }
   .method-box{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px; margin-bottom:30px; }
   .method-box h3{ margin-bottom:12px; }
@@ -124,6 +124,7 @@
 
 <div class="layout">
   <aside id="sidebar">
+    <a href="index.html" style="display:inline-block; font-size:12.5px; font-weight:600; color:var(--ink-faint); text-decoration:none; margin-bottom:14px;">&larr; Back to portfolio</a>
     <div class="side-brand">AgeMate</div>
     <div class="side-sub">Creative &amp; Competitive Analysis<br>Prepared by Jolly Daniel Tenorio</div>
     <nav id="toc">
@@ -141,17 +142,17 @@
     </nav>
     <div class="side-legend">
       <div class="side-legend-title">Evidence key</div>
-      <div style="margin-bottom:6px;"><span class="tag verified">Verified</span></div>
-      <div style="margin-bottom:6px;"><span class="tag proxy">Proxy</span></div>
-      <div style="margin-bottom:6px;"><span class="tag analyst">Analyst read</span></div>
-      <div><span class="tag gap">Data gap</span></div>
+      <div style="margin-bottom:6px;"><span class="tag observed">Observed</span></div>
+      <div style="margin-bottom:6px;"><span class="tag estimated">Estimated</span></div>
+      <div style="margin-bottom:6px;"><span class="tag interp">My interpretation</span></div>
+      <div><span class="tag unavailable">Not available</span></div>
     </div>
   </aside>
 
   <main>
     <div class="hero">
-      <h1>AgeMate — Creative <span>&amp;</span> Competitive Analysis</h1>
-      <p>A research-driven teardown of a Melbourne-based longevity-supplement DTC brand — its offer, positioning, and live ad activity, graded by how solid the evidence actually is.</p>
+      <h1>AgeMate <span>·</span> Creative &amp; Competitive Analysis</h1>
+      <p>A research driven teardown of a Melbourne based longevity supplement brand: its offer, positioning, and live ad activity, graded by how solid the evidence actually is.</p>
       <div class="hero-meta">
         <span>PREPARED SEP 05, 2026</span>
         <span>SUBJECT: AGEMATE AUSTRALIA PTY LTD</span>
@@ -161,12 +162,13 @@
 
     <div class="method-box">
       <h3>How to read this report</h3>
-      <p>Every claim below is tagged by how solid the evidence is. This brand turned out to be a much better case for this kind of research than most — a third-party Shopify/ad-intelligence tool (BrandSearch) had a live public profile with real active-ad counts, disclosed EU/UK ad spend, and even the brand's current top-performing ad copy. What it couldn't give me — the full partnership-vs-brand ratio across every active ad, and an exact impressions-ranked top 10 — is marked <strong>Data gap</strong>, with the manual method in Section 11.</p>
+      <p>Every claim below carries a label showing how solid the evidence behind it is. This is competitive intelligence built entirely from publicly available and third party sources. I have never had access to AgeMate's ad account, analytics, or internal numbers, and nothing here should be read as if I did.</p>
+      <p>This brand left a wider public trail than most. A third party ad intelligence tool publishes active ad counts, the UK and EU ad spend that Meta discloses by regulation, and the brand's current top performing ad copy. What no public source could give me was the full partnership to brand ratio across every active ad, or an exact impressions ranked top ten. Those are marked Not available, with the manual method in the final section.</p>
       <div class="method-grid">
-        <div class="method-cell"><span class="tag verified">Verified</span>From AgeMate's own site, or a named, checkable third-party source (Trustpilot, BrandSearch, FDA filings).</div>
-        <div class="method-cell"><span class="tag proxy">Proxy</span>Real data, but an estimate or a single-snapshot read — directional, not exact.</div>
-        <div class="method-cell"><span class="tag analyst">Analyst read</span>My own strategic interpretation, clearly separated from sourced fact.</div>
-        <div class="method-cell"><span class="tag gap">Data gap</span>Couldn't be accessed with the tools available here. Manual method provided.</div>
+        <div class="method-cell"><span class="tag observed">Observed</span>Published or publicly visible. From AgeMate's own site, or a named public source such as Trustpilot, BrandSearch, or FDA filings. You can check any of it yourself.</div>
+        <div class="method-cell"><span class="tag estimated">Estimated</span>A third-party tool's estimate, or a single snapshot in time. Directional, not exact, and flagged wherever tools disagreed.</div>
+        <div class="method-cell"><span class="tag interp">My interpretation</span>My own strategic read. Kept deliberately separate from anything sourced above.</div>
+        <div class="method-cell"><span class="tag unavailable">Not available</span>Not obtainable from public sources. Where this appears, the manual method to get it is in the final section.</div>
       </div>
     </div>
 
@@ -174,24 +176,24 @@
       <h3>Quick facts</h3>
       <p style="font-size:13px; color:var(--ink-faint); margin-bottom:0;">The specific business questions, answered directly.</p>
       <div class="qf-grid">
-        <div class="qf-item"><div class="qf-q">WHAT DOES THE COMPANY SELL? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">An "all-in-one" daily longevity supplement powder, plus single-ingredient NMN, TMG, resveratrol, and berberine powders/capsules — 15 SKUs total.</div></div>
-        <div class="qf-item"><div class="qf-q">HERO PRODUCT? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">Daily Longevity Blend — NMN plus 17 other actives, one scoop mixed with water daily.</div></div>
-        <div class="qf-item"><div class="qf-q">PRICE? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">Hero product: $79/month subscription (list $99). Full range across all SKUs: $29–$349.</div></div>
-        <div class="qf-item"><div class="qf-q">AOV? <span class="tag proxy tag-inline">Proxy</span></div><div class="qf-a">~A$81, per third-party estimate — closely tracks the $79 hero subscription price, which checks out.</div></div>
-        <div class="qf-item"><div class="qf-q">MARGIN? <span class="tag gap tag-inline">Data gap</span></div><div class="qf-a">Not disclosed anywhere. Premium DTC supplement brands typically run 60–80% gross margin industry-wide — a category benchmark, not an AgeMate-specific figure.</div></div>
-        <div class="qf-item"><div class="qf-q">MAIN OFFER? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">The "Welcome Kit": first month at $79 (vs. $158 nominal value) plus two free gifts, 30-day money-back guarantee, cancel anytime. Stable for 2+ years per catalog history.</div></div>
-        <div class="qf-item"><div class="qf-q">BUSINESS GOAL? <span class="tag analyst tag-inline">Analyst read</span></div><div class="qf-a">Scale recurring subscription revenue through heavy content/paid-social acquisition and review-driven trust, across five shipping markets.</div></div>
-        <div class="qf-item"><div class="qf-q">CURRENT MONTHLY REVENUE? <span class="tag proxy tag-inline">Proxy</span></div><div class="qf-a">Third-party estimates genuinely disagree — roughly A$450K on the low end, up to A$1.8M on a different snapshot. Treat as "high six to low seven figures," not a precise number.</div></div>
-        <div class="qf-item"><div class="qf-q">CURRENT AD SPEND? <span class="tag verified tag-inline">Verified</span> (partial)</div><div class="qf-a">Only EU/UK spend is publicly disclosed by regulation: €19.7K, 100% in the UK. Global spend (incl. Australia and the US, their biggest markets) isn't publicly available.</div></div>
-        <div class="qf-item"><div class="qf-q">MARKETS? <span class="tag verified tag-inline">Verified</span></div><div class="qf-a">Ships to Australia, New Zealand, Singapore, UK, and US. Traffic also skews heavily from the Philippines and Nigeria — neither an official ship-to market.</div></div>
-        <div class="qf-item"><div class="qf-q">BEST CUSTOMERS? <span class="tag analyst tag-inline">Analyst read</span></div><div class="qf-a">Not disclosed directly. Testimonials and homepage framing ("Aussies ageing better") point to health-conscious Australian adults in their 50s–70s.</div></div>
+        <div class="qf-item"><div class="qf-q">WHAT DOES THE COMPANY SELL? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">An "all-in-one" daily longevity supplement powder, plus single-ingredient NMN, TMG, resveratrol, and berberine powders and capsules. 15 SKUs in total.</div></div>
+        <div class="qf-item"><div class="qf-q">HERO PRODUCT? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">Daily Longevity Blend. NMN plus 17 other actives, one scoop mixed with water daily.</div></div>
+        <div class="qf-item"><div class="qf-q">PRICE? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">Hero product: $79/month subscription (list $99). Full range across all SKUs: $29–$349.</div></div>
+        <div class="qf-item"><div class="qf-q">AOV? <span class="tag estimated tag-inline">Estimated</span></div><div class="qf-a">~A$81, per third-party estimate. That tracks the $79 hero subscription price closely, which checks out.</div></div>
+        <div class="qf-item"><div class="qf-q">MARGIN? <span class="tag unavailable tag-inline">Not available</span></div><div class="qf-a">Not disclosed anywhere. Premium DTC supplement brands typically run 60–80% gross margin industry wide. That is a category benchmark, not an AgeMate specific figure.</div></div>
+        <div class="qf-item"><div class="qf-q">MAIN OFFER? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">The "Welcome Kit": first month at $79 (vs. $158 nominal value) plus two free gifts, 30-day money-back guarantee, cancel anytime. Stable for 2+ years per catalog history.</div></div>
+        <div class="qf-item"><div class="qf-q">BUSINESS GOAL? <span class="tag interp tag-inline">My interpretation</span></div><div class="qf-a">Scale recurring subscription revenue through heavy content/paid-social acquisition and review-driven trust, across five shipping markets.</div></div>
+        <div class="qf-item"><div class="qf-q">CURRENT MONTHLY REVENUE? <span class="tag estimated tag-inline">Estimated</span></div><div class="qf-a">Third-party estimates genuinely disagree: roughly A$450K on the low end, up to A$1.8M on a different snapshot. Treat as "high six to low seven figures," not a precise number.</div></div>
+        <div class="qf-item"><div class="qf-q">CURRENT AD SPEND? <span class="tag observed tag-inline">Observed</span> (partial)</div><div class="qf-a">Only EU/UK spend is publicly disclosed by regulation: €19.7K, 100% in the UK. Global spend (incl. Australia and the US, their biggest markets) isn't publicly available.</div></div>
+        <div class="qf-item"><div class="qf-q">MARKETS? <span class="tag observed tag-inline">Observed</span></div><div class="qf-a">Ships to Australia, New Zealand, Singapore, UK, and US. Traffic also skews heavily from the Philippines and Nigeria, neither of which is an official ship-to market.</div></div>
+        <div class="qf-item"><div class="qf-q">BEST CUSTOMERS? <span class="tag interp tag-inline">My interpretation</span></div><div class="qf-a">Not disclosed directly. Testimonials and homepage framing ("Aussies ageing better") point to health-conscious Australian adults in their 50s–70s.</div></div>
       </div>
     </div>
 
     <!-- ============ 01 OVERVIEW ============ -->
     <section id="overview">
       <div class="sec-head"><span class="sec-num">01</span><h2>Company Overview</h2></div>
-      <p class="sec-dek">A 7-year-old Melbourne DTC brand that's quietly become one of the bigger names in longevity supplements. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">A 7-year-old Melbourne DTC brand that's quietly become one of the bigger names in longevity supplements. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="stat-strip">
         <div class="stat-cell"><span class="stat-num">~2019</span><div class="stat-label">Founded, Melbourne VIC</div></div>
@@ -201,24 +203,24 @@
         <div class="stat-cell"><span class="stat-num">5</span><div class="stat-label">Countries shipped to</div></div>
       </div>
 
-      <p>AgeMate Australia Pty Ltd operates out of Richmond, Melbourne (ABN 42687696500), manufacturing in Sydney under TGA (Therapeutic Goods Administration) compliance — a real regulatory credential that most US-based NMN competitors, operating under a murkier FDA status, can't claim. A separate "AgeMate Pte. Ltd." entity appears in the site's footer, suggesting a Singapore arm alongside the Australian one, consistent with their Singapore shipping option.</p>
-      <p>No named founder turned up in available research — this is a smaller private company, and I'd rather flag that gap than guess. What's verifiable: the brand has sold over 1 million units, built a 100,000+ subscriber newsletter, and is currently running one of the more active Meta ad accounts I've seen in this category — 2,179 ads live right now.</p>
+      <p>AgeMate Australia Pty Ltd operates out of Richmond, Melbourne (ABN 42687696500), manufacturing in Sydney under TGA (Therapeutic Goods Administration) compliance, a real regulatory credential that most US-based NMN competitors, operating under a murkier FDA status, can't claim. A separate "AgeMate Pte. Ltd." entity appears in the site's footer, suggesting a Singapore arm alongside the Australian one, consistent with their Singapore shipping option.</p>
+      <p>No named founder turned up in available research. This is a smaller private company, and I'd rather flag that gap than guess. What's verifiable: the brand has sold over 1 million units, built a 100,000+ subscriber newsletter, and is currently running one of the more active Meta ad accounts I've seen in this category, 2,179 ads live right now.</p>
       <p style="color:var(--ink-faint); font-size:12.5px;">Sources: agemate.com, brandsearch.co brand profile, Trustpilot.</p>
     </section>
 
     <!-- ============ 02 AUDIENCE ============ -->
     <section id="audience">
       <div class="sec-head"><span class="sec-num">02</span><h2>Target Audience</h2></div>
-      <p class="sec-dek">Grounded in real testimonial data and traffic geography, not ad-targeting data (which isn't public). <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">Grounded in real testimonial data and traffic geography, not ad-targeting data (which isn't public). <span class="tag interp tag-inline">My interpretation</span></p>
 
       <div class="grid-3">
         <div class="persona">
           <div class="ptag">Persona 01</div>
           <h3>The Proactive Ager</h3>
-          <p>Australian, 50s–70s, already health-literate, not sick — just trying to stay sharp and energetic.</p>
+          <p>Australian, 50s–70s, already health-literate, not sick, just trying to stay sharp and energetic.</p>
           <ul>
             <li>Mirrored directly in named testimonials: Suzana (57), Liz (73)</li>
-            <li>Responds to "one simple daily routine" — wants results without becoming a supplement hobbyist</li>
+            <li>Responds to "one simple daily routine", wants results without becoming a supplement hobbyist</li>
             <li>Converts on the risk-reversed Welcome Kit offer</li>
           </ul>
         </div>
@@ -228,14 +230,14 @@
           <p>Has already read about NMN and NAD+ decline independently before landing on the site.</p>
           <ul>
             <li>Addressed directly by "700+ studies," ingredient-mechanism explainers, and TGA-compliance messaging</li>
-            <li>Wants "no pseudo-science" — the site's own words for its own claimed differentiator</li>
+            <li>Wants "no pseudo-science", the site's own words for its own claimed differentiator</li>
             <li>Likely to price-compare against single-ingredient NMN brands before buying the blend</li>
           </ul>
         </div>
         <div class="persona">
           <div class="ptag">Persona 03</div>
           <h3>The Unexpected Browser</h3>
-          <p>Traffic from the Philippines (11.2%) and Nigeria (5.6%) is real and sizeable — but neither is an official ship-to market.</p>
+          <p>Traffic from the Philippines (11.2%) and Nigeria (5.6%) is real and sizeable, but neither is an official ship-to market.</p>
           <ul>
             <li>Likely curiosity, content, or affiliate-driven traffic rather than a served customer base</li>
             <li>Either a genuine expansion signal or simply spend/attention that can't convert today</li>
@@ -247,7 +249,7 @@
     <!-- ============ 03 OFFER ============ -->
     <section id="offer">
       <div class="sec-head"><span class="sec-num">03</span><h2>Offer</h2></div>
-      <p class="sec-dek">One hero subscription offer, stable for years, with a long tail of à la carte ingredient SKUs behind it. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">One hero subscription offer, stable for years, with a long tail of à la carte ingredient SKUs behind it. <span class="tag observed tag-inline">Observed</span></p>
 
       <svg viewBox="0 0 700 250" style="width:100%; max-width:700px; font-family:'JetBrains Mono',monospace;">
         <text x="0" y="14" font-size="11" font-weight="600" fill="#16181C">Welcome Kit (hero subscription)</text>
@@ -265,7 +267,7 @@
         <text x="0" y="198" font-size="11" font-weight="600" fill="#16181C">3-Pack Resveratrol Powder</text>
         <rect x="0" y="206" width="683" height="16" rx="3" fill="#2A5EA8" opacity="0.85"/>
         <text x="0" y="218" font-size="11" fill="#fff" font-weight="600" dx="6">$309</text>
-        <text x="0" y="244" font-size="11" font-weight="600" fill="#16181C">3-Pack NMN Powder (bulk) — highest SKU</text>
+        <text x="0" y="244" font-size="11" font-weight="600" fill="#16181C">3-Pack NMN Powder (bulk), highest SKU</text>
         <rect x="0" y="248" width="700" height="0" rx="3" fill="none"/>
       </svg>
       <p class="timeline-caption">Selected SKUs across the range; full catalog runs $29–$349. Bars scaled to the $349 top SKU (3-Pack NMN Powder, bulk).</p>
@@ -273,11 +275,11 @@
       <div class="grid-2" style="margin-top:20px;">
         <div class="card">
           <h3>The Welcome Kit mechanic</h3>
-          <p style="font-size:13.5px;">First month at $79 against a $158 nominal bundle value (Blend + free storage container + free drink bottle), framed as "save 50%," with a 30-day money-back guarantee and cancel-anytime subscription. This exact structure — free bonus items bundled into a subscription anchor — has recurred in the product catalog for at least two years, so it's the proven core offer, not a current test.</p>
+          <p style="font-size:13.5px;">First month at $79 against a $158 nominal bundle value (Blend + free storage container + free drink bottle), framed as "save 50%," with a 30-day money-back guarantee and cancel-anytime subscription. This exact structure (free bonus items bundled into a subscription anchor) has recurred in the product catalog for at least two years, so it's the proven core offer, not a current test.</p>
         </div>
         <div class="card">
           <h3>Revenue reality check</h3>
-          <p style="font-size:13.5px;">Two different third-party snapshots of the same store gave me two different monthly revenue ranges (roughly $450K–$824K in one pull, $1.0M–$1.8M in another, taken months apart). That spread is real and worth sitting with — these estimation tools move a lot between snapshots, so anchor on "large, real, DTC-scale business," not on any single number.</p>
+          <p style="font-size:13.5px;">Two different third-party snapshots of the same store gave me two different monthly revenue ranges (roughly $450K–$824K in one pull, $1.0M–$1.8M in another, taken months apart). That spread is real and worth sitting with, these estimation tools move a lot between snapshots, so anchor on "large, real, DTC-scale business," not on any single number.</p>
         </div>
       </div>
     </section>
@@ -285,26 +287,26 @@
     <!-- ============ 04 POSITIONING ============ -->
     <section id="positioning">
       <div class="sec-head"><span class="sec-num">04</span><h2>Positioning</h2></div>
-      <p class="sec-dek">"All-in-one and TGA-regulated" against a category of single-ingredient, murkier-status competitors. <span class="tag analyst tag-inline">Analyst read</span>, built on verified claims.</p>
+      <p class="sec-dek">"All-in-one and TGA-regulated" against a category of single-ingredient, murkier-status competitors. <span class="tag interp tag-inline">My interpretation</span>, built on verified claims.</p>
 
-      <p>AgeMate's own copy names its wedge directly: "supplements for ageing have been expensive, hard to source, confusing to dose, and shrouded in pseudo-science — until now." That's a positioning statement aimed squarely at the single-ingredient NMN/resveratrol/berberine capsule market it also happens to sell into à la carte — the blend is positioned as the simplified, credible alternative to a routine you'd otherwise build yourself from five different bottles. <span class="tag verified tag-inline">Verified</span></p>
-      <p>An algorithmic brand-intelligence tool (BrandSearch) independently placed AgeMate in the same competitive set as AM Nutrition, Näak, Schiff Vitamins, and Betterbrand — a mix of sports nutrition and mainstream vitamin brands rather than longevity-specialist peers, which suggests AgeMate is being discovered and compared more broadly than "longevity supplement" as a narrow category. <span class="tag proxy tag-inline">Proxy</span></p>
-      <p>The manufacturing and regulatory story — "Now made in Australia," TGA-listed — is a real, ownable point of difference in a category where the core ingredient's legal status in the US has been genuinely unstable (see Section 10). "Regulated, Australian-made" is a trust claim a lot of competitors literally cannot make right now.</p>
+      <p>AgeMate's own copy names its wedge directly: "supplements for ageing have been expensive, hard to source, confusing to dose, and shrouded in pseudo-science, until now." That's a positioning statement aimed squarely at the single-ingredient NMN/resveratrol/berberine capsule market it also happens to sell into à la carte, the blend is positioned as the simplified, credible alternative to a routine you'd otherwise build yourself from five different bottles. <span class="tag observed tag-inline">Observed</span></p>
+      <p>An algorithmic brand-intelligence tool (BrandSearch) independently placed AgeMate in the same competitive set as AM Nutrition, Näak, Schiff Vitamins, and Betterbrand. That is a mix of sports nutrition and mainstream vitamin brands rather than longevity-specialist peers, which suggests AgeMate is being discovered and compared more broadly than "longevity supplement" as a narrow category. <span class="tag estimated tag-inline">Estimated</span></p>
+      <p>The manufacturing and regulatory story ("Now made in Australia," TGA listed) is a real, ownable point of difference in a category where the core ingredient's legal status in the US has been genuinely unstable (see Section 10). "Regulated, Australian-made" is a trust claim a lot of competitors literally cannot make right now.</p>
     </section>
 
     <!-- ============ 05 MESSAGING ============ -->
     <section id="messaging">
       <div class="sec-head"><span class="sec-num">05</span><h2>Messaging</h2></div>
-      <p class="sec-dek">The exact copy from AgeMate's current top ad — simultaneously their most-seen, most recently launched, and highest-spend UK creative. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">The exact copy from AgeMate's current top ad, simultaneously their most-seen, most recently launched, and highest-spend UK creative. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="ad-sample">
         <div class="ad-copy">
           <span class="badge">LIVE NOW</span><span class="badge" style="background:var(--gold);">TOP IMPRESSIONS</span><span class="badge" style="background:var(--analyst);">TOP UK SPEND</span>
           <p style="margin-top:10px; margin-bottom:6px; font-weight:700;">"Agemate Daily Longevity Blend 🇦🇺"</p>
-          <p style="margin-bottom:0;">Made in Australia 🇦🇺 — A science-backed way to support the foundations of healthy ageing<br>✔️ NMN + More<br>✔️ No Nasties<br>✔️ 15,000+ reviews<br><em>Designed to fit seamlessly into your everyday routine</em></p>
+          <p style="margin-bottom:0;">Made in Australia 🇦🇺, A science-backed way to support the foundations of healthy ageing<br>✔️ NMN + More<br>✔️ No Nasties<br>✔️ 15,000+ reviews<br><em>Designed to fit seamlessly into your everyday routine</em></p>
         </div>
       </div>
-      <p class="timeline-caption">One creative concept is simultaneously the top-impression, top-UK-spend, and most-recently-launched ad in their account — a strong signal they've found a winner and are pushing most of their budget through variants of it rather than testing many distinct concepts in parallel.</p>
+      <p class="timeline-caption">One creative concept is simultaneously the top-impression, top-UK-spend, and most-recently-launched ad in their account, a strong signal they've found a winner and are pushing most of their budget through variants of it rather than testing many distinct concepts in parallel.</p>
 
       <div class="grid-2" style="margin-top:20px;">
         <div class="card">
@@ -313,15 +315,15 @@
         </div>
         <div class="card">
           <h3>2. Clean-label shorthand</h3>
-          <p style="font-size:13.5px;">"No Nasties" — deliberately casual, Australian-inflected shorthand for "no fillers/additives," repeated across ad and site copy.</p>
+          <p style="font-size:13.5px;">"No Nasties", deliberately casual, Australian-inflected shorthand for "no fillers/additives," repeated across ad and site copy.</p>
         </div>
         <div class="card">
           <h3>3. Review count as the headline proof</h3>
-          <p style="font-size:13.5px;">"15,000+ reviews" sits inside the ad itself, not just on the landing page — the review count is treated as a top-of-funnel hook, not just a conversion-stage trust badge.</p>
+          <p style="font-size:13.5px;">"15,000+ reviews" sits inside the ad itself, not just on the landing page, the review count is treated as a top-of-funnel hook, not just a conversion-stage trust badge.</p>
         </div>
         <div class="card">
           <h3>4. Routine, not regimen</h3>
-          <p style="font-size:13.5px;">"Seamlessly into your everyday routine," "one simple daily routine," "one level scoop" — consistently framing the product as low-effort against a category that often reads as complicated.</p>
+          <p style="font-size:13.5px;">"Seamlessly into your everyday routine," "one simple daily routine," "one level scoop", consistently framing the product as low-effort against a category that often reads as complicated.</p>
         </div>
       </div>
     </section>
@@ -329,7 +331,7 @@
     <!-- ============ 06 CREATIVE STRATEGY ============ -->
     <section id="creative">
       <div class="sec-head"><span class="sec-num">06</span><h2>Creative Strategy</h2></div>
-      <p class="sec-dek">This is where the original ad-library asks live. Most of it is real, current data — a couple of pieces are genuine gaps.</p>
+      <p class="sec-dek">The ad level analysis. Most of this is solid, current public data, with a couple of genuine gaps.</p>
 
       <div class="stat-strip">
         <div class="stat-cell"><span class="stat-num">2,179</span><div class="stat-label">Active Meta ads (of 2,800 ever tracked)</div></div>
@@ -338,32 +340,32 @@
         <div class="stat-cell"><span class="stat-num">1.7M</span><div class="stat-label">Reach from that UK spend</div></div>
         <div class="stat-cell"><span class="stat-num">87.1K</span><div class="stat-label">Instagram followers</div></div>
       </div>
-      <p class="timeline-caption">Source: brandsearch.co, which indexes Meta's own regulatory ad-transparency data — this is a live figure, not a one-off snapshot. UK spend is disclosed because Meta requires it for UK/EU-targeted ads; global spend (including their larger AU/US markets) isn't publicly available anywhere.</p>
+      <p class="timeline-caption">Source: brandsearch.co, which indexes Meta's own regulatory ad-transparency data. This is a live figure, not a one-off snapshot. UK spend is disclosed because Meta requires it for UK/EU-targeted ads; global spend (including their larger AU/US markets) isn't publicly available anywhere.</p>
 
-      <h3 style="margin-top:26px;">Format breakdown <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>I have the one sample creative above and confirmation that it repeats across a large share of the 2,179 active ads — but not a full format tally (static vs. video vs. carousel) across the whole account. The tool that got me this far (BrandSearch/Spectre) has a full ad-by-ad browser behind a free account signup; Section 11 has the direct path.</p>
+      <h3 style="margin-top:26px;">Format breakdown <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>I have the one sample creative above and confirmation that it repeats across a large share of the 2,179 active ads, but not a full format tally (static vs. video vs. carousel) across the whole account. The tool that got me this far (BrandSearch/Spectre) has a full ad-by-ad browser behind a free account signup; Section 11 has the direct path.</p>
 
-      <h3 style="margin-top:26px;">Partnership vs. brand ad ratio <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>The one verified creative I have is straight brand copy — no "with @creator" tag. That's one data point, not a ratio. Genuinely can't extrapolate a split across 2,179 ads from a single sample without guessing, so this stays a gap rather than an invented percentage. Manual method in Section 11.</p>
+      <h3 style="margin-top:26px;">Partnership vs. brand ad ratio <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>The one verified creative I have is straight brand copy, no "with @creator" tag. That's one data point, not a ratio. Genuinely can't extrapolate a split across 2,179 ads from a single sample without guessing, so this stays a gap rather than an invented percentage. Manual method in Section 11.</p>
 
-      <h3 style="margin-top:26px;">Top 10 ads by impressions <span class="tag proxy tag-inline">Proxy</span> (partial)</h3>
-      <p>I can confirm #1 with real copy (above) — it's simultaneously the top-impression, top-UK-spend, and most recent ad. I don't have a ranked #2 through #10 with individual figures, and I won't invent nine more ads with fabricated copy and numbers to fill the list out. What I can tell you with real confidence: this account looks concentrated around one winning angle rather than spread across ten genuinely distinct top performers.</p>
+      <h3 style="margin-top:26px;">Top 10 ads by impressions <span class="tag estimated tag-inline">Estimated</span> (partial)</h3>
+      <p>I can confirm #1 with real copy (above). It's simultaneously the top-impression, top-UK-spend, and most recent ad. I do not have a ranked second through tenth with individual figures, and filling that list with invented copy and numbers would undermine everything else here. What I can tell you with real confidence: this account looks concentrated around one winning angle rather than spread across ten genuinely distinct top performers.</p>
 
-      <h3 style="margin-top:26px;">Longest-running ads &amp; trend summary <span class="tag gap tag-inline">Data gap</span></h3>
-      <p>Run-duration-per-ad wasn't in what I could pull. What I can say: of the 2,800 ads ever tracked in this account, 2,179 (78%) are still active — a high live-to-total ratio, consistent with an advertiser that lets variants run rather than cycling them out fast.</p>
+      <h3 style="margin-top:26px;">Longest-running ads &amp; trend summary <span class="tag unavailable tag-inline">Not available</span></h3>
+      <p>Run-duration-per-ad wasn't in what I could pull. What I can say: of the 2,800 ads ever tracked in this account, 2,179 (78%) are still active, a high live-to-total ratio, consistent with an advertiser that lets variants run rather than cycling them out fast.</p>
 
-      <h3 style="margin-top:26px;">Creative velocity <span class="tag verified tag-inline">Verified</span></h3>
-      <p>Their most recently launched tracked ad started <strong>the same day</strong> this data was pulled — this is an account uploading new variants same-day/daily, not on a weekly or monthly cadence. Combined with the 2,179-active-ad count, this is a genuinely high-velocity, high-variant-volume account for a brand this size.</p>
+      <h3 style="margin-top:26px;">Creative velocity <span class="tag observed tag-inline">Observed</span></h3>
+      <p>Their most recently launched tracked ad started <strong>the same day</strong> this data was pulled. This is an account uploading new variants same-day/daily, not on a weekly or monthly cadence. Combined with the 2,179-active-ad count, this is a genuinely high-velocity, high-variant-volume account for a brand this size.</p>
     </section>
 
     <!-- ============ 07 CUSTOMER JOURNEY ============ -->
     <section id="journey">
       <div class="sec-head"><span class="sec-num">07</span><h2>Customer Journey</h2></div>
-      <p class="sec-dek">A subscription-first funnel built on three specific, identifiable apps. <span class="tag verified tag-inline">Verified</span> tech stack / <span class="tag analyst tag-inline">Analyst read</span> on the funnel framing.</p>
+      <p class="sec-dek">A subscription-first funnel built on three specific, identifiable apps. <span class="tag observed tag-inline">Observed</span> tech stack / <span class="tag interp tag-inline">My interpretation</span> on the funnel framing.</p>
       <div class="steps">
-        <div class="step"><h4>Paid social or search brings them to the Blend page</h4><p>The hero ad links directly to the Daily Longevity Blend product page, not the homepage — a short, single-decision path.</p></div>
+        <div class="step"><h4>Paid social or search brings them to the Blend page</h4><p>The hero ad links directly to the Daily Longevity Blend product page, not the homepage, a short, single-decision path.</p></div>
         <div class="step"><h4>Risk reversal at the point of decision</h4><p>30-day money-back guarantee plus two free gifts bundled into the first month soften the commitment on a recurring charge.</p></div>
-        <div class="step"><h4>Recharge Subscriptions manages the recurring relationship</h4><p>Confirmed in their tech stack — ships every 30 days, "update or cancel anytime" messaging front and center.</p></div>
+        <div class="step"><h4>Recharge Subscriptions manages the recurring relationship</h4><p>Confirmed in their tech stack, ships every 30 days, "update or cancel anytime" messaging front and center.</p></div>
         <div class="step"><h4>Klaviyo and Judge.me carry retention and proof</h4><p>Email/SMS flows (Klaviyo) and an on-site review engine (Judge.me, 20,598+ reviews collected) keep existing subscribers engaged and feed new social proof back into the funnel.</p></div>
       </div>
     </section>
@@ -371,7 +373,7 @@
     <!-- ============ 08 SOCIAL PROOF ============ -->
     <section id="proof">
       <div class="sec-head"><span class="sec-num">08</span><h2>Social Proof</h2></div>
-      <p class="sec-dek">Independently checkable review data, not just curated homepage quotes. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">Independently checkable review data, not just curated homepage quotes. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="stat-strip">
         <div class="stat-cell"><span class="stat-num">4.5–4.6</span><div class="stat-label">Trustpilot score / 5</div></div>
@@ -383,48 +385,48 @@
 
       <div class="card">
         <h3>Self-reported but disclosed proof points</h3>
-        <p style="font-size:13.5px;">87% of customers reported an increase in energy, per AgeMate's own post-purchase survey of 12,966 customers — a real, specific number, but company-run rather than independently verified. "700+ studies used as supporting evidence" is a similar case: a real claim, not something I independently audited study-by-study.</p>
+        <p style="font-size:13.5px;">87% of customers reported an increase in energy, per AgeMate's own post-purchase survey of 12,966 customers, a real, specific number, but company-run rather than independently verified. "700+ studies used as supporting evidence" is a similar case: a real claim, not something I independently audited study-by-study.</p>
       </div>
     </section>
 
     <!-- ============ 09 CUSTOMER RESEARCH ============ -->
     <section id="research">
       <div class="sec-head"><span class="sec-num">09</span><h2>Customer Research</h2></div>
-      <p class="sec-dek">Independent Trustpilot language, not homepage-curated quotes. <span class="tag verified tag-inline">Verified</span></p>
+      <p class="sec-dek">Independent Trustpilot language, not homepage-curated quotes. <span class="tag observed tag-inline">Observed</span></p>
 
       <div class="rev-cols">
         <div class="rev-col love">
           <h4>What customers love</h4>
-          <div class="rev-item">"The powder vessel and water bottle are of premium quality" — the physical Welcome Kit itself gets called out, not just the supplement.</div>
+          <div class="rev-item">"The powder vessel and water bottle are of premium quality", the physical Welcome Kit itself gets called out, not just the supplement.</div>
           <div class="rev-item">"Within 2 days, both my husband and I have seen huge improvements in our energy levels... less brain fog."</div>
-          <div class="rev-item">"AgeMate service is fantastic and always on time" — from a subscriber of over a year.</div>
+          <div class="rev-item">"AgeMate service is fantastic and always on time", from a subscriber of over a year.</div>
         </div>
         <div class="rev-col friction">
           <h4>Where the friction is</h4>
-          <div class="rev-item">One detailed review describes feeling "ghosted" by customer service after requesting a subscription cancellation and refund — multiple emails, live chat, and messenger attempts with no response, despite the advertised money-back guarantee.</div>
-          <div class="rev-item">A shipping-address error required manual follow-up to correct — resolved, but adds friction pre-dispatch.</div>
+          <div class="rev-item">One detailed review describes feeling "ghosted" by customer service after requesting a subscription cancellation and refund, multiple emails, live chat, and messenger attempts with no response, despite the advertised money-back guarantee.</div>
+          <div class="rev-item">A shipping-address error required manual follow-up to correct, resolved, but adds friction pre-dispatch.</div>
         </div>
       </div>
-      <p style="margin-top:6px; font-size:12.5px; color:var(--ink-faint);">The overall review base is genuinely strongly positive (4.5+/5 across 2,000+ independent reviews) — the cancellation-responsiveness complaint is a specific, real pattern worth watching given the business runs on subscriptions, not proof that support is broadly unreliable.</p>
+      <p style="margin-top:6px; font-size:12.5px; color:var(--ink-faint);">The overall review base is genuinely strongly positive (4.5+/5 across 2,000+ independent reviews), the cancellation-responsiveness complaint is a specific, real pattern worth watching given the business runs on subscriptions, not proof that support is broadly unreliable.</p>
     </section>
 
     <!-- ============ 10 WEAKNESSES & OPPORTUNITIES ============ -->
     <section id="weaknesses">
       <div class="sec-head"><span class="sec-num">10</span><h2>Weaknesses &amp; Opportunities</h2></div>
-      <p class="sec-dek">Synthesized from everything above. <span class="tag analyst tag-inline">Analyst read</span></p>
+      <p class="sec-dek">Synthesized from everything above. <span class="tag interp tag-inline">My interpretation</span></p>
 
       <div class="wo-grid">
         <div class="wo-col weak">
           <h3>Weaknesses</h3>
           <div class="wo-item"><h4>NMN's US legal status has been genuinely unstable</h4><p>The FDA moved to block NMN as a dietary supplement in late 2022, prompting Amazon and other retailers to pull it; the FDA reversed course in September 2025, but legal analysts note "significant legal and business risks persist" given reduced judicial deference to agency interpretations post-Loper Bright. This is squarely material for a brand selling NMN into the US.</p></div>
-          <div class="wo-item"><h4>One dominant creative, heavily concentrated</h4><p>The same ad concept is simultaneously the top-impression, top-spend, and most-recent creative — real efficiency, but a real fatigue and concentration risk if that one angle stops working.</p></div>
+          <div class="wo-item"><h4>One dominant creative, heavily concentrated</h4><p>The same ad concept is simultaneously the top-impression, top-spend, and most-recent creative, real efficiency, but a real fatigue and concentration risk if that one angle stops working.</p></div>
           <div class="wo-item"><h4>A documented subscription cancellation complaint</h4><p>An unresponsive cancellation/refund experience, described in detail in an independent review, cuts directly against a guarantee that's central to the offer's risk reversal.</p></div>
         </div>
         <div class="wo-col opp">
           <h3>Opportunities</h3>
           <div class="wo-item"><h4>"Regulated and Australian-made" is a timely claim</h4><p>With NMN's US legal status only recently restored and still contested, TGA compliance and local manufacturing are a genuine, ownable trust edge over competitors still explaining their regulatory footing.</p></div>
-          <div class="wo-item"><h4>Real, specific proof is under-used as a hook</h4><p>"87% reported more energy" and "700+ studies" are disclosed, specific, and persuasive — but the flagship ad leads with "science-backed" generically rather than the number itself. Testing the number as the headline is a low-cost experiment.</p></div>
-          <div class="wo-item"><h4>Unconverted traffic in the Philippines and Nigeria</h4><p>11.2% and 5.6% of monthly traffic respectively, with no official shipping support — either a real expansion signal worth testing or wasted top-of-funnel spend worth diagnosing.</p></div>
+          <div class="wo-item"><h4>Real, specific proof is under-used as a hook</h4><p>"87% reported more energy" and "700+ studies" are disclosed, specific, and persuasive, but the flagship ad leads with "science-backed" generically rather than the number itself. Testing the number as the headline is a low-cost experiment.</p></div>
+          <div class="wo-item"><h4>Unconverted traffic in the Philippines and Nigeria</h4><p>11.2% and 5.6% of monthly traffic respectively, with no official shipping support, either a real expansion signal worth testing or wasted top-of-funnel spend worth diagnosing.</p></div>
         </div>
       </div>
     </section>
@@ -436,8 +438,8 @@
 
       <h3>The tool that did the heavy lifting here: BrandSearch</h3>
       <div class="steps">
-        <div class="step"><h4>Go to brandsearch.co/brands/[domain]</h4><p>For AgeMate, that's <code>brandsearch.co/brands/agemate.com</code>. No login needed for the public profile — it surfaced active ad count, disclosed EU/UK spend, traffic and revenue estimates, and a sample top creative.</p></div>
-        <div class="step"><h4>Create a free account for the full ad browser</h4><p>The public page teases "2.2K of 2.8K ads" under each sample — a free Brand Library account unlocks browsing the full set, which is exactly where you'd count "with @creator" tags to get the real partnership ratio and a true top-10.</p></div>
+        <div class="step"><h4>Go to brandsearch.co/brands/[domain]</h4><p>For AgeMate, that's <code>brandsearch.co/brands/agemate.com</code>. No login needed for the public profile. It surfaced active ad count, disclosed EU/UK spend, traffic and revenue estimates, and a sample top creative.</p></div>
+        <div class="step"><h4>Create a free account for the full ad browser</h4><p>The public page teases "2.2K of 2.8K ads" under each sample, a free Brand Library account unlocks browsing the full set, which is exactly where you'd count "with @creator" tags to get the real partnership ratio and a true top-10.</p></div>
         <div class="step"><h4>Cross-check with Meta's own Ad Library</h4><p>Search "AgeMate" at <code>facebook.com/ads/library</code> to verify format and impression-range buckets directly against Meta's own disclosure, since third-party tools can lag or estimate.</p></div>
         <div class="step"><h4>Use Trustpilot's own filters for sentiment tracking</h4><p><code>trustpilot.com/review/agemate.com</code>, filtered to 1–2 star, is the fastest way to monitor whether the cancellation-complaint pattern in Section 09 is a one-off or a trend.</p></div>
       </div>
@@ -445,13 +447,13 @@
       <h3 style="margin-top:28px;">What this kind of tool gets you, at a glance</h3>
       <table class="tool-table">
         <tr><th>Tool</th><th>Good for</th><th>Limitation</th></tr>
-        <tr><td>BrandSearch / Spectre</td><td>Shopify-specific brands — traffic, revenue estimates, active ad counts, EU/UK spend</td><td>Revenue/traffic are estimates that visibly shift between snapshots</td></tr>
-        <tr><td>Meta Ad Library (manual)</td><td>Ground-truth format, copy, and impression-range buckets per ad</td><td>JS-rendered — no automated access; browsing by hand works fine</td></tr>
+        <tr><td>BrandSearch / Spectre</td><td>Shopify-specific brands, traffic, revenue estimates, active ad counts, EU/UK spend</td><td>Revenue/traffic are estimates that visibly shift between snapshots</td></tr>
+        <tr><td>Meta Ad Library (manual)</td><td>Ground-truth format, copy, and impression-range buckets per ad</td><td>JS-rendered, no automated access; browsing by hand works fine</td></tr>
         <tr><td>Trustpilot</td><td>Independent, filterable customer sentiment</td><td>Self-selected reviewer base, not a random sample</td></tr>
       </table>
 
       <h3 style="margin-top:28px;">What I used to build this report</h3>
-      <p style="font-size:13.5px;">agemate.com (site, pricing, FAQs), the AgeMate Linktree, Trustpilot (multiple regional mirrors), brandsearch.co's public brand profile, and FDA/legal trade coverage of NMN's regulatory status (Natural Products Insider, Examine.com, New Hope Network, Venable LLP, NPA). Revenue and traffic figures should be re-pulled before using them for anything decision-critical — they moved meaningfully between the two snapshots I found.</p>
+      <p style="font-size:13.5px;">agemate.com (site, pricing, FAQs), the AgeMate Linktree, Trustpilot (multiple regional mirrors), brandsearch.co's public brand profile, and FDA/legal trade coverage of NMN's regulatory status (Natural Products Insider, Examine.com, New Hope Network, Venable LLP, NPA). Revenue and traffic figures should be re-pulled before using them for anything decision-critical. They moved meaningfully between the two snapshots I found.</p>
     </section>
 
     <footer>
