@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jolly Daniel Tenorio · Direct Response Copywriter &amp; Creative Strategist</title>
+<meta name="description" content="Competitive research, creative strategy, and copy for DTC and SaaS brands. Independent work, clearly sourced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAFAF8;
+    --card:#FFFFFF;
+    --ink:#17181B;
+    --ink-dim:#54575D;
+    --ink-faint:#8B8E93;
+    --line:#E6E4DD;
+    --accent:#DA4B2A;
+    --accent-dim:#F3DDD5;
+    --observed:#2A5EA8;
+    --observed-bg:#E8EEF6;
+    --estimated:#B4791F;
+    --estimated-bg:#F5ECDA;
+    --interp:#6B5CA5;
+    --interp-bg:#EBE8F3;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ font-family:'Space Grotesk',sans-serif; letter-spacing:-0.01em; margin:0; }
+  a{ color:inherit; }
+  .wrap{ max-width:860px; margin:0 auto; padding:0 28px; }
+  p{ margin:0 0 16px; color:var(--ink-dim); font-size:16px; }
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky; top:0; z-index:10;
+    background:rgba(250,250,248,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{ display:flex; align-items:center; justify-content:space-between; padding:18px 28px; max-width:860px; margin:0 auto; }
+  .mark{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px;
+    text-decoration:none; color:var(--ink);
+  }
+  .mark .glyph{
+    width:30px; height:30px; border-radius:8px; background:var(--ink);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:12px; font-weight:700;
+  }
+  .navlinks{ display:flex; gap:28px; align-items:center; }
+  .navlinks a{ font-size:14px; font-weight:500; text-decoration:none; color:var(--ink-dim); }
+  .navlinks a:hover{ color:var(--ink); }
+  .navlinks .cta{
+    background:var(--ink); color:#fff; padding:8px 16px; border-radius:8px; font-weight:600;
+  }
+  .navlinks .cta:hover{ background:var(--accent); }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:76px 0 64px; }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent);
+    font-weight:600; margin-bottom:16px; display:block;
+  }
+  .hero h1{ font-size:40px; line-height:1.2; margin-bottom:20px; max-width:640px; }
+  .hero .lede{ font-size:17.5px; color:var(--ink-dim); max-width:580px; margin-bottom:22px; }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:12px 22px; border-radius:9px; font-weight:600; font-size:14.5px;
+    text-decoration:none; border:1px solid var(--line);
+  }
+  .btn.primary{ background:var(--ink); color:#fff; border-color:var(--ink); }
+  .btn.primary:hover{ background:var(--accent); border-color:var(--accent); }
+  .btn.ghost{ color:var(--ink); }
+  .btn.ghost:hover{ border-color:var(--ink); }
+
+  .method-strip{
+    display:flex; gap:0; margin-top:56px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .method-cell{ flex:1; padding:20px 20px 20px 0; border-right:1px solid var(--line); }
+  .method-cell:last-child{ border-right:none; padding-left:20px; }
+  .method-cell:first-child{ padding-left:0; }
+  .method-num{ font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--accent); font-weight:600; }
+  .method-cell h3{ font-size:15px; margin:8px 0 4px; }
+  .method-cell p{ font-size:13.5px; margin:0; }
+
+  /* ---------- sections ---------- */
+  section{ padding:64px 0; }
+  section.alt{ background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .sec-label{ font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--accent); font-weight:600; margin-bottom:10px; display:block; }
+  .sec-title{ font-size:28px; margin-bottom:14px; }
+  .sec-intro{ max-width:600px; margin-bottom:28px; font-size:15.5px; }
+
+  /* ---------- sourcing notice ---------- */
+  .sourcing{
+    border:1px solid var(--line); border-left:3px solid var(--observed);
+    background:var(--card); border-radius:8px; padding:16px 18px; margin-bottom:36px;
+  }
+  .sourcing h4{ font-size:13.5px; margin:0 0 6px; font-family:'Inter',sans-serif; font-weight:700; }
+  .sourcing p{ font-size:13.5px; margin:0 0 10px; }
+  .sourcing p:last-child{ margin-bottom:0; }
+  .keys{ display:flex; flex-wrap:wrap; gap:8px; }
+  .key{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:600;
+    text-transform:uppercase; letter-spacing:.03em; padding:3px 9px; border-radius:20px;
+  }
+  .key.observed{ background:var(--observed-bg); color:var(--observed); }
+  .key.estimated{ background:var(--estimated-bg); color:var(--estimated); }
+  .key.interp{ background:var(--interp-bg); color:var(--interp); }
+
+  /* ---------- case studies ---------- */
+  .case{
+    border:1px solid var(--line); border-radius:var(--radius); background:var(--card);
+    padding:32px; margin-bottom:24px;
+  }
+  .case-top{ display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+  .case-avatar{
+    width:44px; height:44px; border-radius:9px; background:var(--ink); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif;
+    font-weight:700; font-size:14px; flex-shrink:0;
+  }
+  .case-top h3{ font-size:19px; margin-bottom:2px; }
+  .case-top .tag{ font-size:13px; color:var(--ink-faint); }
+  .case-grid{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:20px; }
+  .case-block h4{
+    font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em;
+    color:var(--ink-faint); margin:0 0 8px; font-weight:600;
+  }
+  .case-block p{ font-size:14.5px; margin:0; }
+  .finding{
+    margin-top:20px; padding:14px 16px; background:var(--paper); border-radius:8px;
+    font-size:13.5px; color:var(--ink); border:1px solid var(--line);
+  }
+  .finding .flabel{
+    font-family:'JetBrains Mono',monospace; font-size:10px; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--ink-faint); font-weight:600; display:block; margin-bottom:5px;
+  }
+  .case-link, .teardown-link{
+    display:inline-block; margin-top:18px; font-size:13.5px; font-weight:600;
+    color:var(--accent); text-decoration:none;
+  }
+  .case-link:hover, .teardown-link:hover{ text-decoration:underline; }
+
+  /* ---------- teardowns ---------- */
+  .teardown-intro{ margin:44px 0 20px; }
+  .teardown-intro h3{ font-size:17px; margin-bottom:6px; }
+  .teardown-intro p{ font-size:14px; margin:0; max-width:560px; }
+  .teardown-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .teardown-card{ border:1px solid var(--line); border-radius:var(--radius); padding:18px; background:var(--card); display:flex; flex-direction:column; }
+  .teardown-card .tag{ font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--accent); text-transform:uppercase; letter-spacing:.03em; font-weight:600; }
+  .teardown-card h4{ font-size:15.5px; margin:8px 0 6px; }
+  .teardown-card p{ font-size:13px; margin:0 0 12px; }
+  .teardown-card .stat{
+    font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink);
+    background:var(--paper); border:1px solid var(--line); border-radius:6px;
+    padding:8px 10px; margin-bottom:4px;
+  }
+  .teardown-card .teardown-link{ margin-top:auto; }
+
+  /* ---------- email samples ---------- */
+  .email{
+    border:1px solid var(--line); border-radius:var(--radius); background:var(--paper);
+    margin-bottom:14px; overflow:hidden;
+  }
+  .email-head{
+    width:100%; display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:16px 18px; border:none; border-bottom:1px solid var(--line); background:var(--card);
+    cursor:pointer; text-align:left; font-family:inherit; color:inherit; margin:0;
+  }
+  .email-head:hover{ background:var(--paper); }
+  .email-head-text{ min-width:0; }
+  .email-role{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--accent);
+    text-transform:uppercase; letter-spacing:.05em; font-weight:600; display:block; margin-bottom:6px;
+  }
+  .email-subject{ font-size:15.5px; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:3px; }
+  .email-preview{ font-size:13px; color:var(--ink-faint); }
+  .email-chevron{
+    flex-shrink:0; font-size:14px; color:var(--ink-faint);
+    transition:transform .25s ease; transform:rotate(-90deg);
+  }
+  .email-head[aria-expanded="true"] .email-chevron{ transform:rotate(0deg); color:var(--accent); }
+  .email-head[aria-expanded="true"]{ border-bottom-color:var(--line); }
+  .email-collapse{
+    display:grid; grid-template-rows:0fr;
+    transition:grid-template-rows .3s ease;
+  }
+  .email-collapse-inner{ overflow:hidden; }
+  .email-head[aria-expanded="true"] + .email-collapse{ grid-template-rows:1fr; }
+  .email-body{ padding:18px; font-size:14.5px; color:var(--ink-dim); line-height:1.7; }
+  .email-body p{ margin:0 0 12px; font-size:14.5px; }
+  .email-body p:last-child{ margin-bottom:0; }
+  .email-body strong{ color:var(--ink); }
+  .email-cta{
+    display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600;
+    color:var(--accent); border:1px solid var(--accent); border-radius:6px; padding:7px 14px; margin-top:4px;
+  }
+  .email-note{
+    padding:12px 18px; background:var(--accent-dim); font-size:13px; color:var(--ink);
+    border-top:1px solid var(--line);
+  }
+  .email-note b{ font-weight:700; }
+
+  /* ---------- before / after reveal ---------- */
+  .reveal-intro{ margin:44px 0 18px; }
+  .reveal-intro h3{ font-size:17px; margin-bottom:6px; }
+  .reveal-intro p{ font-size:14px; margin:0; max-width:560px; }
+  .reveal-grid{ display:grid; gap:14px; }
+  .reveal-card{ border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:20px 22px; }
+  .reveal-label{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--ink-faint); font-weight:600; display:block; margin-bottom:6px;
+  }
+  .reveal-label.rewrite{ color:var(--accent); }
+  .reveal-generic p, .reveal-after p{
+    font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:500; color:var(--ink); margin:0;
+  }
+  .reveal-toggle{
+    display:flex; align-items:center; gap:6px; margin:12px 0 0; padding:0;
+    background:none; border:none; cursor:pointer;
+    font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:var(--accent);
+  }
+  .reveal-toggle:hover{ text-decoration:underline; }
+  .reveal-chevron{ transition:transform .25s ease; }
+  .reveal-toggle[aria-expanded="true"] .reveal-chevron{ transform:rotate(180deg); }
+  .reveal-collapse{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease; }
+  .reveal-collapse-inner{ overflow:hidden; }
+  .reveal-toggle[aria-expanded="true"] + .reveal-collapse{ grid-template-rows:1fr; }
+  .reveal-after{ padding-top:16px; }
+  .reveal-why{
+    margin-top:12px; padding-top:12px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--ink-dim);
+  }
+
+  /* ---------- about ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; }
+  .skill-group{ margin-bottom:22px; }
+  .skill-group h4{ font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); margin-bottom:10px; font-family:'JetBrains Mono',monospace; font-weight:600; }
+  .pills{ display:flex; flex-wrap:wrap; gap:8px; }
+  .pill{ font-size:13px; background:var(--paper); border:1px solid var(--line); padding:5px 12px; border-radius:20px; color:var(--ink-dim); }
+
+  /* ---------- contact ---------- */
+  .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:32px; }
+  .contact-card{
+    border:1px solid var(--line); border-radius:var(--radius); padding:20px; background:var(--card);
+    text-decoration:none; color:var(--ink);
+  }
+  .contact-card:hover{ border-color:var(--accent); }
+  .contact-card h4{ font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-faint); margin-bottom:8px; font-weight:600; }
+  .contact-card .val{ font-size:15px; font-weight:600; word-break:break-word; }
+
+  footer{ padding:32px 0 48px; text-align:center; }
+  footer p{ font-size:13px; color:var(--ink-faint); margin:0; }
+
+  /* ---------- scroll progress ---------- */
+  #scroll-progress{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,#DA4B2A,#B4791F,#2A5EA8,#6B5CA5);
+    z-index:1001; transition:width .08s linear;
+  }
+
+  /* ---------- color splash ---------- */
+  .splash-particle{
+    position:fixed; top:0; left:0; border-radius:50%; pointer-events:none; z-index:999;
+    animation:splash-out .85s cubic-bezier(.2,.8,.3,1) forwards;
+  }
+  @keyframes splash-out{
+    0%{ transform:translate(0,0) scale(1); opacity:1; }
+    100%{ transform:translate(var(--dx),var(--dy)) scale(0); opacity:0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .splash-particle{ animation-duration:.01ms; }
+  }
+
+  @media (max-width: 720px){
+    .navlinks{ display:none; }
+    .hero h1{ font-size:30px; }
+    .method-strip{ flex-direction:column; }
+    .method-cell{ border-right:none; border-bottom:1px solid var(--line); padding:16px 0; }
+    .method-cell:first-child{ padding-top:0; }
+    .method-cell:last-child{ border-bottom:none; padding-bottom:0; padding-left:0; }
+    .case-grid{ grid-template-columns:1fr; }
+    .teardown-grid{ grid-template-columns:1fr; }
+    .about-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .case{ padding:22px; }
+  }
+</style>
+</head>
+<body>
+<div id="scroll-progress"></div>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="mark"><span class="glyph">JT</span> Jolly Tenorio</a>
+    <div class="navlinks">
+      <a href="#work">Work</a>
+      <a href="#writing">Writing</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="cta">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<div id="top" class="wrap">
+  <div class="hero">
+    <span class="eyebrow">DIRECT RESPONSE COPYWRITER &amp; CREATIVE STRATEGIST</span>
+    <h1>I take apart what brands are running, and rebuild it into creative worth testing.</h1>
+    <p class="lede">Six months of self directed competitor research, ad teardowns, and creative concepts for DTC and SaaS brands. No paid client work yet. Everything on this site is my own project, and every claim is labeled so you can see what I observed, what was estimated, and what is my read.</p>
+    <div class="hero-ctas">
+      <a href="#work" class="btn primary">See the work</a>
+      <a href="#writing" class="btn ghost">Read the copy</a>
+    </div>
+
+    <div class="method-strip">
+      <div class="method-cell">
+        <span class="method-num">01</span>
+        <h3>Customer Research</h3>
+        <p>Reviews, forums, and competitor messaging. Finding the language customers already use.</p>
+      </div>
+      <div class="method-cell">
+        <span class="method-num">02</span>
+        <h3>Creative Strategy</h3>
+        <p>Angles, offer positioning, and a messaging hierarchy built from that research.</p>
+      </div>
+      <div class="method-cell">
+        <span class="method-num">03</span>
+        <h3>Copy &amp; Concepts</h3>
+        <p>Ads, emails, and creative concepts written scene by scene, ready to test.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <span class="sec-label">SELECTED WORK</span>
+    <h2 class="sec-title">Case studies and teardowns</h2>
+    <p class="sec-intro">Independent projects, not paid client work. I picked real brands and ran the process I would run for a client: research first, strategy second, creative last.</p>
+
+    <div class="sourcing">
+      <h4>How I sourced this</h4>
+      <p>All of it is competitive intelligence built from publicly available and third party data. I have never had access to any of these brands' ad accounts, analytics, or internal numbers. Inside each report, every claim carries one of three labels:</p>
+      <div class="keys">
+        <span class="key observed">Observed</span>
+        <span class="key estimated">Estimated</span>
+        <span class="key interp">My interpretation</span>
+      </div>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <div class="case-avatar">PC</div>
+        <div>
+          <h3>The Purest Co.</h3>
+          <span class="tag">DTC Supplements · Competitor research and creative concept</span>
+        </div>
+      </div>
+      <p>Competitor research across positioning, messaging, and customer journey, built around one tension: trust versus skepticism in a crowded supplements category.</p>
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>What I found</h4>
+          <p>Social proof clusters around established hero products, while newer SKUs carry far less review volume. Transparency does the heavy lifting everywhere else.</p>
+        </div>
+        <div class="case-block">
+          <h4>What I proposed</h4>
+          <p>A UGC concept that opens on the customer's skepticism instead of the product, with a full scene by scene script.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <span class="flabel">The insight it turned on</span>
+        The customer is not looking for a supplement. They are looking for a reason to trust one. So skepticism becomes the hook rather than the obstacle.
+      </div>
+      <a href="./purest-co.html" class="case-link">Read the full case study →</a>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <div class="case-avatar">MM</div>
+        <div>
+          <h3>MarsMen</h3>
+          <span class="tag">DTC Men's Health · Research, strategy, and creative concept</span>
+        </div>
+      </div>
+      <p>Two observations about their existing marketing, a reworked creative strategy, and a five scene concept built to test against what they were already running.</p>
+      <div class="case-grid">
+        <div class="case-block">
+          <h4>What I found</h4>
+          <p>A five capsule serving creates real friction for a first time buyer. Separately, their existing creator relationships were being used for reach rather than as a repeatable creative system.</p>
+        </div>
+        <div class="case-block">
+          <h4>What I proposed</h4>
+          <p>"I Want My Drive Back," a creator led concept where the athlete experiences the problem instead of endorsing the product.</p>
+        </div>
+      </div>
+      <div class="finding">
+        <span class="flabel">The structural change</span>
+        Their current ads run athlete, then product, then brand message. The proposed structure runs problem, then the athlete's experience of it, then the product. The audience gets a reason to care before anything is sold.
+      </div>
+      <a href="./marsmen.html" class="case-link">Read the full case study →</a>
+    </div>
+
+    <div class="case">
+      <div class="case-top">
+        <div class="case-avatar">WH</div>
+        <div>
+          <h3>Wheyl Supplements</h3>
+          <span class="tag">Philippines · Creative strategy</span>
+        </div>
+      </div>
+      <p>Customer barriers around choice overload, addressed with a "Find Your First Wheyl Product" quiz concept designed to cut decision friction and route customers to the right SKU.</p>
+    </div>
+
+    <div class="teardown-intro">
+      <h3>Brand teardowns</h3>
+      <p>Longer competitive reports. Format breakdowns, messaging patterns, positioning, and a weaknesses and opportunities read, each written as a standalone document with its sourcing labeled throughout.</p>
+    </div>
+    <div class="teardown-grid">
+      <div class="teardown-card">
+        <span class="tag">SaaS · Work Management</span>
+        <h4>monday.com</h4>
+        <p>Five years of campaign history, positioning against seven named competitors, and the repositioning most people have not caught yet.</p>
+        <div class="stat">Apr 2026: shifted from "Work Management Platform" to "AI Work Platform"</div>
+        <a href="./monday-com.html" class="teardown-link">Read the report →</a>
+      </div>
+      <div class="teardown-card">
+        <span class="tag">DTC · Longevity Supplements</span>
+        <h4>AgeMate</h4>
+        <p>Offer structure, messaging patterns, and a category risk most competitor research would miss entirely.</p>
+        <div class="stat">One creative concept holds top impressions, top spend, and newest launch at once</div>
+        <a href="./agemate.html" class="teardown-link">Read the report →</a>
+      </div>
+      <div class="teardown-card">
+        <span class="tag">DTC · Men's Health</span>
+        <h4>MarsMen, revisited</h4>
+        <p>A follow up to the case study above, looking at their pricing ladder, proof strategy, and review credibility.</p>
+        <div class="stat">4.77 on site rating vs 3.5 independent. The widest gap I found</div>
+        <a href="./marsmen-teardown.html" class="teardown-link">Read the report →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="writing" class="alt">
+  <div class="wrap">
+    <span class="sec-label">WRITING SAMPLES</span>
+    <h2 class="sec-title">Copy</h2>
+    <p class="sec-intro">A three email sequence for a content creator coaching offer. Welcome, objection handling, then urgency. Written as a spec piece, not for a paying client.</p>
+
+    <div class="email">
+      <button class="email-head" aria-expanded="false">
+        <div class="email-head-text">
+          <span class="email-role">Email 1 · Welcome</span>
+          <div class="email-subject">You're in the 7-Day Bootcamp</div>
+          <div class="email-preview">Preview: I just wanted to commend you for believing in yourself...</div>
+        </div>
+        <span class="email-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="email-collapse"><div class="email-collapse-inner">
+        <div class="email-body">
+          <p>Hey %FIRSTNAME%,</p>
+          <p>You're officially in.</p>
+          <p>Over the next 7 days, I'll walk you through the roadmap to creating content that gets noticed.</p>
+          <p><strong>Day 1: MISTAKES</strong><br>Discover why your videos aren't getting the views you want. By identifying what's holding your content back, you'll know what to fix instead of guessing.</p>
+          <p><strong>Day 2: ACCELERATION</strong><br>Learn what high-performing creators do differently to generate consistent views, and how you can apply those principles to your own content.</p>
+          <p><strong>Day 3: STAND OUT</strong><br>You're competing for attention every day. Learn how to make your content stand out instead of getting lost in the feed.</p>
+          <p><strong>Day 4: ACTION PLAN</strong><br>Put what you've learned into practice with a clear plan for improving your content.</p>
+          <p>And if you want to go deeper...</p>
+          <p><strong>UPGRADE TO VIP</strong><br>In-depth training · 1-on-1 coaching call · Priority Q&amp;A · Additional strategies</p>
+          <p><span class="email-cta">YES, I WANT TO GO VIRAL →</span></p>
+        </div>
+        <div class="email-note"><b>Why it's built this way:</b> the roadmap does the retention work. Naming all four days up front gives a reason to open the next email, and the VIP offer sits after the value so it reads as an upgrade rather than a pitch.</div>
+      </div></div>
+    </div>
+
+    <div class="email">
+      <button class="email-head" aria-expanded="false">
+        <div class="email-head-text">
+          <span class="email-role">Email 2 · Value and objection</span>
+          <div class="email-subject">More Videos Doesn't Mean More Views</div>
+          <div class="email-preview">Preview: Those are just videos. Here's what actually matters.</div>
+        </div>
+        <span class="email-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="email-collapse"><div class="email-collapse-inner">
+        <div class="email-body">
+          <p>Hey %FIRSTNAME%,</p>
+          <p>More videos means more views, right?</p>
+          <p>Wrong.</p>
+          <p>Posting more content doesn't guarantee that anyone will watch it.</p>
+          <p>If I were starting from scratch, I'd focus on three things first:</p>
+          <p><strong>1. Know Your Niche</strong><br>Before creating more content, understand who you're creating it for. If you don't know your audience, it's difficult to create something they'll actually care about.</p>
+          <p><strong>2. Master Your Hooks</strong><br>Your hook determines whether someone stops scrolling, or keeps going. A great video can still fail if the first few seconds don't give people a reason to watch.</p>
+          <p><strong>3. Understand What Keeps People Watching</strong><br>Getting the click, or the initial view, isn't enough. You need to understand what makes viewers stay, watch, and come back for more.</p>
+          <p>And that's exactly what I teach inside my coaching program.</p>
+          <p>I've helped creators grow to a combined 49K+ students, and I've built my coaching around helping creators understand what actually drives content performance.</p>
+          <p>Don't just take my word for it.</p>
+          <p><span class="email-cta">GO VIRAL →</span></p>
+        </div>
+        <div class="email-note"><b>Why it's built this way:</b> it opens by stating the reader's own assumption back to them, then breaks it in one word. The three teaching points are real value, so the bridge into the offer is earned rather than bolted on.</div>
+      </div></div>
+    </div>
+
+    <div class="email">
+      <button class="email-head" aria-expanded="false">
+        <div class="email-head-text">
+          <span class="email-role">Email 3 · Urgency and close</span>
+          <div class="email-subject">The Chair Won't Stay Empty</div>
+          <div class="email-preview">Preview: But I'm giving you one last chance.</div>
+        </div>
+        <span class="email-chevron" aria-hidden="true">&#9662;</span>
+      </button>
+      <div class="email-collapse"><div class="email-collapse-inner">
+        <div class="email-body">
+          <p>Hey %FIRSTNAME%,</p>
+          <p>This is your last call.</p>
+          <p>The opportunity to join the same system I've used to help content creators stand out is almost gone.</p>
+          <p>Because while you're waiting...</p>
+          <p>Someone else is learning the hooks.<br>Someone else is improving their content.<br>Someone else is building the audience you want.</p>
+          <p>The question is:</p>
+          <p>Will you keep watching, or start?</p>
+          <p>If you've been waiting for the right time to take your content seriously, this is your last chance.</p>
+          <p><span class="email-cta">GET THE SYSTEM NOW →</span></p>
+        </div>
+        <div class="email-note"><b>Why it's built this way:</b> the urgency is social rather than a plain countdown. "Someone else" is doing the work you are not, which makes the deadline feel like a cost already being paid. The subject line carries that same idea in five words.</div>
+      </div></div>
+    </div>
+
+    <div class="reveal-intro">
+      <h3>A few lines, before and after</h3>
+      <p>Generic version first. Click to see the rewrite, and why it's different. Not client work, just how I think about a line.</p>
+    </div>
+    <div class="reveal-grid">
+      <div class="reveal-card">
+        <div class="reveal-generic">
+          <span class="reveal-label">Generic angle</span>
+          <p>"Try our new supplement today."</p>
+        </div>
+        <button class="reveal-toggle" aria-expanded="false"><span class="reveal-toggle-text">See the rewrite</span> <span class="reveal-chevron" aria-hidden="true">&#9662;</span></button>
+        <div class="reveal-collapse"><div class="reveal-collapse-inner">
+          <div class="reveal-after">
+            <span class="reveal-label rewrite">The rewrite</span>
+            <p>"I know this probably isn't going to work... but I'm trying it anyway."</p>
+          </div>
+          <div class="reveal-why">Skepticism becomes the hook instead of something to hide from. From the Purest Co. case study above.</div>
+        </div></div>
+      </div>
+
+      <div class="reveal-card">
+        <div class="reveal-generic">
+          <span class="reveal-label">Generic angle</span>
+          <p>"Feeling tired? Boost your energy now."</p>
+        </div>
+        <button class="reveal-toggle" aria-expanded="false"><span class="reveal-toggle-text">See the rewrite</span> <span class="reveal-chevron" aria-hidden="true">&#9662;</span></button>
+        <div class="reveal-collapse"><div class="reveal-collapse-inner">
+          <div class="reveal-after">
+            <span class="reveal-label rewrite">The rewrite</span>
+            <p>"I started thinking my age was finally catching up with me."</p>
+          </div>
+          <div class="reveal-why">Opens on the problem, not the product, so the reader recognizes themselves before anything is sold. From the MarsMen case study above.</div>
+        </div></div>
+      </div>
+
+      <div class="reveal-card">
+        <div class="reveal-generic">
+          <span class="reveal-label">Generic angle</span>
+          <p>"Don't miss out, limited time offer!"</p>
+        </div>
+        <button class="reveal-toggle" aria-expanded="false"><span class="reveal-toggle-text">See the rewrite</span> <span class="reveal-chevron" aria-hidden="true">&#9662;</span></button>
+        <div class="reveal-collapse"><div class="reveal-collapse-inner">
+          <div class="reveal-after">
+            <span class="reveal-label rewrite">The rewrite</span>
+            <p>"The Chair Won't Stay Empty"</p>
+          </div>
+          <div class="reveal-why">Urgency without a countdown clock. The scarcity is social, not a timer. Subject line from Email 3 above.</div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <span class="sec-label">ABOUT</span>
+    <h2 class="sec-title">Where I actually am</h2>
+    <div class="about-grid">
+      <div>
+        <p>I am studying at Panpacific University College in Urdaneta City, Philippines, graduating in 2030. For the past six months I have been going deep on direct response: breaking down more than 100 ad creatives to work out what is doing the heavy lifting, and building full creative strategies for brands I am not working with, treating each one like a real account.</p>
+        <p>Most of what I know comes from doing that work and studying people who have done it for real, including Tyson 4D's courses and breakdowns.</p>
+        <p>I am early in this and I would rather say so than fill this page with claims I cannot back up. No client results yet. What is here is independent work, done to the standard I would bring to a paying client, with the sourcing shown so you can check it yourself.</p>
+      </div>
+      <div>
+        <div class="skill-group">
+          <h4>Copywriting</h4>
+          <div class="pills">
+            <span class="pill">Email sequences</span>
+            <span class="pill">VSLs</span>
+            <span class="pill">Sales pages</span>
+            <span class="pill">Meta ads</span>
+            <span class="pill">Hooks and headlines</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Creative Strategy</h4>
+          <div class="pills">
+            <span class="pill">Messaging strategy</span>
+            <span class="pill">Angle development</span>
+            <span class="pill">Offer positioning</span>
+            <span class="pill">Audience segmentation</span>
+            <span class="pill">Customer research</span>
+            <span class="pill">Competitor teardowns</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <div class="pills">
+            <span class="pill">English</span>
+            <span class="pill">Filipino</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap">
+    <span class="sec-label">CONTACT</span>
+    <h2 class="sec-title">Let's talk about your next creative.</h2>
+    <p class="sec-intro">If you want someone to dig into your customer research and turn it into creative worth testing, I would like to hear about it.</p>
+    <div class="contact-grid">
+      <a href="mailto:tjollydaniel@gmail.com" class="contact-card">
+        <h4>Email</h4>
+        <div class="val">tjollydaniel@gmail.com</div>
+      </a>
+      <a href="tel:+639274532006" class="contact-card">
+        <h4>Phone</h4>
+        <div class="val">+63 927 453 2006</div>
+      </a>
+      <a href="https://www.linkedin.com/in/dan-undefined-94a239416" class="contact-card">
+        <h4>LinkedIn</h4>
+        <div class="val">Jolly Daniel Tenorio</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Jolly Daniel Tenorio</p>
+</footer>
+
+<script>
+  // Email accordion: collapsed by default, one summary click reveals the full sequence
+  document.querySelectorAll('.email-head').forEach(head => {
+    head.addEventListener('click', () => {
+      const open = head.getAttribute('aria-expanded') === 'true';
+      head.setAttribute('aria-expanded', String(!open));
+    });
+  });
+
+  // Before/after reveal cards: same collapse pattern, plus a text swap on the toggle
+  document.querySelectorAll('.reveal-toggle').forEach(btn => {
+    const label = btn.querySelector('.reveal-toggle-text');
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      if (label) label.textContent = open ? 'See the rewrite' : 'Hide the rewrite';
+    });
+  });
+
+  // Corner color splash: a burst of colored particles from wherever it's triggered
+  const SPLASH_COLORS = ['#DA4B2A','#2A5EA8','#B4791F','#2F7A5C','#6B5CA5','#E0577F','#1CADA8'];
+  function fireSplash(cx, cy, count) {
+    const n = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : count;
+    for (let i = 0; i < n; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const dist = 50 + Math.random() * 150;
+      const size = 6 + Math.random() * 12;
+      const p = document.createElement('span');
+      p.className = 'splash-particle';
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      p.style.left = (cx - size / 2) + 'px';
+      p.style.top = (cy - size / 2) + 'px';
+      p.style.background = SPLASH_COLORS[Math.floor(Math.random() * SPLASH_COLORS.length)];
+      p.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+      p.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
+      document.body.appendChild(p);
+      p.addEventListener('animationend', () => p.remove());
+    }
+  }
+
+  // Splash of color wherever the page is clicked, anywhere on it
+  document.addEventListener('click', (e) => {
+    fireSplash(e.clientX, e.clientY, 20);
+  });
+
+  // Thin scroll progress bar in the header accent gradient
+  const progressBar = document.getElementById('scroll-progress');
+  function updateProgress() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  window.addEventListener('resize', updateProgress);
+  updateProgress();
+</script>
+
+</body>
+</html>
