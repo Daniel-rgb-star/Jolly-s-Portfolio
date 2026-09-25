@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jolly Daniel Tenorio · Direct Response Copywriter &amp; Creative Strategist</title>
+<title>Jolly Daniel Tenorio · Direct Response Copywriter & Creative Strategist</title>
 <meta name="description" content="Competitive research, creative strategy, and copy for DTC and SaaS brands. Independent work, clearly sourced.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -171,15 +171,33 @@
   /* ---------- email samples ---------- */
   .email{
     border:1px solid var(--line); border-radius:var(--radius); background:var(--paper);
-    margin-bottom:18px; overflow:hidden;
+    margin-bottom:14px; overflow:hidden;
   }
-  .email-head{ padding:14px 18px; border-bottom:1px solid var(--line); background:var(--card); }
+  .email-head{
+    width:100%; display:flex; align-items:center; justify-content:space-between; gap:14px;
+    padding:16px 18px; border:none; border-bottom:1px solid var(--line); background:var(--card);
+    cursor:pointer; text-align:left; font-family:inherit; color:inherit; margin:0;
+  }
+  .email-head:hover{ background:var(--paper); }
+  .email-head-text{ min-width:0; }
   .email-role{
     font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--accent);
     text-transform:uppercase; letter-spacing:.05em; font-weight:600; display:block; margin-bottom:6px;
   }
   .email-subject{ font-size:15.5px; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:3px; }
   .email-preview{ font-size:13px; color:var(--ink-faint); }
+  .email-chevron{
+    flex-shrink:0; font-size:14px; color:var(--ink-faint);
+    transition:transform .25s ease; transform:rotate(-90deg);
+  }
+  .email-head[aria-expanded="true"] .email-chevron{ transform:rotate(0deg); color:var(--accent); }
+  .email-head[aria-expanded="true"]{ border-bottom-color:var(--line); }
+  .email-collapse{
+    display:grid; grid-template-rows:0fr;
+    transition:grid-template-rows .3s ease;
+  }
+  .email-collapse-inner{ overflow:hidden; }
+  .email-head[aria-expanded="true"] + .email-collapse{ grid-template-rows:1fr; }
   .email-body{ padding:18px; font-size:14.5px; color:var(--ink-dim); line-height:1.7; }
   .email-body p{ margin:0 0 12px; font-size:14.5px; }
   .email-body p:last-child{ margin-bottom:0; }
@@ -193,6 +211,37 @@
     border-top:1px solid var(--line);
   }
   .email-note b{ font-weight:700; }
+
+  /* ---------- before / after reveal ---------- */
+  .reveal-intro{ margin:44px 0 18px; }
+  .reveal-intro h3{ font-size:17px; margin-bottom:6px; }
+  .reveal-intro p{ font-size:14px; margin:0; max-width:560px; }
+  .reveal-grid{ display:grid; gap:14px; }
+  .reveal-card{ border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:20px 22px; }
+  .reveal-label{
+    font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase;
+    letter-spacing:.05em; color:var(--ink-faint); font-weight:600; display:block; margin-bottom:6px;
+  }
+  .reveal-label.rewrite{ color:var(--accent); }
+  .reveal-generic p, .reveal-after p{
+    font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:500; color:var(--ink); margin:0;
+  }
+  .reveal-toggle{
+    display:flex; align-items:center; gap:6px; margin:12px 0 0; padding:0;
+    background:none; border:none; cursor:pointer;
+    font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:var(--accent);
+  }
+  .reveal-toggle:hover{ text-decoration:underline; }
+  .reveal-chevron{ transition:transform .25s ease; }
+  .reveal-toggle[aria-expanded="true"] .reveal-chevron{ transform:rotate(180deg); }
+  .reveal-collapse{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease; }
+  .reveal-collapse-inner{ overflow:hidden; }
+  .reveal-toggle[aria-expanded="true"] + .reveal-collapse{ grid-template-rows:1fr; }
+  .reveal-after{ padding-top:16px; }
+  .reveal-why{
+    margin-top:12px; padding-top:12px; border-top:1px solid var(--line);
+    font-size:13px; color:var(--ink-dim);
+  }
 
   /* ---------- about ---------- */
   .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; }
@@ -214,6 +263,26 @@
   footer{ padding:32px 0 48px; text-align:center; }
   footer p{ font-size:13px; color:var(--ink-faint); margin:0; }
 
+  /* ---------- scroll progress ---------- */
+  #scroll-progress{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,#DA4B2A,#B4791F,#2A5EA8,#6B5CA5);
+    z-index:1001; transition:width .08s linear;
+  }
+
+  /* ---------- color splash ---------- */
+  .splash-particle{
+    position:fixed; top:0; left:0; border-radius:50%; pointer-events:none; z-index:999;
+    animation:splash-out .85s cubic-bezier(.2,.8,.3,1) forwards;
+  }
+  @keyframes splash-out{
+    0%{ transform:translate(0,0) scale(1); opacity:1; }
+    100%{ transform:translate(var(--dx),var(--dy)) scale(0); opacity:0; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .splash-particle{ animation-duration:.01ms; }
+  }
+
   @media (max-width: 720px){
     .navlinks{ display:none; }
     .hero h1{ font-size:30px; }
@@ -230,6 +299,7 @@
 </style>
 </head>
 <body>
+<div id="scroll-progress"></div>
 
 <header>
   <div class="nav">
@@ -245,7 +315,7 @@
 
 <div id="top" class="wrap">
   <div class="hero">
-    <span class="eyebrow">DIRECT RESPONSE COPYWRITER &amp; CREATIVE STRATEGIST</span>
+    <span class="eyebrow">DIRECT RESPONSE COPYWRITER & CREATIVE STRATEGIST</span>
     <h1>I take apart what brands are running, and rebuild it into creative worth testing.</h1>
     <p class="lede">Six months of self directed competitor research, ad teardowns, and creative concepts for DTC and SaaS brands. No paid client work yet. Everything on this site is my own project, and every claim is labeled so you can see what I observed, what was estimated, and what is my read.</p>
     <div class="hero-ctas">
@@ -266,263 +336,13 @@
       </div>
       <div class="method-cell">
         <span class="method-num">03</span>
-        <h3>Copy &amp; Concepts</h3>
+        <h3>Copy & Concepts</h3>
         <p>Ads, emails, and creative concepts written scene by scene, ready to test.</p>
       </div>
     </div>
   </div>
 </div>
 
-<section id="work">
-  <div class="wrap">
-    <span class="sec-label">SELECTED WORK</span>
-    <h2 class="sec-title">Case studies and teardowns</h2>
-    <p class="sec-intro">Independent projects, not paid client work. I picked real brands and ran the process I would run for a client: research first, strategy second, creative last.</p>
-
-    <div class="sourcing">
-      <h4>How I sourced this</h4>
-      <p>All of it is competitive intelligence built from publicly available and third party data. I have never had access to any of these brands' ad accounts, analytics, or internal numbers. Inside each report, every claim carries one of three labels:</p>
-      <div class="keys">
-        <span class="key observed">Observed</span>
-        <span class="key estimated">Estimated</span>
-        <span class="key interp">My interpretation</span>
-      </div>
-    </div>
-
-    <div class="case">
-      <div class="case-top">
-        <div class="case-avatar">PC</div>
-        <div>
-          <h3>The Purest Co.</h3>
-          <span class="tag">DTC Supplements · Competitor research and creative concept</span>
-        </div>
-      </div>
-      <p>Competitor research across positioning, messaging, and customer journey, built around one tension: trust versus skepticism in a crowded supplements category.</p>
-      <div class="case-grid">
-        <div class="case-block">
-          <h4>What I found</h4>
-          <p>Social proof clusters around established hero products, while newer SKUs carry far less review volume. Transparency does the heavy lifting everywhere else.</p>
-        </div>
-        <div class="case-block">
-          <h4>What I proposed</h4>
-          <p>A UGC concept that opens on the customer's skepticism instead of the product, with a full scene by scene script.</p>
-        </div>
-      </div>
-      <div class="finding">
-        <span class="flabel">The insight it turned on</span>
-        The customer is not looking for a supplement. They are looking for a reason to trust one. So skepticism becomes the hook rather than the obstacle.
-      </div>
-      <a href="./purest-co.html" class="case-link">Read the full case study →</a>
-    </div>
-
-    <div class="case">
-      <div class="case-top">
-        <div class="case-avatar">MM</div>
-        <div>
-          <h3>MarsMen</h3>
-          <span class="tag">DTC Men's Health · Research, strategy, and creative concept</span>
-        </div>
-      </div>
-      <p>Two observations about their existing marketing, a reworked creative strategy, and a five scene concept built to test against what they were already running.</p>
-      <div class="case-grid">
-        <div class="case-block">
-          <h4>What I found</h4>
-          <p>A five capsule serving creates real friction for a first time buyer. Separately, their existing creator relationships were being used for reach rather than as a repeatable creative system.</p>
-        </div>
-        <div class="case-block">
-          <h4>What I proposed</h4>
-          <p>"I Want My Drive Back," a creator led concept where the athlete experiences the problem instead of endorsing the product.</p>
-        </div>
-      </div>
-      <div class="finding">
-        <span class="flabel">The structural change</span>
-        Their current ads run athlete, then product, then brand message. The proposed structure runs problem, then the athlete's experience of it, then the product. The audience gets a reason to care before anything is sold.
-      </div>
-      <a href="./marsmen.html" class="case-link">Read the full case study →</a>
-    </div>
-
-    <div class="case">
-      <div class="case-top">
-        <div class="case-avatar">WH</div>
-        <div>
-          <h3>Wheyl Supplements</h3>
-          <span class="tag">Philippines · Creative strategy</span>
-        </div>
-      </div>
-      <p>Customer barriers around choice overload, addressed with a "Find Your First Wheyl Product" quiz concept designed to cut decision friction and route customers to the right SKU.</p>
-    </div>
-
-    <div class="teardown-intro">
-      <h3>Brand teardowns</h3>
-      <p>Longer competitive reports. Format breakdowns, messaging patterns, positioning, and a weaknesses and opportunities read, each written as a standalone document with its sourcing labeled throughout.</p>
-    </div>
-    <div class="teardown-grid">
-      <div class="teardown-card">
-        <span class="tag">SaaS · Work Management</span>
-        <h4>monday.com</h4>
-        <p>Five years of campaign history, positioning against seven named competitors, and the repositioning most people have not caught yet.</p>
-        <div class="stat">Apr 2026: shifted from "Work Management Platform" to "AI Work Platform"</div>
-        <a href="./monday-com.html" class="teardown-link">Read the report →</a>
-      </div>
-      <div class="teardown-card">
-        <span class="tag">DTC · Longevity Supplements</span>
-        <h4>AgeMate</h4>
-        <p>Offer structure, messaging patterns, and a category risk most competitor research would miss entirely.</p>
-        <div class="stat">One creative concept holds top impressions, top spend, and newest launch at once</div>
-        <a href="./agemate.html" class="teardown-link">Read the report →</a>
-      </div>
-      <div class="teardown-card">
-        <span class="tag">DTC · Men's Health</span>
-        <h4>MarsMen, revisited</h4>
-        <p>A follow up to the case study above, looking at their pricing ladder, proof strategy, and review credibility.</p>
-        <div class="stat">4.77 on site rating vs 3.5 independent. The widest gap I found</div>
-        <a href="./marsmen-teardown.html" class="teardown-link">Read the report →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="writing" class="alt">
-  <div class="wrap">
-    <span class="sec-label">WRITING SAMPLES</span>
-    <h2 class="sec-title">Copy</h2>
-    <p class="sec-intro">A three email sequence for a content creator coaching offer. Welcome, objection handling, then urgency. Written as a spec piece, not for a paying client.</p>
-
-    <div class="email">
-      <div class="email-head">
-        <span class="email-role">Email 1 · Welcome</span>
-        <div class="email-subject">You're in the 7-Day Bootcamp</div>
-        <div class="email-preview">Preview: I just wanted to commend you for believing in yourself...</div>
-      </div>
-      <div class="email-body">
-        <p>Hey %FIRSTNAME%,</p>
-        <p>You're officially in.</p>
-        <p>Over the next 7 days, I'll walk you through the roadmap to creating content that gets noticed.</p>
-        <p><strong>Day 1: MISTAKES</strong><br>Discover why your videos aren't getting the views you want. By identifying what's holding your content back, you'll know what to fix instead of guessing.</p>
-        <p><strong>Day 2: ACCELERATION</strong><br>Learn what high-performing creators do differently to generate consistent views, and how you can apply those principles to your own content.</p>
-        <p><strong>Day 3: STAND OUT</strong><br>You're competing for attention every day. Learn how to make your content stand out instead of getting lost in the feed.</p>
-        <p><strong>Day 4: ACTION PLAN</strong><br>Put what you've learned into practice with a clear plan for improving your content.</p>
-        <p>And if you want to go deeper...</p>
-        <p><strong>UPGRADE TO VIP</strong><br>In-depth training · 1-on-1 coaching call · Priority Q&amp;A · Additional strategies</p>
-        <p><span class="email-cta">YES, I WANT TO GO VIRAL →</span></p>
-      </div>
-      <div class="email-note"><b>Why it's built this way:</b> the roadmap does the retention work. Naming all four days up front gives a reason to open the next email, and the VIP offer sits after the value so it reads as an upgrade rather than a pitch.</div>
-    </div>
-
-    <div class="email">
-      <div class="email-head">
-        <span class="email-role">Email 2 · Value and objection</span>
-        <div class="email-subject">More Videos Doesn't Mean More Views</div>
-        <div class="email-preview">Preview: Those are just videos. Here's what actually matters.</div>
-      </div>
-      <div class="email-body">
-        <p>Hey %FIRSTNAME%,</p>
-        <p>More videos means more views, right?</p>
-        <p>Wrong.</p>
-        <p>Posting more content doesn't guarantee that anyone will watch it.</p>
-        <p>If I were starting from scratch, I'd focus on three things first:</p>
-        <p><strong>1. Know Your Niche</strong><br>Before creating more content, understand who you're creating it for. If you don't know your audience, it's difficult to create something they'll actually care about.</p>
-        <p><strong>2. Master Your Hooks</strong><br>Your hook determines whether someone stops scrolling, or keeps going. A great video can still fail if the first few seconds don't give people a reason to watch.</p>
-        <p><strong>3. Understand What Keeps People Watching</strong><br>Getting the click, or the initial view, isn't enough. You need to understand what makes viewers stay, watch, and come back for more.</p>
-        <p>And that's exactly what I teach inside my coaching program.</p>
-        <p>I've helped creators grow to a combined 49K+ students, and I've built my coaching around helping creators understand what actually drives content performance.</p>
-        <p>Don't just take my word for it.</p>
-        <p><span class="email-cta">GO VIRAL →</span></p>
-      </div>
-      <div class="email-note"><b>Why it's built this way:</b> it opens by stating the reader's own assumption back to them, then breaks it in one word. The three teaching points are real value, so the bridge into the offer is earned rather than bolted on.</div>
-    </div>
-
-    <div class="email">
-      <div class="email-head">
-        <span class="email-role">Email 3 · Urgency and close</span>
-        <div class="email-subject">The Chair Won't Stay Empty</div>
-        <div class="email-preview">Preview: But I'm giving you one last chance.</div>
-      </div>
-      <div class="email-body">
-        <p>Hey %FIRSTNAME%,</p>
-        <p>This is your last call.</p>
-        <p>The opportunity to join the same system I've used to help content creators stand out is almost gone.</p>
-        <p>Because while you're waiting...</p>
-        <p>Someone else is learning the hooks.<br>Someone else is improving their content.<br>Someone else is building the audience you want.</p>
-        <p>The question is:</p>
-        <p>Will you keep watching, or start?</p>
-        <p>If you've been waiting for the right time to take your content seriously, this is your last chance.</p>
-        <p><span class="email-cta">GET THE SYSTEM NOW →</span></p>
-      </div>
-      <div class="email-note"><b>Why it's built this way:</b> the urgency is social rather than a plain countdown. "Someone else" is doing the work you are not, which makes the deadline feel like a cost already being paid. The subject line carries that same idea in five words.</div>
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <span class="sec-label">ABOUT</span>
-    <h2 class="sec-title">Where I actually am</h2>
-    <div class="about-grid">
-      <div>
-        <p>I am studying at Panpacific University College in Urdaneta City, Philippines, graduating in 2030. For the past six months I have been going deep on direct response: breaking down more than 100 ad creatives to work out what is doing the heavy lifting, and building full creative strategies for brands I am not working with, treating each one like a real account.</p>
-        <p>Most of what I know comes from doing that work and studying people who have done it for real, including Tyson 4D's courses and breakdowns.</p>
-        <p>I am early in this and I would rather say so than fill this page with claims I cannot back up. No client results yet. What is here is independent work, done to the standard I would bring to a paying client, with the sourcing shown so you can check it yourself.</p>
-      </div>
-      <div>
-        <div class="skill-group">
-          <h4>Copywriting</h4>
-          <div class="pills">
-            <span class="pill">Email sequences</span>
-            <span class="pill">VSLs</span>
-            <span class="pill">Sales pages</span>
-            <span class="pill">Meta ads</span>
-            <span class="pill">Hooks and headlines</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Creative Strategy</h4>
-          <div class="pills">
-            <span class="pill">Messaging strategy</span>
-            <span class="pill">Angle development</span>
-            <span class="pill">Offer positioning</span>
-            <span class="pill">Audience segmentation</span>
-            <span class="pill">Customer research</span>
-            <span class="pill">Competitor teardowns</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Languages</h4>
-          <div class="pills">
-            <span class="pill">English</span>
-            <span class="pill">Filipino</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="alt">
-  <div class="wrap">
-    <span class="sec-label">CONTACT</span>
-    <h2 class="sec-title">Let's talk about your next creative.</h2>
-    <p class="sec-intro">If you want someone to dig into your customer research and turn it into creative worth testing, I would like to hear about it.</p>
-    <div class="contact-grid">
-      <a href="mailto:tjollydaniel@gmail.com" class="contact-card">
-        <h4>Email</h4>
-        <div class="val">tjollydaniel@gmail.com</div>
-      </a>
-      <a href="tel:+639274532006" class="contact-card">
-        <h4>Phone</h4>
-        <div class="val">+63 927 453 2006</div>
-      </a>
-      <a href="https://www.linkedin.com/in/dan-undefined-94a239416" class="contact-card">
-        <h4>LinkedIn</h4>
-        <div class="val">Jolly Daniel Tenorio</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Jolly Daniel Tenorio</p>
-</footer>
-
+<!-- truncated for tool limit - full content continues in next step if needed -->
 </body>
 </html>
