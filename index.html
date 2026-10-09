@@ -726,7 +726,7 @@
         <span class="infl-label">People I have learned from</span>
         <div class="people-grid">
           <div class="person">
-            <div class="avatar av-blue"><span>AH</span><img src="person-alex-hormozi.jpg" alt="Alex Hormozi" onerror="this.remove()"></div>
+            <div class="avatar av-blue"><span>AH</span><img src="person-tyson-4d.jpg" alt="Alex Hormozi" onerror="this.remove()"></div>
             <div class="person-info">
               <h4>Alex Hormozi</h4>
               <span class="learned-label">Learned</span>
@@ -734,7 +734,7 @@
             </div>
           </div>
           <div class="person">
-            <div class="avatar av-orange"><span>T4</span><img src="person-tyson-4d.jpg" alt="Tyson 4D" onerror="this.remove()"></div>
+            <div class="avatar av-orange"><span>T4</span><img src="person-alex-hormozi.jpg" alt="Tyson 4D" onerror="this.remove()"></div>
             <div class="person-info">
               <h4>Tyson 4D</h4>
               <span class="learned-label">Learned</span>
@@ -783,7 +783,6 @@
 </footer>
 
 <script>
-  // Email accordion: collapsed by default, one summary click reveals the full sequence
   document.querySelectorAll('.email-head').forEach(head => {
     head.addEventListener('click', () => {
       const open = head.getAttribute('aria-expanded') === 'true';
@@ -791,7 +790,6 @@
     });
   });
 
-  // Before/after reveal cards: same collapse pattern, plus a text swap on the toggle
   document.querySelectorAll('.reveal-toggle').forEach(btn => {
     const label = btn.querySelector('.reveal-toggle-text');
     btn.addEventListener('click', () => {
@@ -801,7 +799,6 @@
     });
   });
 
-  // Corner color splash: a burst of colored particles from wherever it's triggered
   const SPLASH_COLORS = ['#DA4B2A','#2A5EA8','#B4791F','#2F7A5C','#6B5CA5','#E0577F','#1CADA8'];
   function fireSplash(cx, cy, count) {
     const n = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : count;
@@ -823,12 +820,10 @@
     }
   }
 
-  // Quick splash of color from wherever the page is clicked. It flies out and fades.
   document.addEventListener('click', (e) => {
     fireSplash(e.clientX, e.clientY, 20);
   });
 
-  // Thin scroll progress bar in the header accent gradient
   const progressBar = document.getElementById('scroll-progress');
   function updateProgress() {
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
