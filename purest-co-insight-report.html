@@ -1,1 +1,198 @@
-loading
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Purest Co — Full Brand & Customer Insight Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2d1b4e; --primary-dark: #1a0f2e; --primary-light: #7c4dff;
+      --accent: #e91e8c; --bg: #faf8fc; --card: #ffffff; --text: #1a1a1a;
+      --text-muted: #5c5c5c; --border: #ebe6f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 15px; }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    .topnav { background:#fff; border-bottom:1px solid var(--border); padding:14px 24px; }
+    .topnav a { color:#5c5c5c; text-decoration:none; font-size:14px; font-weight:600; margin-right:14px; }
+    .topnav a.accent { color: var(--accent); }
+    header {
+      background: linear-gradient(135deg, #2d1b4e 0%, #5c2d91 45%, #e91e8c 140%);
+      color: white; padding: 52px 0 60px;
+    }
+    .badge {
+      display: inline-block; background: rgba(255,255,255,0.18); padding: 6px 14px;
+      border-radius: 999px; font-size: 12px; font-weight: 600; letter-spacing: 0.5px;
+      text-transform: uppercase; margin-bottom: 16px;
+    }
+    h1 { font-family: 'Playfair Display', serif; font-size: 2.35rem; font-weight: 700; margin-bottom: 14px; }
+    .subtitle { font-size: 1.05rem; opacity: 0.92; max-width: 780px; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 28px; font-size: 14px; }
+    .meta-item strong { display: block; font-size: 1.2rem; font-weight: 700; }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    nav .container { display: flex; gap: 4px; overflow-x: auto; padding: 12px 24px; }
+    nav a { white-space: nowrap; padding: 8px 13px; border-radius: 8px; color: var(--text-muted); text-decoration: none; font-size: 13px; font-weight: 500; }
+    section { padding: 48px 0; }
+    section.alt { background: white; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 8px; }
+    .section-lead { color: var(--text-muted); margin-bottom: 28px; max-width: 780px; }
+    h3 { font-size: 1.1rem; font-weight: 600; margin: 26px 0 10px; color: var(--primary); }
+    h4 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+    .card-stat { text-align: center; padding: 26px 14px; }
+    .card-stat .number { font-size: 1.7rem; font-weight: 800; color: var(--accent); }
+    .card-stat .label { font-size: 13px; color: var(--text-muted); margin-top: 8px; font-weight: 500; }
+    .quote { background: #faf5fc; border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 0 10px 10px 0; font-size: 13.5px; margin: 10px 0; font-style: italic; }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: white; border-radius: 12px; overflow: hidden; border: 1px solid var(--border); margin: 16px 0; }
+    th { background: #f5f0fa; text-align: left; padding: 11px 14px; font-weight: 600; font-size: 11.5px; text-transform: uppercase; color: var(--text-muted); }
+    td { padding: 12px 14px; border-top: 1px solid var(--border); vertical-align: top; }
+    .tag { display: inline-block; padding: 3px 9px; border-radius: 6px; font-size: 11.5px; font-weight: 600; }
+    .tag-pos { background: #e8f5e9; color: #1b5e20; }
+    .tag-strong { background: #fce4ec; color: #c2185b; }
+    ul.clean { list-style: none; }
+    ul.clean li { padding: 7px 0 7px 26px; position: relative; }
+    ul.clean li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .callout { background: #fdf2f8; border-left: 4px solid var(--accent); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 18px 0; font-size: 14px; }
+    .disclaimer { background: #fff8e7; border: 1px solid #f0d9a8; border-radius: 12px; padding: 14px 18px; font-size: 13px; color: #7a5c1a; margin-bottom: 28px; }
+    footer { background: #1a0f2e; color: #b8a9c9; padding: 36px 0; font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+<div class="topnav"><div class="container">
+  <a href="index.html">← Back to portfolio</a>
+  <a class="accent" href="purest-co.html">Purest Co. case study →</a>
+</div></div>
+<header>
+  <div class="container">
+    <div class="badge">Product · Messaging · Customer Insight Report</div>
+    <h1>The Purest Co</h1>
+    <p class="subtitle">Full analysis of the brand, hero products, claims, customer language, previous solutions, winning ad patterns, and competitive strengths.</p>
+    <div class="meta-row">
+      <div class="meta-item"><strong>Collagen + Wellness</strong> Core Focus</div>
+      <div class="meta-item"><strong>132k+</strong> Customers</div>
+      <div class="meta-item"><strong>60k+</strong> Reviews</div>
+      <div class="meta-item"><strong>Oct 2026</strong> Report</div>
+    </div>
+  </div>
+</header>
+<nav><div class="container">
+  <a href="#overview">Overview</a><a href="#products">Products</a><a href="#customers">Who Buys</a>
+  <a href="#voices">Customer Voices</a><a href="#messaging">Messaging</a><a href="#ads">Winning Ads</a><a href="#summary">Takeaways</a>
+</div></nav>
+<main>
+<section id="overview"><div class="container">
+  <div class="disclaimer"><strong>Source focus:</strong> Primary analysis of thepurest.co, product pages, customer reviews, and public positioning. Competitive/customer-insight report only. Not affiliated with The Purest Co.</div>
+  <h2>Brand Overview</h2>
+  <p class="section-lead">Singapore-origin wellness brand focused on transparent, clinically-backed supplements for skin, gut, weight, hair, and longevity. Positioning: natural, honest, delicious — with heavy emphasis on taste, high active doses, and visible everyday results.</p>
+  <div class="grid grid-3" style="margin-bottom:28px;">
+    <div class="card card-stat"><div class="number">Collagen</div><div class="label">Hero Category</div></div>
+    <div class="card card-stat"><div class="number">132k+</div><div class="label">Happy Customers Claimed</div></div>
+    <div class="card card-stat"><div class="number">60k+</div><div class="label">Reviews Across Sites</div></div>
+  </div>
+  <div class="card"><h3 style="margin-top:0">Core Positioning</h3>
+    <ul class="clean">
+      <li>Natural, honest, delicious — quality + taste as equal pillars</li>
+      <li>Transparent doses and clinically-backed ingredients (e.g. Wellnex™ marine collagen)</li>
+      <li>Easy daily rituals (sachets, melts, powders)</li>
+      <li>Strong review volume and social proof (“friends noticed”, “husband noticed”)</li>
+      <li>Regional strength in Singapore / SEA with expanding US/CA presence</li>
+    </ul>
+  </div>
+</div></section>
+<section id="products" class="alt"><div class="container">
+  <h2>Hero Products</h2>
+  <table>
+    <thead><tr><th>Product</th><th>Key Actives</th><th>Primary Promise</th><th>Customer Language</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Collagen Glow Berries</strong></td><td>~6,000mg Wellnex™ marine collagen + Vit C</td><td>Smooth, firm, glowing skin</td><td>“Hydrated, glowy & plump”; “friends noticed”</td></tr>
+      <tr><td><strong>Marine Collagen Peptides</strong></td><td>5,000mg hydrolysed marine collagen</td><td>Softer, plumper skin; hair & nails</td><td>“Holy grail”; “skin less dry”</td></tr>
+      <tr><td><strong>Sicilian Orange Slimming Elixir</strong></td><td>Blood orange extract + L-carnitine + probiotics</td><td>Craving control, slimmer waist</td><td>“Same size as in my 20s”; “curbed cravings”</td></tr>
+      <tr><td><strong>Daily Pre+Probiotic Melts</strong></td><td>Probiotic strains</td><td>Reduced bloating, gut comfort</td><td>“No more extreme bloating”</td></tr>
+      <tr><td><strong>Pomegranate Hair Vitality</strong></td><td>Marine collagen + horsetail</td><td>Less hair fall, thicker strands</td><td>“Hair fall reduced”</td></tr>
+      <tr><td><strong>Daily Longevity Blend (US)</strong></td><td>400mg NMN + creatine + taurine</td><td>Sustained energy, focus</td><td>“No more 3pm crash”</td></tr>
+    </tbody>
+  </table>
+</div></section>
+<section id="customers" class="alt"><div class="container">
+  <h2>Who These Customers Are</h2>
+  <div class="grid grid-2">
+    <div class="card"><span class="tag tag-strong">Primary</span><h4 style="margin-top:8px;">The Glow-Seeking Woman (30–50)</h4>
+      <p style="font-size:13.5px;">Wants visible skin improvement without complicated skincare. Values taste and daily habit. Shares results when friends notice.</p></div>
+    <div class="card"><span class="tag tag-strong">Strong</span><h4 style="margin-top:8px;">The Postpartum / Mummy Segment</h4>
+      <p style="font-size:13.5px;">Looking to reclaim skin quality, manage weight/cravings, feel more like herself after pregnancy.</p></div>
+    <div class="card"><span class="tag tag-strong">Strong</span><h4 style="margin-top:8px;">The Gut-Comfort Seeker</h4>
+      <p style="font-size:13.5px;">Chronic bloating or discomfort after meals. Responds to Pre+Probiotic Melts language.</p></div>
+    <div class="card"><span class="tag tag-strong">Secondary</span><h4 style="margin-top:8px;">The Clean-Label Optimiser</h4>
+      <p style="font-size:13.5px;">Reads labels, wants transparent doses and clinically-backed ingredients.</p></div>
+  </div>
+</div></section>
+<section id="voices"><div class="container">
+  <h2>Customer Voices</h2>
+  <div class="card" style="margin-bottom:16px;"><h4>Ariela · 7 months</h4>
+    <div class="quote">“Love how it has helped my skin to stay hydrated, glowy & plump… people around us have noticed and asked what have we done.”</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:8px;"><strong>Insight:</strong> Spouse + outsiders noticing is a recurring high-value outcome.</p></div>
+  <div class="card" style="margin-bottom:16px;"><h4>Woan Fung · 30 days</h4>
+    <div class="quote">“Before, my skin looked dry, patchy and a little dull. After 30 days… friends even started asking what I'd been doing differently.”</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:8px;"><strong>Insight:</strong> Clear before/after + external validation. 30-day window commonly cited.</p></div>
+  <div class="card" style="margin-bottom:16px;"><h4>Ysabel L.R.</h4>
+    <div class="quote">“Okay, I was super skeptical at first… Purest Glow Berries actually delivered. Even my friends have started asking what I changed.”</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:8px;"><strong>Insight:</strong> Skepticism → conversion is a common journey.</p></div>
+  <div class="card" style="margin-bottom:16px;"><h4>ML · Sicilian Orange</h4>
+    <div class="quote">“Sicilian Orange helped me curb cravings and I’m now the same size as I was in my 20s… recommended this to all my mummy friends.”</div>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:8px;"><strong>Insight:</strong> Craving control + identity recovery + mummy word-of-mouth.</p></div>
+  <div class="callout"><strong>Pattern:</strong> Strongest reviews combine (1) a specific felt/visible change, (2) a clear timeline (2–4 weeks first signals), and (3) external validation — friends, spouse, or “people noticed.”</div>
+</div></section>
+<section id="messaging" class="alt"><div class="container">
+  <h2>Core Messaging System</h2>
+  <div class="grid grid-2">
+    <div class="card"><h4>Problem Agitation</h4><ul class="clean">
+      <li>Dull, dry, or sagging skin that shows age</li>
+      <li>Bloating and gut discomfort after meals</li>
+      <li>Stubborn weight / cravings</li>
+      <li>Complicated routines that don’t taste good</li>
+    </ul></div>
+    <div class="card"><h4>Emotional Payoff</h4><ul class="clean">
+      <li>Friends and family notice the glow</li>
+      <li>Feel like yourself again (postpartum / midlife)</li>
+      <li>Comfortable in your body</li>
+      <li>Actually look forward to taking the product</li>
+    </ul></div>
+  </div>
+</div></section>
+<section id="ads"><div class="container">
+  <h2>Winning Ad Patterns</h2>
+  <div class="grid grid-2">
+    <div class="card" style="border-top:4px solid var(--accent);"><h4>1. “Friends / family noticed”</h4>
+      <div class="quote">“People around us have noticed and asked what have we done.”</div>
+      <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> External validation beats self-reported results for beauty claims.</p></div>
+    <div class="card" style="border-top:4px solid var(--accent);"><h4>2. Taste + daily habit</h4>
+      <div class="quote">“I actually look forward to having it”</div>
+      <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Removes the biggest barrier to consistency in supplements.</p></div>
+    <div class="card" style="border-top:4px solid var(--accent);"><h4>3. Visible skin transformation</h4>
+      <div class="quote">“Hydrated, glowy & plump”</div>
+      <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Highest-volume customer outcome. Easy to desire and show.</p></div>
+    <div class="card" style="border-top:4px solid var(--accent);"><h4>4. 90-day guarantee + simple ritual</h4>
+      <div class="quote">One sachet a day + risk-free trial</div>
+      <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Lowers friction for higher-consideration beauty purchase.</p></div>
+  </div>
+  <div class="callout"><strong>Practical takeaway:</strong> Highest-performing Purest-style creatives lead with social proof (“people noticed”), pair it with a clear skin outcome, emphasise taste / easy habit, and close with dose transparency + 90-day guarantee.</div>
+</div></section>
+<section id="summary" class="alt"><div class="container">
+  <h2>Key Takeaways</h2>
+  <div class="callout" style="margin-top:8px;">
+    <strong>Bottom line:</strong> The Purest Co wins by making clinically relevant actives (especially collagen) delicious and easy to take every day, then amplifying the social proof that “people noticed.” Sustained advantage depends on owning the “noticed by others + actually enjoyable” narrative.
+  </div>
+</div></section>
+</main>
+<footer><div class="container">
+  <p>The Purest Co — Full Brand & Customer Insight Report<br>
+  Based on thepurest.co, product pages, and public customer language<br>
+  <span style="opacity:0.7">Generated October 2026 · Not affiliated with The Purest Co.</span></p>
+</div></footer>
+</body>
+</html>
