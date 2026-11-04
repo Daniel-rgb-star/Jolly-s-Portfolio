@@ -28,33 +28,32 @@
   section{ margin-bottom:48px; }
   h2{ font-size:22px; margin-bottom:16px; }
   h3{ font-size:16px; margin-bottom:8px; }
-  .findings{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .findings{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
   .finding{ border:1px solid var(--line); border-radius:var(--radius); padding:18px; background:var(--card); }
   .finding .num{ font-family:'JetBrains Mono',monospace; color:var(--accent); font-size:12px; font-weight:600; }
   .finding h3{ font-size:14.5px; margin:8px 0 6px; }
   .finding p{ font-size:13px; margin:0; }
   blockquote{
-    font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:500; color:var(--ink);
+    font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:500; color:var(--ink);
     border-left:3px solid var(--accent); padding:2px 0 2px 20px; margin:0 0 20px; max-width:560px;
   }
-  .flow{ display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:18px 0 24px; }
-  .flow-step{ background:var(--card); border:1px solid var(--line); border-radius:20px; padding:7px 16px; font-size:13.5px; font-weight:600; }
-  .flow-arrow{ color:var(--ink-faint); font-size:15px; }
-  .concept-box{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; margin-bottom:16px; }
-  .concept-meta{ display:flex; gap:20px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-faint); margin-bottom:16px; }
+  .concept-box{ background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px; margin-bottom:20px; }
+  .concept-meta{ display:flex; flex-wrap:wrap; gap:12px 20px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-faint); margin-bottom:16px; }
   .concept-meta b{ color:var(--ink); }
-  ol.beats{ margin:0; padding-left:20px; }
-  ol.beats li{ margin-bottom:10px; font-size:14.5px; color:var(--ink-dim); }
-  ol.beats b{ color:var(--ink); }
-  .scene{ border-top:1px solid var(--line); padding:28px 0; }
+  .hooks{ margin:0 0 16px; padding-left:18px; }
+  .hooks li{ margin-bottom:8px; font-size:14.5px; color:var(--ink-dim); }
+  .hooks b{ color:var(--ink); }
+  .scene{ border-top:1px solid var(--line); padding:24px 0; }
   .scene:first-of-type{ border-top:none; padding-top:0; }
   .scene-label{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:.05em; font-weight:600; margin-bottom:8px; display:block; }
-  .scene h3{ font-size:18px; margin-bottom:14px; }
-  .scene-visual{ font-size:13.5px; color:var(--ink-faint); font-style:italic; margin-bottom:14px; }
-  .scene-note{ background:var(--accent-dim); border-radius:8px; padding:12px 14px; font-size:13.5px; color:var(--ink); margin-top:14px; }
+  .scene h3{ font-size:17px; margin-bottom:10px; }
+  .scene-visual{ font-size:13.5px; color:var(--ink-faint); font-style:italic; margin-bottom:12px; }
+  .scene-note{ background:var(--accent-dim); border-radius:8px; padding:12px 14px; font-size:13.5px; color:var(--ink); margin-top:12px; }
+  .script-line{ font-size:14.5px; color:var(--ink-dim); margin:0 0 8px; }
+  .script-line b{ color:var(--ink); }
   .demo-block{
     border:1.5px dashed var(--ink-faint); border-radius:var(--radius); padding:22px;
-    margin-bottom:32px; background:var(--card);
+    margin-bottom:28px; background:var(--card);
   }
   .demo-flag{
     display:inline-flex; align-items:center; gap:6px; font-family:'JetBrains Mono',monospace;
@@ -66,13 +65,11 @@
   .demo-block p{ font-size:13.5px; margin:0 0 16px; }
   .demo-video{ width:100%; border-radius:8px; display:block; background:#000; }
   .demo-caption{ font-size:12.5px; color:var(--ink-faint); margin-top:10px; font-style:italic; }
-  .offer{ display:flex; align-items:baseline; gap:12px; font-family:'JetBrains Mono',monospace; margin-bottom:14px; }
-  .offer .was{ text-decoration:line-through; color:var(--ink-faint); font-size:15px; }
-  .offer .now{ color:var(--accent); font-size:20px; font-weight:700; }
   .whywork{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
   .whywork .card{ border:1px solid var(--line); border-radius:var(--radius); padding:20px; background:var(--card); }
   .whywork h3{ font-size:15px; }
   .whywork p{ font-size:13.5px; margin:0; }
+  .source-note{ font-size:13px; color:var(--ink-faint); margin-top:8px; }
   @media (max-width:640px){
     .findings, .whywork{ grid-template-columns:1fr; }
   }
@@ -88,120 +85,151 @@
   <div class="title-block">
     <span class="tag">CASE STUDY · DTC SUPPLEMENTS</span>
     <h1>The Purest Co.</h1>
-    <p class="sub">Competitor research and a proposed creative concept, built around one question: what does it actually take to earn trust in a crowded supplement category?</p>
+    <p class="sub">Product-level creative for Collagen Glow Berries. Two TOFU, problem-aware concepts built from avatar research and competitor ad patterns — with full hooks, scripts, and visual direction.</p>
   </div>
 
   <section>
-    <h2>Objective</h2>
-    <p>Conduct competitor research to identify strengths, weaknesses, and opportunities across positioning, messaging, creative, and customer journey.</p>
+    <h2>Product & objective</h2>
+    <p><b>Product:</b> Collagen Glow Berries (The Purest Co.)</p>
+    <p>Build TOFU creative that speaks to women who feel their skin changed after kids or daily stress — dry, patchy, dull, or breakout-prone — and who have already tried topical skincare without getting glow or firmness from within.</p>
   </section>
 
   <section>
-    <h2>Key Findings</h2>
+    <h2>Avatars</h2>
     <div class="findings">
       <div class="finding">
         <span class="num">01</span>
-        <h3>Social Proof</h3>
-        <p>Strongest around established hero products, while newer SKUs have considerably less review volume.</p>
+        <h3>Postpartum mom (30–50)</h3>
+        <p>After giving birth, dealing with breakouts. Wants the same youthful, glowy look she had before — and to feel more like herself again.</p>
       </div>
       <div class="finding">
         <span class="num">02</span>
-        <h3>Transparency</h3>
-        <p>A major positioning pillar, reinforced through the brand's Purest Promise, PurestLabs, and lab-testing information.</p>
-      </div>
-      <div class="finding">
-        <span class="num">03</span>
-        <h3>Customer Journey</h3>
-        <p>Incorporates guided selling, subscriptions, and loyalty mechanisms to move customers toward purchase and repeat purchasing.</p>
+        <h3>Fung, 35</h3>
+        <p>Married, kids. Dry, patchy, dull skin that makes her look tired and flat by afternoon. Topicals helped the surface; not the glow or firmness others notice.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Customer Insight</h2>
-    <blockquote>The customer isn't simply looking for a supplement. They need a reason to trust one.</blockquote>
-    <p>Purest repeatedly addresses skepticism through transparency, testimonials, product demonstrations, and testing information.</p>
-
-    <h3 style="margin-top:28px;">Strategic Opportunity</h3>
-    <p>Skepticism can be treated as a creative opportunity rather than something to avoid. Instead of immediately telling customers "our product works," the creative can acknowledge their skepticism and let the customer's own journey and available evidence build trust.</p>
-    <div class="flow">
-      <div class="flow-step">Skepticism</div><span class="flow-arrow">→</span>
-      <div class="flow-step">Trial</div><span class="flow-arrow">→</span>
-      <div class="flow-step">Experience</div><span class="flow-arrow">→</span>
-      <div class="flow-step">Proof</div><span class="flow-arrow">→</span>
-      <div class="flow-step">Purchase</div>
-    </div>
+    <h2>Core insight</h2>
+    <blockquote>Topical skincare fixed the surface. It didn't bring back the glow or firmness other people used to notice.</blockquote>
+    <p>Both avatars already tried the obvious fix. The creative should respect that — name the failed path, then introduce support from within without sounding like another miracle claim.</p>
   </section>
 
   <section>
-    <h2>Creative Concept: "The Skeptic"</h2>
+    <h2>Concept 1 · Postpartum breakouts</h2>
     <div class="concept-box">
-      <div class="concept-meta">Format: <b>UGC</b> &nbsp;·&nbsp; Objective: <b>Turn skepticism into the hook</b></div>
-      <ol class="beats">
-        <li><b>Hook:</b> "I know this probably isn't going to work... but I'm trying it anyway."</li>
-        <li><b>Set Up:</b> The creator explains why they're skeptical and decides to try the product.</li>
-        <li><b>Journey:</b> Show product usage, daily routine, and progress.</li>
-        <li><b>Payoff:</b> "Okay... I actually didn't expect this."</li>
-        <li><b>Proof:</b> Genuine customer experiences, testimonials, or substantiated product evidence.</li>
-        <li><b>CTA:</b> "See what Purest is about."</li>
-      </ol>
+      <div class="concept-meta">
+        <span>Avatar: <b>Mom, 30–50, post-birth breakouts</b></span>
+        <span>Angle: <b>TOFU · Problem-aware · Relatable story</b></span>
+      </div>
+      <h3 style="margin-bottom:12px;">Hooks</h3>
+      <ul class="hooks">
+        <li><b>Hook 1:</b> "Mom-to-mom... what is going on with our skin lately?"</li>
+        <li><b>Hook 2:</b> "After having a baby skin check"</li>
+        <li><b>Hook 3:</b> "I survived labor, but my skin didn't"</li>
+      </ul>
+      <p class="source-note" style="margin:0;">Why these can work: specific call-out, pattern interrupt, and an open loop that invites the scroll-stop.</p>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Body script</span>
+      <p class="script-line"><b>VO:</b> I've been experiencing this lately…. I know.</p>
+      <div class="scene-visual">Visual: after the line, show breakouts on her face.</div>
+      <p class="script-line"><b>VO:</b> This started right after I had my son. Along the way, I just stopped prioritizing myself and put all my focus into motherhood and work.</p>
+      <p class="script-line"><b>VO:</b> I'm so happy being a mom to my boy, but every time I look in the mirror, my breakouts make me feel so insecure. I just miss having clear, youthful-looking skin.</p>
+      <p class="script-line"><b>VO:</b> It used to feel like everyone smiled at me when I walked around the mall, but lately, I feel practically invisible.</p>
+      <div class="scene-visual">Visual: her not feeling the same — flat energy, avoiding the mirror.</div>
+      <p class="script-line"><b>VO:</b> So I decided enough was enough and started taking care of myself again.</p>
+      <p class="script-line"><b>VO:</b> Months of fixing my diet and routine, and I'm slowly getting my confidence back.</p>
+      <div class="scene-visual">Visual: movement, hobbies, small routines that support how she wants to look.</div>
+      <p class="script-line"><b>VO:</b> But I noticed breakouts still showing up. I realized relying on topical skincare wasn't enough.</p>
+      <p class="script-line"><b>VO:</b> That's why I started taking Collagen Glow Berries from The Purest Co. and adding it to my routine.</p>
+      <div class="scene-visual">Visual: clearer, glowy skin — less breakout, more like herself.</div>
+      <p class="script-line"><b>VO:</b> It helped my skin look smooth and glowing again. I honestly feel like I'm back in my youth.</p>
+      <p class="script-line"><b>CTA:</b> If you also want to start a daily routine that supports your skin — check out The Purest Co. Collagen Glow Berries.</p>
     </div>
   </section>
 
   <section>
-    <h2>Execution</h2>
+    <h2>Concept 2 · Dull, tired-looking skin</h2>
+    <div class="concept-box">
+      <div class="concept-meta">
+        <span>Avatar: <b>Fung, 35 — dry, patchy, dull</b></span>
+        <span>Angle: <b>TOFU · Problem-aware · Brand-led proof</b></span>
+      </div>
+      <h3 style="margin-bottom:12px;">Hooks</h3>
+      <ul class="hooks">
+        <li><b>Hook 1:</b> "I was so sick of hearing ‘you look tired' when I was just sitting there with a bare face."</li>
+        <li><b>Hook 2:</b> "Glowing in the morning, completely dull and flat by the afternoon"</li>
+        <li><b>Hook 3:</b> "Before I figured this out, my skin constantly looked dry, patchy, and just... dull."</li>
+      </ul>
+      <p class="source-note" style="margin:0;">Angle idea: name the main problem without friction, then introduce the solution while leaning on brand credibility.</p>
+    </div>
 
+    <div class="scene">
+      <span class="scene-label">Scene 1 · Problem (10–15s)</span>
+      <p class="script-line"><b>VO:</b> This is me throughout the day — I look tired and dull.</p>
+      <div class="scene-visual">Visual: right after the hook — tired, dull face under real light.</div>
+      <p class="script-line"><b>VO:</b> I tried to fix it with topical skincare, but it didn't help from within. Only on the surface.</p>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Scene 2 · Solution (20–30s)</span>
+      <p class="script-line"><b>VO:</b> Right when I was accepting this as my new look, my coworker recommended I start using Collagen Glow Berries from The Purest Co.</p>
+      <p class="script-line"><b>VO:</b> Literally all it takes is three steps — rip, sip, and glow.</p>
+      <p class="script-line"><b>VO:</b> This is me after just using it for four weeks. My face looks hydrated and radiant.</p>
+      <div class="scene-visual">Visual: before/after of her face — clear, hydrated, more radiant.</div>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Scene 3 · CTA</span>
+      <p class="script-line"><b>VO:</b> I thought this was a hidden gem — but no. This is literally the #1 collagen serum in Singapore.</p>
+      <div class="scene-visual">Visual: product + credibility cue (rank / social proof).</div>
+      <p class="script-line"><b>VO:</b> Try Collagen Glow Berries risk-free. If you're still skeptical, they're running a 90-day money-back guarantee.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Competitive reference</h2>
+    <p>Public Meta Ad Library examples used while shaping angle and structure (observed only — not performance data from inside the account):</p>
+    <p style="font-size:13.5px;">
+      <a href="https://www.facebook.com/ads/library/?id=1091488663300673" target="_blank" rel="noopener">Ad Library · 1091488663300673</a><br>
+      <a href="https://www.facebook.com/ads/library/?id=919040397775701" target="_blank" rel="noopener">Ad Library · 919040397775701</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Demo (older skepticism concept)</h2>
     <div class="demo-block">
       <span class="demo-flag">Demonstration, not a real execution</span>
-      <p>This is a rough visual demo of how Scene 01 could look and feel in motion, not a finished ad or a real Purest Co. execution. It's here to show pacing and tone, not to represent actual client work.</p>
+      <p>Earlier concept demo — skepticism-first open. Kept here as a pacing/tone reference only. Not a Purest Co. client execution.</p>
       <video class="demo-video" controls preload="metadata" poster="poster.jpg">
         <source src="skeptic-demo.mp4" type="video/mp4">
         Your browser doesn't support embedded video. <a href="skeptic-demo.mp4">Download the demo clip</a> instead.
       </video>
-      <div class="demo-caption">Demo of Scene 01 — Problem Recognition, from the breakdown below.</div>
-    </div>
-
-    <div class="scene">
-      <span class="scene-label">Scene 01 · Problem Recognition</span>
-      <h3>Four need-states, one question</h3>
-      <blockquote style="font-size:16px;">"Looking for support with menopause, clearer-looking skin, breakouts, or bloating?"</blockquote>
-      <div class="scene-visual">Introduce four different customers, each representing one need-state.</div>
-      <div class="scene-note">Purpose: make the viewer recognize their own problem before the product ever appears.</div>
-    </div>
-
-    <div class="scene">
-      <span class="scene-label">Scene 02 · Product Relevance</span>
-      <h3>The product enters, briefly</h3>
-      <blockquote style="font-size:16px;">"The Purest Co. created targeted formulas designed to support each of these needs."</blockquote>
-      <div class="scene-visual">Each person holds the relevant product; the line briefly communicates what it's designed to support before moving to evidence.</div>
-    </div>
-
-    <div class="scene">
-      <span class="scene-label">Scene 03 · Proof</span>
-      <h3>Evidence, not claims</h3>
-      <blockquote style="font-size:16px;">"Don't just take our word for it. See what customers experienced for themselves."</blockquote>
-      <div class="scene-visual">Customer testimonials, product demonstrations, reviews, and testing information.</div>
-      <div class="scene-note">Purpose: directly address the trust barrier identified in research.</div>
-    </div>
-
-    <div class="scene">
-      <span class="scene-label">Scene 04 · Offer</span>
-      <h3>Present the verified offer</h3>
-      <div class="offer"><span class="was">₱5,100</span><span class="now">₱4,300</span></div>
-      <blockquote style="font-size:16px;">"Start your 30-day routine today."</blockquote>
+      <div class="demo-caption">Older demo clip — problem recognition / skepticism open.</div>
     </div>
   </section>
 
   <section>
-    <h2>Why This Creative Could Work</h2>
+    <h2>Why this direction</h2>
     <div class="whywork">
       <div class="card">
-        <h3>Problem before product</h3>
-        <p>Most supplement advertising opens with the product. This concept opens with the customer's problem, so the viewer identifies with the situation first.</p>
+        <h3>Specific over generic</h3>
+        <p>Mom-to-mom and "you look tired" beat category-wide claims. The viewer can point at themselves in the first three seconds.</p>
       </div>
       <div class="card">
-        <h3>Addresses skepticism directly</h3>
-        <p>The creative acknowledges skepticism instead of pretending it doesn't exist, then answers it with testimonials and evidence.</p>
+        <h3>Failed path acknowledged</h3>
+        <p>Both scripts admit topical-only didn't deliver glow or firmness. That matches how this audience already thinks.</p>
+      </div>
+      <div class="card">
+        <h3>Product enters late</h3>
+        <p>Problem and story first. Collagen Glow Berries shows up after the tension is real — not as the opening claim.</p>
+      </div>
+      <div class="card">
+        <h3>Soft proof + risk reversal</h3>
+        <p>Brand rank + 90-day guarantee handle residual skepticism without hard-sell language.</p>
       </div>
     </div>
   </section>
