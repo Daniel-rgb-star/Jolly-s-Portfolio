@@ -162,144 +162,11 @@
   }
   .teardown-card .teardown-link{ margin-top:auto; }
 
-  .email{
-    border:1px solid var(--line); border-radius:var(--radius); background:var(--paper);
-    margin-bottom:14px; overflow:hidden;
-  }
-  .email-head{
-    width:100%; display:flex; align-items:center; justify-content:space-between; gap:14px;
-    padding:16px 18px; border:none; border-bottom:1px solid var(--line); background:var(--card);
-    cursor:pointer; text-align:left; font-family:inherit; color:inherit; margin:0;
-  }
-  .email-head:hover{ background:var(--paper); }
-  .email-head-text{ min-width:0; }
-  .email-role{
-    font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--accent);
-    text-transform:uppercase; letter-spacing:.05em; font-weight:600; display:block; margin-bottom:6px;
-  }
-  .email-subject{ font-size:15.5px; font-weight:700; font-family:'Space Grotesk',sans-serif; margin-bottom:3px; }
-  .email-preview{ font-size:13px; color:var(--ink-faint); }
-  .email-chevron{
-    flex-shrink:0; font-size:14px; color:var(--ink-faint);
-    transition:transform .25s ease; transform:rotate(-90deg);
-  }
-  .email-head[aria-expanded="true"] .email-chevron{ transform:rotate(0deg); color:var(--accent); }
-  .email-head[aria-expanded="true"]{ border-bottom-color:var(--line); }
-  .email-collapse{
-    display:grid; grid-template-rows:0fr;
-    transition:grid-template-rows .3s ease;
-  }
-  .email-collapse-inner{ overflow:hidden; }
-  .email-head[aria-expanded="true"] + .email-collapse{ grid-template-rows:1fr; }
-  .email-body{ padding:18px; font-size:14.5px; color:var(--ink-dim); line-height:1.7; }
-  .email-body p{ margin:0 0 12px; font-size:14.5px; }
-  .email-body p:last-child{ margin-bottom:0; }
-  .email-body strong{ color:var(--ink); }
-  .email-cta{
-    display:inline-block; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600;
-    color:var(--accent); border:1px solid var(--accent); border-radius:6px; padding:7px 14px; margin-top:4px;
-  }
-  .email-note{
-    padding:12px 18px; background:var(--accent-dim); font-size:13px; color:var(--ink);
-    border-top:1px solid var(--line);
-  }
-  .email-note b{ font-weight:700; }
-
-  .reveal-intro{ margin:44px 0 18px; }
-  .reveal-intro h3{ font-size:17px; margin-bottom:6px; }
-  .reveal-intro p{ font-size:14px; margin:0; max-width:560px; }
-  .reveal-grid{ display:grid; gap:14px; }
-  .reveal-card{ border:1px solid var(--line); border-radius:var(--radius); background:var(--card); padding:20px 22px; }
-  .reveal-label{
-    font-family:'JetBrains Mono',monospace; font-size:10.5px; text-transform:uppercase;
-    letter-spacing:.05em; color:var(--ink-faint); font-weight:600; display:block; margin-bottom:6px;
-  }
-  .reveal-label.rewrite{ color:var(--accent); }
-  .reveal-generic p, .reveal-after p{
-    font-family:'Space Grotesk',sans-serif; font-size:17px; font-weight:500; color:var(--ink); margin:0;
-  }
-  .reveal-toggle{
-    display:flex; align-items:center; gap:6px; margin:12px 0 0; padding:0;
-    background:none; border:none; cursor:pointer;
-    font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; color:var(--accent);
-  }
-  .reveal-toggle:hover{ text-decoration:underline; }
-  .reveal-chevron{ transition:transform .25s ease; }
-  .reveal-toggle[aria-expanded="true"] .reveal-chevron{ transform:rotate(180deg); }
-  .reveal-collapse{ display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease; }
-  .reveal-collapse-inner{ overflow:hidden; }
-  .reveal-toggle[aria-expanded="true"] + .reveal-collapse{ grid-template-rows:1fr; }
-  .reveal-after{ padding-top:16px; }
-  .reveal-why{
-    margin-top:12px; padding-top:12px; border-top:1px solid var(--line);
-    font-size:13px; color:var(--ink-dim);
-  }
-
   .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; }
   .skill-group{ margin-bottom:22px; }
   .skill-group h4{ font-size:13px; text-transform:uppercase; letter-spacing:.04em; color:var(--ink-faint); margin-bottom:10px; font-family:'JetBrains Mono',monospace; font-weight:600; }
   .pills{ display:flex; flex-wrap:wrap; gap:8px; }
   .pill{ font-size:13px; background:var(--paper); border:1px solid var(--line); padding:5px 12px; border-radius:20px; color:var(--ink-dim); }
-
-  .infl{ margin-top:8px; padding-top:28px; margin-bottom:40px; border-bottom:1px solid var(--line); padding-bottom:36px; }
-  .infl h3{ font-size:22px; margin-bottom:8px; }
-  .infl-intro{ font-size:15px; max-width:560px; margin:0; }
-  .infl-group{ margin-top:30px; }
-  .infl-label{
-    font-family:'JetBrains Mono',monospace; font-size:11px; text-transform:uppercase;
-    letter-spacing:.05em; color:var(--ink-faint); font-weight:600; display:block; margin-bottom:14px;
-  }
-  .infl-note{ font-size:12.5px; color:var(--ink-faint); margin:14px 0 0; }
-
-  .book-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .book{
-    display:flex; align-items:center; gap:18px; padding:18px;
-    border:1px solid var(--line); border-radius:var(--radius); background:var(--card);
-  }
-  .cover{
-    position:relative; width:104px; aspect-ratio:5/7; flex-shrink:0; overflow:hidden;
-    border-radius:3px 7px 7px 3px; box-shadow:0 6px 14px rgba(23,24,27,0.18);
-  }
-  .cover img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
-  .cover-fallback{
-    position:absolute; inset:0; display:flex; flex-direction:column; justify-content:space-between;
-    padding:12px 8px 10px 15px; color:#fff;
-  }
-  .cover-fallback::before{
-    content:""; position:absolute; left:0; top:0; bottom:0; width:6px; background:rgba(255,255,255,0.18);
-  }
-  .cover-ink .cover-fallback{ background:var(--ink); }
-  .cover-ink .cover-title{ color:#E3B25A; }
-  .cover-blue .cover-fallback{ background:var(--observed); }
-  .cover-title{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10px; line-height:1.2; overflow-wrap:anywhere; }
-  .cover-author{
-    font-family:'JetBrains Mono',monospace; font-size:7.5px; text-transform:uppercase;
-    letter-spacing:.04em; opacity:.85;
-  }
-  .book-info h4{ font-family:'Space Grotesk',sans-serif; font-size:16px; margin:0 0 2px; }
-  .book-info .by{ font-size:12.5px; color:var(--ink-faint); display:block; margin-bottom:8px; }
-  .book-info p{ font-size:13.5px; margin:0; }
-
-  .people-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-  .person{
-    display:flex; align-items:center; gap:14px; padding:16px;
-    border:1px solid var(--line); border-radius:var(--radius); background:var(--card);
-  }
-  .avatar{
-    position:relative; width:64px; height:64px; flex-shrink:0; overflow:hidden; border-radius:50%;
-    display:flex; align-items:center; justify-content:center; color:#fff;
-    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px;
-  }
-  .avatar img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 20%; }
-  .av-blue{ background:var(--observed); }
-  .av-orange{ background:var(--accent); }
-  .av-purple{ background:var(--interp); }
-  .person-info h4{ font-family:'Space Grotesk',sans-serif; font-size:15px; margin:0 0 6px; }
-  .learned-label{
-    font-family:'JetBrains Mono',monospace; font-size:10px; text-transform:uppercase;
-    letter-spacing:.05em; color:var(--ink-faint); font-weight:600; display:block; margin-bottom:2px;
-  }
-  .learned{ font-size:13px; color:var(--ink-dim); display:block; line-height:1.4; }
 
   .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:32px; }
   .contact-card{
@@ -319,18 +186,6 @@
     z-index:1001; transition:width .08s linear;
   }
 
-  .splash-particle{
-    position:fixed; top:0; left:0; border-radius:50%; pointer-events:none; z-index:999;
-    animation:splash-out .85s cubic-bezier(.2,.8,.3,1) forwards;
-  }
-  @keyframes splash-out{
-    0%{ transform:translate(0,0) scale(1); opacity:1; }
-    100%{ transform:translate(var(--dx),var(--dy)) scale(0); opacity:0; }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .splash-particle{ animation-duration:.01ms; }
-  }
-
   @media (max-width: 720px){
     .navlinks{ display:none; }
     .hero h1{ font-size:30px; }
@@ -341,8 +196,6 @@
     .case-grid{ grid-template-columns:1fr; }
     .teardown-grid{ grid-template-columns:1fr; }
     .about-grid{ grid-template-columns:1fr; }
-    .book-grid{ grid-template-columns:1fr; }
-    .people-grid{ grid-template-columns:1fr; }
     .contact-grid{ grid-template-columns:1fr; }
     .case{ padding:22px; }
   }
@@ -356,7 +209,6 @@
     <a href="#top" class="mark"><span class="glyph">JT</span> Jolly Tenorio</a>
     <div class="navlinks">
       <a href="#work">Work</a>
-      <a href="#writing">Writing</a>
       <a href="#about">About</a>
       <a href="#contact" class="cta">Get in touch</a>
     </div>
@@ -370,7 +222,7 @@
     <p class="lede">One year of self directed competitor research, ad teardowns, and creative concepts for DTC and SaaS brands. No paid client work yet. Everything on this site is my own project, and every claim is labeled so you can see what I observed, what was estimated, and what is my read.</p>
     <div class="hero-ctas">
       <a href="#work" class="btn primary">See the work</a>
-      <a href="#writing" class="btn ghost">Read the copy</a>
+      <a href="#contact" class="btn ghost">Get in touch</a>
     </div>
 
     <div class="method-strip">
@@ -417,7 +269,7 @@
           <span class="tag">DTC Supplements · Collagen Glow Berries · Product-level concepts</span>
         </div>
       </div>
-      <p>Two TOFU, problem-aware concepts for Collagen Glow Berries — postpartum breakouts and dull, tired-looking skin — with full hooks, scripts, and visual direction.</p>
+      <p>Two TOFU, problem-aware concepts for Collagen Glow Berries: postpartum breakouts and dull, tired-looking skin, with full hooks, scripts, and visual direction.</p>
       <div class="case-grid">
         <div class="case-block">
           <h4>What I found</h4>
@@ -430,7 +282,7 @@
       </div>
       <div class="finding">
         <span class="flabel">The insight it turned on</span>
-        Topical skincare fixed the surface. It didn't bring back the glow or firmness other people used to notice — so name that gap before the product shows up.
+        Topical skincare fixed the surface. It didn't bring back the glow or firmness other people used to notice. So name that gap before the product shows up.
       </div>
       <a href="./purest-co.html" class="case-link">Read the full case study →</a>
     </div>
@@ -488,15 +340,6 @@
         <a href="./marsmen-teardown.html" class="teardown-link">Read the report →</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="writing">
-  <div class="wrap">
-    <span class="sec-label">WRITING SAMPLES</span>
-    <h2 class="sec-title">Copy</h2>
-    <p class="sec-intro">A three email sequence for a content creator coaching offer. Welcome, objection handling, then urgency. Written as a spec piece, not for a paying client.</p>
-    <p style="font-size:14px;color:var(--ink-faint);">Open each email on the site for the full body and build notes.</p>
   </div>
 </section>
 
