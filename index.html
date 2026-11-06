@@ -152,7 +152,8 @@
   .pills{ display:flex; flex-wrap:wrap; gap:8px; }
   .pill{ font-size:13px; background:var(--paper); border:1px solid var(--line); padding:5px 12px; border-radius:20px; color:var(--ink-dim); }
 
-  .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:32px; }
+  .contact-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:32px; }
+  @media (min-width:720px){ .contact-grid{ grid-template-columns:repeat(4,1fr); } }
   .contact-card{
     border:1px solid var(--line); border-radius:var(--radius); padding:20px; background:var(--card);
     text-decoration:none; color:var(--ink);
@@ -371,13 +372,17 @@
         <h4>Email</h4>
         <div class="val">tjollydaniel@gmail.com</div>
       </a>
-      <a class="contact-card" href="https://daniel-rgb-star.github.io/Jolly-s-Portfolio/">
-        <h4>Portfolio</h4>
-        <div class="val">daniel-rgb-star.github.io</div>
+      <a class="contact-card" href="https://www.linkedin.com/in/dan-undefined-94a239416/" target="_blank" rel="noopener">
+        <h4>LinkedIn</h4>
+        <div class="val">linkedin.com/in/dan</div>
       </a>
       <a class="contact-card" href="tel:+639274532006">
         <h4>Phone</h4>
         <div class="val">+63 927 453 2006</div>
+      </a>
+      <a class="contact-card" href="https://daniel-rgb-star.github.io/Jolly-s-Portfolio/">
+        <h4>Portfolio</h4>
+        <div class="val">daniel-rgb-star.github.io</div>
       </a>
     </div>
   </div>
