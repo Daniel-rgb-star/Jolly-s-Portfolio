@@ -42,9 +42,9 @@
   .hooks b{ color:var(--ink); }
   .scene{ border-top:1px solid var(--line); padding:24px 0; }
   .scene:first-of-type{ border-top:none; padding-top:0; }
-  .scene-label{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:.05em; font-weight:600; display:block; }
-  .lyrics{ font-family:'Space Grotesk',sans-serif; font-size:16px; color:var(--ink); margin:0 0 10px; font-weight:500; }
-  .scene-visual{ font-size:13.5px; color:var(--ink-faint); font-style:italic; margin-bottom:8px; }
+  .scene-label{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:.05em; font-weight:600; margin-bottom:10px; display:block; }
+  .lyrics{ font-family:'Space Grotesk',sans-serif; font-size:16px; color:var(--ink); margin:0 0 6px; font-weight:500; line-height:1.45; }
+  .scene-visual{ font-size:13.5px; color:var(--ink-faint); font-style:italic; margin:0 0 14px; }
   .timeline{ display:grid; gap:12px; }
   .tl{ border:1px solid var(--line); border-radius:8px; padding:14px 16px; background:var(--card); }
   .tl .when{ font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:.04em; }
@@ -100,46 +100,73 @@
   </section>
 
   <section>
-    <h2>Story arc</h2>
-    <div class="timeline">
-      <div class="tl"><div class="when">Day 1</div><p>He tries MarsMen. Looks in the mirror and feels scammed. "This again?" He continues anyway.</p></div>
-      <div class="tl"><div class="when">Month 1</div><p>Energy holds longer through the day. The 2pm crash gets lighter. Still tired at first. Fog starts to clear.</p></div>
-      <div class="tl"><div class="when">Month 2</div><p>Ingredients do their job (Tongkat Ali, Shilajit, Fenugreek, Zinc). Support for drive, not a personality transplant.</p></div>
-      <div class="tl"><div class="when">Month 3</div><p>Same job. Same house. Different man. Present with his kids. Enough left at the end of the day.</p></div>
-    </div>
-  </section>
-
-  <section>
     <h2>Body lyrics + visual</h2>
 
     <div class="scene">
       <span class="scene-label">Act 1 · The loop</span>
-      <p class="lyrics">Week by week the crashes got lighter. The fog started to clear.</p>
-      <div class="scene-visual">Visual: Ben at work in the afternoon. He does not reach for coffee. Subtle energy in his posture.</div>
+      <p class="lyrics">Here's empty coffee cups by the sink,</p>
+      <p class="lyrics">And another afternoon that just fades away.</p>
+      <div class="scene-visual">Visual: Tracking shot across kitchen counter with empty mugs. Ben sits down heavily after work.</div>
+      <p class="lyrics">I changed my habits, I pushed through the gym,</p>
+      <p class="lyrics">But the drive never really came back.</p>
+      <div class="scene-visual">Visual: Ben forcing a workout, then sitting in the car afterward looking drained.</div>
+      <p class="lyrics">She noticed first — my wife —</p>
+      <p class="lyrics">Said I seemed somewhere else again.</p>
+      <div class="scene-visual">Visual: Soft moment. Wife looks at him across the table with quiet concern. Ben doesn't fully meet her eyes.</div>
     </div>
 
     <div class="scene">
-      <span class="scene-label">Act 2 · Something left</span>
-      <p class="lyrics">One month in, I had something left at the end of the day. I stayed present with my kids.</p>
-      <div class="scene-visual">Visual: Ben on the floor with his children. Genuine laugh. Wife in the doorway, softer expression.</div>
+      <span class="scene-label">Act 2 · Discovery</span>
+      <p class="lyrics">Then one night I found something different,</p>
+      <p class="lyrics">Clinical doses, no hidden blends.</p>
+      <div class="scene-visual">Visual: Ben scrolling on phone at night. MarsMen page appears. Close-up of the formula list (Tongkat Ali, Shilajit, Fenugreek, Zinc).</div>
+      <p class="lyrics">Tongkat, Shilajit, Fenugreek, Zinc…</p>
+      <p class="lyrics">Support for the system that had gone quiet.</p>
+      <div class="scene-visual">Visual: Simple graphic of the four-way system (Produce / Free / Protect / Optimize) over Ben's silhouette, then back to him holding the bottle.</div>
+      <p class="lyrics">On day one I almost didn't believe it.</p>
+      <p class="lyrics">"This again?" I thought.</p>
+      <div class="scene-visual">Visual: Package arrives. Ben holds the bottle under bathroom light, skeptical expression.</div>
+      <p class="lyrics">But I kept going.</p>
+      <div class="scene-visual">Visual: Morning routine montage across several days: Ben taking the capsules with breakfast, still looking tired at first.</div>
     </div>
 
     <div class="scene">
-      <span class="scene-label">Act 3 · Different man</span>
-      <p class="lyrics">Three months later… Same job. Same house. Different man. I found that guy again, the one I thought I'd lost.</p>
-      <div class="scene-visual">Visual: Walks through the door with clearer eyes. Kids run to him. Mirror flash of younger Ben, then present. Almost smiles.</div>
-      <p class="lyrics">Not perfect. Not fixed. But finally not empty.</p>
-      <div class="scene-visual">Visual: Backyard with family at golden hour. Warm light.</div>
+      <span class="scene-label">Act 3 · The shift</span>
+      <p class="lyrics">Week by week the crashes got lighter.</p>
+      <p class="lyrics">The fog started to clear.</p>
+      <div class="scene-visual">Visual: Ben at work in the afternoon — he doesn't reach for coffee. Subtle energy in his posture.</div>
+      <p class="lyrics">One month in, I had something left at the end of the day.</p>
+      <p class="lyrics">I stayed present with my kids.</p>
+      <div class="scene-visual">Visual: Ben on the floor playing with his children. Genuine laugh. Wife watches from the doorway, softer expression.</div>
+    </div>
+
+    <div class="scene">
+      <span class="scene-label">Act 4 · Different man</span>
+      <p class="lyrics">Three months later…</p>
+      <p class="lyrics">Same job. Same house.</p>
+      <p class="lyrics">Different man.</p>
+      <div class="scene-visual">Visual: Ben walks through the door after work with clearer eyes. Kids run to him. He picks them up without hesitation.</div>
+      <p class="lyrics">I found that guy again,</p>
+      <p class="lyrics">The one I thought I'd lost.</p>
+      <div class="scene-visual">Visual: Mirror shot. Present-day Ben looks at himself. Quick flash of younger energetic Ben, then back. He almost smiles.</div>
+      <p class="lyrics">Not perfect. Not fixed.</p>
+      <p class="lyrics">But finally not empty.</p>
+      <div class="scene-visual">Visual: Wide shot of Ben in the backyard with his family at golden hour. Warm light.</div>
     </div>
   </section>
 
   <section>
     <h2>CTA</h2>
     <div class="concept-box">
-      <p class="lyrics" style="margin-bottom:12px;">If you've been running on empty too, and you're tired of the afternoon crash…</p>
+      <p class="lyrics" style="margin-bottom:6px;">If you've been running on empty too,</p>
+      <p class="lyrics" style="margin-bottom:12px;">And you're tired of the afternoon crash…</p>
+      <div class="scene-visual">Visual: Callback to earlier tired Ben moments, then soft cut to current Ben.</div>
       <p style="margin:0 0 8px; color:var(--ink);"><b>MarsMen.</b> Clinical doses. 90-day money-back guarantee.</p>
-      <p class="lyrics" style="margin-bottom:8px;">Support your drive. Support your energy. Start with the real work.</p>
-      <div class="scene-visual">Visual: Callback to tired Ben, soft cut to present Ben. Product hero on the counter. Capsules. Quiet confidence. Soft Shop Now end card.</div>
+      <div class="scene-visual">Visual: Clean product hero shot. Bottle on counter in morning light. Simple text overlays.</div>
+      <p class="lyrics" style="margin-bottom:6px;">Support your drive.</p>
+      <p class="lyrics" style="margin-bottom:6px;">Support your energy.</p>
+      <p class="lyrics" style="margin-bottom:8px;">Start with the real work.</p>
+      <div class="scene-visual">Visual: Ben takes the capsules, looks out the window with quiet confidence. Final product shot + soft Shop Now end card.</div>
     </div>
   </section>
 
