@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars Men (Mengotomars) — Product & Customer Insight Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a1a;
+      --primary-dark: #0d0d0d;
+      --primary-light: #ff5c1a;
+      --accent: #ff5c1a;
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --text: #111;
+      --text-muted: #555;
+      --border: #e0e0e0;
+      --success: #2e7d32;
+      --warning: #e65100;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    header {
+      background: linear-gradient(135deg, #111 0%, #2a2a2a 40%, #ff5c1a 160%);
+      color: white;
+      padding: 52px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -15%;
+      width: 55%;
+      height: 180%;
+      background: radial-gradient(circle, rgba(255,92,26,0.15) 0%, transparent 70%);
+    }
+    .header-content { position: relative; z-index: 1; }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.35rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+    .subtitle { font-size: 1.05rem; opacity: 0.9; max-width: 780px; }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 28px;
+      font-size: 14px;
+    }
+    .meta-item strong { display: block; font-size: 1.2rem; font-weight: 700; }
+    nav {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    nav .container {
+      display: flex;
+      gap: 4px;
+      overflow-x: auto;
+      padding: 12px 24px;
+      scrollbar-width: none;
+    }
+    nav a {
+      white-space: nowrap;
+      padding: 8px 13px;
+      border-radius: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.15s;
+    }
+    nav a:hover { background: #f0f0f0; color: var(--primary-light); }
+    section { padding: 48px 0; }
+    section.alt { background: white; }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .section-lead {
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 780px;
+    }
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 26px 0 10px;
+      color: var(--primary);
+    }
+    h4 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .card-stat { text-align: center; padding: 26px 14px; }
+    .card-stat .number {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--primary-light);
+      line-height: 1;
+    }
+    .card-stat .label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 8px;
+      font-weight: 500;
+    }
+    .quote {
+      background: #f7f7f7;
+      border-left: 4px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 0 10px 10px 0;
+      font-size: 13.5px;
+      color: #333;
+      margin: 10px 0;
+      font-style: italic;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin: 16px 0;
+    }
+    th {
+      background: #f0f0f0;
+      text-align: left;
+      padding: 11px 14px;
+      font-weight: 600;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      color: var(--text-muted);
+    }
+    td {
+      padding: 12px 14px;
+      border-top: 1px solid var(--border);
+      vertical-align: top;
+    }
+    tr:hover td { background: #fafafa; }
+    .tag {
+      display: inline-block;
+      padding: 3px 9px;
+      border-radius: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+    .tag-pos { background: #e8f5e9; color: #1b5e20; }
+    .tag-strong { background: #fff3e0; color: #e65100; }
+    .tag-neutral { background: #f0f0f0; color: #555; }
+    .tag-warn { background: #ffebee; color: #c62828; }
+    ul.clean { list-style: none; }
+    ul.clean li {
+      padding: 7px 0 7px 26px;
+      position: relative;
+    }
+    ul.clean li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-light);
+      font-weight: 700;
+    }
+    .callout {
+      background: #fff5f0;
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      font-size: 14px;
+    }
+    .callout strong { color: #bf360c; }
+    .disclaimer {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #7a5c00;
+      margin-bottom: 28px;
+    }
+    footer {
+      background: #111;
+      color: #999;
+      padding: 36px 0;
+      font-size: 13px;
+      text-align: center;
+    }
+    .back-link { display:inline-block; margin: 16px 0 0; color: rgba(255,255,255,0.85); font-size: 14px; text-decoration:none; }
+    .back-link:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.7rem; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <a class="back-link" href="index.html">← Back to portfolio</a>
+    <div class="badge">Product · Messaging · Customer Insight Report</div>
+    <h1>Mars Men<br>(Mengotomars.com)</h1>
+    <p class="subtitle">Full analysis of the 30-Day Supply Starter Kit, formula, claims, customer language, previous solutions, avatars, messaging system, and strengths/weaknesses.</p>
+    <div class="meta-row">
+      <div class="meta-item"><strong>Natural T Support</strong> Core Product</div>
+      <div class="meta-item"><strong>8–11 Ingredients</strong> Clinical Doses</div>
+      <div class="meta-item"><strong>90-Day</strong> Guarantee</div>
+      <div class="meta-item"><strong>Oct 2026</strong> Report</div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <a href="#overview">Overview</a>
+    <a href="#product">Product</a>
+    <a href="#formula">Formula</a>
+    <a href="#claims">Claims</a>
+    <a href="#customers">Who Buys</a>
+    <a href="#messaging">Messaging</a>
+    <a href="#previous">Before Solutions</a>
+    <a href="#ads">Winning Ads</a>
+    <a href="#strengths">Strengths & Gaps</a>
+    <a href="#summary">Takeaways</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="overview">
+    <div class="container">
+      <div class="disclaimer">
+        <strong>Source focus:</strong> Primary analysis of the 30-day starter kit page on mengotomars.com, supporting brand pages, Trustpilot patterns, and public positioning. This is a competitive/customer-insight report. Supplement claims have not been evaluated by the FDA; individual results vary.
+      </div>
+
+      <h2>Brand & Product Overview</h2>
+      <p class="section-lead">Mars Men (mengotomars.com) is a direct-to-consumer natural testosterone support brand targeting men, primarily 30+, who want more energy, better recovery, improved mood/libido, and a leaner, stronger physique without starting TRT.</p>
+
+      <div class="grid grid-3" style="margin-bottom:28px;">
+        <div class="card card-stat">
+          <div class="number">T Support</div>
+          <div class="label">Core Promise</div>
+        </div>
+        <div class="card card-stat">
+          <div class="number">$59</div>
+          <div class="label">Intro Starter Price</div>
+        </div>
+        <div class="card card-stat">
+          <div class="number">90-Day</div>
+          <div class="label">Money-Back Guarantee</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0">Core Positioning</h3>
+        <ul class="clean">
+          <li>“Most potent and natural testosterone stack on earth”</li>
+          <li>Works four ways: Produce, Free, Protect, Optimize testosterone</li>
+          <li>Clinical doses, no proprietary blends, third-party tested, made in USA</li>
+          <li>Alternative to under-dosed Amazon boosters and to TRT for men who prefer natural first</li>
+          <li>Heavy emphasis on energy, gym performance, recovery, mood, and libido</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="product" class="alt">
+    <div class="container">
+      <h2>What the 30-Day Starter Kit Actually Is</h2>
+      <p class="section-lead">The page sells a 30-day supply of Mars Men Natural Testosterone Support capsules, usually framed as a “Launch Kit” with free gifts and a subscription default.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Element</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Product</strong></td>
+            <td>Mars Men Natural Testosterone Support (daily capsules)</td>
+          </tr>
+          <tr>
+            <td><strong>Typical dose</strong></td>
+            <td>5 capsules per day (morning with food) — high total active mass</td>
+          </tr>
+          <tr>
+            <td><strong>Pricing (as shown)</strong></td>
+            <td>~$118 → $59 on subscribe & save (50% off first order common)</td>
+          </tr>
+          <tr>
+            <td><strong>Guarantee</strong></td>
+            <td>90-day money-back</td>
+          </tr>
+          <tr>
+            <td><strong>Common free gifts</strong></td>
+            <td>Aluminum pill case, workout app access, testosterone e-book, stick packs, branded merch on later months</td>
+          </tr>
+          <tr>
+            <td><strong>Subscription model</strong></td>
+            <td>Default 30-day refill; cancel/pause anytime</td>
+          </tr>
+          <tr>
+            <td><strong>Timeline messaging</strong></td>
+            <td>Day 7 “Ignition” → Day 30 “Spark” → Day 90 “Liftoff”</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="formula">
+    <div class="container">
+      <h2>Formula Snapshot (Clinical-Dose Stack)</h2>
+      <p class="section-lead">The brand emphasizes full clinical doses and no proprietary blends. Exact milligrams vary slightly across page versions, but the core stack is consistent.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Ingredient</th>
+            <th>Typical Dose Shown</th>
+            <th>Claimed Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tongkat Ali</strong></td>
+            <td>500–1,000 mg</td>
+            <td>Supports T production, lowers cortisol, libido, muscle</td>
+          </tr>
+          <tr>
+            <td><strong>Shilajit</strong></td>
+            <td>400–500 mg</td>
+            <td>Supports cells that produce T, energy metabolism</td>
+          </tr>
+          <tr>
+            <td><strong>Fenugreek</strong></td>
+            <td>500–1,000 mg</td>
+            <td>Supports T production, DHT, male vitality</td>
+          </tr>
+          <tr>
+            <td><strong>Zinc</strong></td>
+            <td>30 mg</td>
+            <td>Raw material for testosterone metabolism</td>
+          </tr>
+          <tr>
+            <td><strong>Boron</strong></td>
+            <td>4–10 mg</td>
+            <td>Helps free testosterone, estrogen balance</td>
+          </tr>
+          <tr>
+            <td><strong>Vitamin D</strong></td>
+            <td>4,000 IU</td>
+            <td>Supports cellular health & T regulation</td>
+          </tr>
+          <tr>
+            <td><strong>Taurine</strong></td>
+            <td>675–750 mg</td>
+            <td>Oxidative stress, supports T levels</td>
+          </tr>
+          <tr>
+            <td><strong>Vitamin K1 + K2</strong></td>
+            <td>100 mcg each</td>
+            <td>Bone health, Vitamin D cofactor</td>
+          </tr>
+          <tr>
+            <td><strong>Cistanche / Copper</strong></td>
+            <td>Present in some versions</td>
+            <td>Additional T support / zinc synergy</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <strong>Four-way system they sell:</strong> Produce (make more T) → Free (more free/usable T) → Protect (from stress/oxidation) → Optimize (cellular energy so you feel it).
+      </div>
+    </div>
+  </section>
+
+  <section id="claims" class="alt">
+    <div class="container">
+      <h2>Claims Assessment</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Claim Theme</th>
+            <th>Strength</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Clinical doses / no proprietary blends</strong></td>
+            <td><span class="tag tag-pos">Strong</span></td>
+            <td>Clear differentiator vs many Amazon T-boosters that hide doses.</td>
+          </tr>
+          <tr>
+            <td><strong>Energy & afternoon crash reduction</strong></td>
+            <td><span class="tag tag-pos">Strong</span></td>
+            <td>Most repeated customer language. Highly believable for this stack.</td>
+          </tr>
+          <tr>
+            <td><strong>Gym performance / recovery / muscle</strong></td>
+            <td><span class="tag tag-strong">Good</span></td>
+            <td>Common in reviews; aligns with Tongkat, zinc, recovery support.</td>
+          </tr>
+          <tr>
+            <td><strong>Sleep improvement</strong></td>
+            <td><span class="tag tag-strong">Good</span></td>
+            <td>Frequently mentioned (“sleep improved without even trying”).</td>
+          </tr>
+          <tr>
+            <td><strong>Libido / mood / confidence</strong></td>
+            <td><span class="tag tag-strong">Good</span></td>
+            <td>Strong emotional drivers for the male 30–50 audience.</td>
+          </tr>
+          <tr>
+            <td><strong>Dramatic lab T increases (e.g. 3x)</strong></td>
+            <td><span class="tag tag-warn">Aggressive</span></td>
+            <td>Anecdotal stories exist; results vary widely. Best treated as individual outcomes, not average expectation.</td>
+          </tr>
+          <tr>
+            <td><strong>“Most potent stack on earth”</strong></td>
+            <td><span class="tag tag-neutral">Marketing</span></td>
+            <td>Competitive claim; hard to verify objectively.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="customers">
+    <div class="container">
+      <h2>Who These Customers Are</h2>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="tag tag-strong">Primary</span>
+          <h4 style="margin-top:8px;">The 30–50 Energy & Drive Seeker</h4>
+          <p style="font-size:13.5px;">Notices afternoon crashes, lower gym performance, softer mood/libido, and slower recovery. Doesn’t want to jump to TRT yet. Wants to “feel like myself again” or “like I was 21.”</p>
+        </div>
+        <div class="card">
+          <span class="tag tag-strong">Strong</span>
+          <h4 style="margin-top:8px;">The Gym-Focused Optimizer</h4>
+          <p style="font-size:13.5px;">Training hard but results have stalled. Looking for better recovery, more strength, leaner look, and sustained energy so workouts feel intense again.</p>
+        </div>
+        <div class="card">
+          <span class="tag tag-strong">Secondary</span>
+          <h4 style="margin-top:8px;">The “Tried Everything Else” Guy</h4>
+          <p style="font-size:13.5px;">Has already tried cheap Amazon T-boosters, multivitamins, or lifestyle changes. Frustrated with under-dosed formulas and proprietary blends.</p>
+        </div>
+        <div class="card">
+          <span class="tag tag-strong">Contextual</span>
+          <h4 style="margin-top:8px;">The TRT-Curious but Hesitant</h4>
+          <p style="font-size:13.5px;">Considering medical TRT but prefers a natural first step, or wants to support natural production alongside lifestyle.</p>
+        </div>
+      </div>
+
+      <h3>Key Customer Language</h3>
+      <div class="quote">“I feel more alive throughout the day now without the afternoon crash.”</div>
+      <div class="quote">“Energy back like I was 21.” · “Hitting more sets, more weight.” · “Sleep improved without even trying.”</div>
+      <div class="quote">“Libido boost was an unexpected welcome.” · “Feel 10 years younger.” · “Haven’t felt this good in years.”</div>
+    </div>
+  </section>
+
+  <section id="messaging" class="alt">
+    <div class="container">
+      <h2>Core Messaging System</h2>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>Problem Agitation</h4>
+          <ul class="clean">
+            <li>Afternoon energy crash</li>
+            <li>Gym performance plateau / poor recovery</li>
+            <li>Lower drive, mood, or libido</li>
+            <li>Feeling older than chronological age</li>
+            <li>Under-dosed or “BS” proprietary blends that failed</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Solution Framing</h4>
+          <ul class="clean">
+            <li>Four-way system: Produce / Free / Protect / Optimize</li>
+            <li>Clinical doses, transparent labels</li>
+            <li>Natural alternative before (or instead of) TRT</li>
+            <li>30 / 60 / 90 day transformation timeline</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Emotional Payoff</h4>
+          <ul class="clean">
+            <li>“Feel like the man you’re supposed to be”</li>
+            <li>Energy that lasts all day</li>
+            <li>Stronger in the gym, better recovery</li>
+            <li>Confidence, mood, and libido returning</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Risk Reversal & Offer</h4>
+          <ul class="clean">
+            <li>90-day money-back guarantee</li>
+            <li>50% off first order / subscribe & save</li>
+            <li>Free gifts (pill case, guide, app, merch)</li>
+            <li>Cancel anytime</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="previous">
+    <div class="container">
+      <h2>What Customers Tried Before (That Often Led to Little)</h2>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>1. Cheap Amazon / proprietary-blend T-boosters</h4>
+          <p style="font-size:13.5px;color:var(--text-muted);">Under-dosed formulas that “did nothing.” Mars Men leans hard on clinical doses and transparent labeling as the contrast.</p>
+        </div>
+        <div class="card">
+          <h4>2. Coffee / stimulants for the afternoon crash</h4>
+          <p style="font-size:13.5px;color:var(--text-muted);">Temporary energy that still leaves the underlying fatigue and sleep issues intact.</p>
+        </div>
+        <div class="card">
+          <h4>3. Multivitamins or single-ingredient experiments</h4>
+          <p style="font-size:13.5px;color:var(--text-muted);">Zinc or vitamin D alone, or random stacks that weren’t comprehensive.</p>
+        </div>
+        <div class="card">
+          <h4>4. Just training harder / accepting decline</h4>
+          <p style="font-size:13.5px;color:var(--text-muted);">Pushing in the gym while recovery and energy kept slipping. Some consider TRT next.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Pattern:</strong> Previous solutions were either too weak (under-dosed), too temporary (stimulants), or too extreme (jumping straight to TRT). Mars Men positions itself as the properly dosed, natural middle path with a long enough trial window (90 days).
+      </div>
+    </div>
+  </section>
+
+  <section id="ads">
+    <div class="container">
+      <h2>Mars Men Winning Ads — Patterns & Why They Win</h2>
+      <p class="section-lead">Based on the brand’s own high-converting page language, customer quotes, and proven patterns in the men’s testosterone-support category on Meta.</p>
+
+      <div class="disclaimer">
+        <strong>Note:</strong> Meta Ad Library full commercial impression data is restricted. Analysis focuses on angles that match the highest-frequency customer outcomes (energy, gym, sleep, libido) and the brand’s own conversion mechanics (clinical doses, 90-day guarantee, timeline story).
+      </div>
+
+      <h3>Core Winning Angles</h3>
+      <div class="grid grid-2">
+        <div class="card" style="border-top:4px solid var(--accent);">
+          <h4>1. Afternoon Crash / Energy Hook</h4>
+          <div class="quote">“No more afternoon crash” · “Energy back like I was 21” · “Feel more alive throughout the day”</div>
+          <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Highest-frequency customer language. Instant recognition for men 30–50.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--accent);">
+          <h4>2. Clinical Doses vs Under-Dosed BS</h4>
+          <div class="quote">“Clinical doses, not the under-dosed blends that failed you before” · “Zero proprietary blends”</div>
+          <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Attacks previous solutions. High trust signal.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--accent);">
+          <h4>3. Gym Performance & Recovery</h4>
+          <div class="quote">“Hitting more sets, more weight” · “Workouts feel intense again”</div>
+          <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Speaks to the gym-focused optimizer avatar.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--accent);">
+          <h4>4. Day 7 / 30 / 90 Timeline</h4>
+          <div class="quote">“Day 7 Ignition → Day 30 Spark → Day 90 Liftoff”</div>
+          <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Sets realistic expectations and makes the 90-day guarantee feel logical.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--accent);">
+          <h4>5. Natural Alternative to TRT</h4>
+          <div class="quote">“Before you jump to TRT…” · “Support your own production first”</div>
+          <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Captures the TRT-curious but hesitant segment.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--accent);">
+          <h4>6. Risk-Free + Social Proof Stack</h4>
+          <div class="quote">“90-day money-back guarantee” + real quotes about energy, sleep, libido, gym gains</div>
+          <p style="font-size:13.5px;margin-top:10px;"><strong>Why it wins:</strong> Removes price and “will it work for me?” barriers.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>Practical takeaway:</strong> Highest-performing Mars Men-style creatives lead with afternoon energy crash or gym plateau, contrast against under-dosed competitors, show a simple 30/90-day path, prove it with real outcomes, and close with the 90-day guarantee.
+      </div>
+    </div>
+  </section>
+
+  <section id="strengths" class="alt">
+    <div class="container">
+      <h2>Strengths, Weaknesses & Opportunities</h2>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 style="margin-top:0">Strengths</h3>
+          <ul class="clean">
+            <li>Clear clinical-dose / no-proprietary-blend positioning</li>
+            <li>Strong alignment with real felt outcomes (energy, gym, sleep, libido)</li>
+            <li>90-day guarantee reduces purchase friction</li>
+            <li>Aggressive but effective offer structure (50% off + gifts)</li>
+            <li>Timeline storytelling (Day 7 / 30 / 90) sets expectations</li>
+            <li>Four-way system (Produce/Free/Protect/Optimize) is memorable</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Weaknesses / Risks</h3>
+          <ul class="clean">
+            <li>Some Trustpilot complaints about subscription friction / AI support</li>
+            <li>Aggressive “3x T” style stories can create unrealistic expectations</li>
+            <li>5 capsules per day is a high pill burden for some men</li>
+            <li>Results take consistent 30–90 days — early quitters feel nothing</li>
+            <li>Crowded category with many similar stacks</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Opportunities</h3>
+      <ul class="clean">
+        <li>Lean harder into “no more afternoon crash” and “sleep improved”</li>
+        <li>Show more realistic lab + lifestyle before/after ranges</li>
+        <li>Address the 5-capsule commitment more proactively</li>
+        <li>Strengthen post-purchase education through the 60–90 day window</li>
+        <li>Differentiate more clearly from cheap Amazon products and medical TRT</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="summary">
+    <div class="container">
+      <h2>Key Takeaways</h2>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 style="margin-top:0">Product Reality</h3>
+          <ul class="clean">
+            <li>High-dose natural T-support stack (Tongkat, Shilajit, Fenugreek, Zinc, Boron, D, Taurine, Ks)</li>
+            <li>Designed for daily consistency over 30–90 days</li>
+            <li>Strongest reported outcomes: energy, gym performance/recovery, sleep, mood/libido</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="margin-top:0">Customer Reality</h3>
+          <ul class="clean">
+            <li>Men 30+ who feel the afternoon crash, slower recovery, and lower drive</li>
+            <li>Many have already failed with under-dosed boosters</li>
+            <li>Respond to transparent dosing, 90-day risk-free trial, and “feel like yourself again” language</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:28px;">
+        <strong>Bottom line:</strong> Mars Men is a classic high-converting men’s testosterone support offer. Strengths are clinical-dose transparency, a clear four-way mechanism story, aggressive first-order pricing + gifts, and a 90-day guarantee. Most reliable outcomes center on sustained energy, better training recovery, and improved sleep/mood/libido.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>Mars Men (Mengotomars.com) — Product & Customer Insight Report<br>
+    Based on the 30-day starter kit page, brand positioning, and public customer language<br>
+    <span style="opacity:0.7">Generated October 2026 · For competitive & customer-insight use. Not affiliated with Mars Men / Mengotomars.</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
