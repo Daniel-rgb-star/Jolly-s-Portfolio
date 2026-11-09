@@ -59,6 +59,39 @@
   @media (max-width:640px){
     .findings, .whywork{ grid-template-columns:1fr; }
   }
+
+  body.life{
+    --paper:#0c0f14; --card:#1a222d; --ink:#f2efe8; --ink-dim:#b8b3a8; --ink-faint:#7a756c;
+    --line:#2a3545; --accent:#ff6b3d; --accent-dim:#3a2218;
+  }
+  body{ transition: background .4s ease, color .35s ease; }
+  p, h1, h2, h3, .sub, .back, header{ transition: color .35s ease, background .35s, border-color .35s; }
+  .finding, .concept-box, .meta-item, .notes, .whywork .card, .tl{
+    transition: background .35s, border-color .35s, color .35s;
+  }
+  body.life header{ border-color:#243040; }
+  body.life .finding, body.life .concept-box, body.life .meta-item,
+  body.life .notes, body.life .whywork .card, body.life .tl{
+    background:#1a222d; border-color:#2a3545;
+  }
+  body.life .scene{ border-color:#2a3545; }
+  body.life .scene-note{ background:#3a2218; color:#f2efe8; }
+  body.life .lyrics{ color:var(--ink); }
+  body.life blockquote{ color:var(--ink); }
+  .life-toggle{
+    position:fixed; right:18px; bottom:28px; z-index:50;
+    writing-mode:vertical-rl; text-orientation:mixed;
+    background:var(--card); border:1px solid var(--line); color:var(--ink);
+    font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700;
+    letter-spacing:0.18em; text-transform:uppercase; padding:18px 11px;
+    border-radius:999px; cursor:pointer; transition: all .35s ease;
+  }
+  .life-toggle:hover{ border-color:var(--accent); color:var(--accent); }
+  body.life .life-toggle{
+    background:linear-gradient(180deg,#ff6b3d,#ff8f5a); color:#0c0f14;
+    border-color:transparent; box-shadow:0 0 24px rgba(255,107,61,0.45);
+  }
+
 </style>
 </head>
 <body>
@@ -213,6 +246,26 @@
     <p><a href="./purest-co-insight-report.html">Open The Purest Co. Insight Report →</a></p>
   </section>
 </div>
+
+
+<button class="life-toggle" id="lifeToggle" type="button" aria-pressed="false">Ignite</button>
+<script>
+(function(){
+  var btn=document.getElementById('lifeToggle');
+  var body=document.body;
+  var key='jt-life-mode';
+  function apply(on){
+    body.classList.toggle('life', on);
+    btn.setAttribute('aria-pressed', on?'true':'false');
+    btn.textContent=on?'Calm':'Ignite';
+    try{localStorage.setItem(key,on?'1':'0');}catch(e){}
+  }
+  var saved=false;
+  try{saved=localStorage.getItem(key)==='1';}catch(e){}
+  apply(saved);
+  btn.addEventListener('click',function(){apply(!body.classList.contains('life'));});
+})();
+</script>
 
 </body>
 </html>
