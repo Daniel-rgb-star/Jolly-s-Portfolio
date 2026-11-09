@@ -60,23 +60,41 @@
   }
 
   body.life{
-    --paper:#0c0f14; --card:#1a222d; --ink:#f2efe8; --ink-dim:#b8b3a8; --ink-faint:#7a756c;
-    --line:#2a3545; --accent:#ff6b3d; --accent-dim:#3a2218;
+    --paper:#0c0f14 !important;
+    --card:#1a222d !important;
+    --ink:#f2efe8 !important;
+    --ink-dim:#b8b3a8 !important;
+    --ink-faint:#7a756c !important;
+    --line:#2a3545 !important;
+    --accent:#ff6b3d !important;
+    --accent-dim:#3a2218 !important;
+    background:#0c0f14 !important;
+    color:#f2efe8 !important;
   }
-  body{ transition: background .4s ease, color .35s ease; }
-  p, h1, h2, h3, .sub, .back, header{ transition: color .35s ease, background .35s, border-color .35s; }
-  .finding, .concept-box, .meta-item, .notes, .whywork .card, .tl{
-    transition: background .35s, border-color .35s, color .35s;
+  body.life p{ color:#b8b3a8 !important; }
+  body.life h1, body.life h2, body.life h3{ color:#f2efe8 !important; }
+  body.life .sub{ color:#7a756c !important; }
+  body.life .back{ color:#b8b3a8 !important; }
+  body.life header{ border-color:#243040 !important; background:#0c0f14 !important; }
+  body.life .finding,
+  body.life .concept-box,
+  body.life .meta-item,
+  body.life .notes,
+  body.life .whywork .card,
+  body.life .tl{
+    background:#1a222d !important;
+    border-color:#2a3545 !important;
   }
-  body.life header{ border-color:#243040; }
-  body.life .finding, body.life .concept-box, body.life .meta-item,
-  body.life .notes, body.life .whywork .card, body.life .tl{
-    background:#1a222d; border-color:#2a3545;
-  }
-  body.life .scene{ border-color:#2a3545; }
-  body.life .scene-note{ background:#3a2218; color:#f2efe8; }
-  body.life .lyrics{ color:var(--ink); }
-  body.life blockquote{ color:var(--ink); }
+  body.life .scene{ border-color:#2a3545 !important; }
+  body.life .scene-visual{ color:#7a756c !important; }
+  body.life .script-line{ color:#b8b3a8 !important; }
+  body.life .script-line b,
+  body.life .hooks b,
+  body.life .lyrics{ color:#f2efe8 !important; }
+  body.life blockquote{ color:#f2efe8 !important; }
+  body.life .tag, body.life .scene-label, body.life .num{ color:#ff6b3d !important; }
+  body.life a{ color:#ff6b3d !important; }
+
   .life-toggle{
     position:fixed; right:18px; bottom:28px; z-index:50;
     writing-mode:vertical-rl; text-orientation:mixed;
@@ -183,8 +201,8 @@
       <p class="lyrics">The one I thought I'd lost.</p>
       <div class="scene-visual">Visual: Mirror shot. Present-day Ben looks at himself. Quick flash of younger energetic Ben, then back. He almost smiles.</div>
       <p class="lyrics">Not perfect. Not fixed.</p>
-      <p class="lyrics">But finally not empty.</p>
       <div class="scene-visual">Visual: Wide shot of Ben in the backyard with his family at golden hour. Warm light.</div>
+      <p class="lyrics">But finally not empty.</p>
     </div>
   </section>
 
@@ -209,7 +227,7 @@
       <ul>
         <li><b>Style:</b> Cinematic. Desaturated in Act 1, warming as Ben improves. Expressive face acting.</li>
         <li><b>Character:</b> Lock Ben's reference first (35, short dark hair, tired eyes that clear, office-casual). Same model every clip.</li>
-        <li><b>Pacing:</b> 3–5 second clips on the beat. Faster in frustration. Slower in family and payoff.</li>
+        <li><b>Pacing:</b> 3–5 second clips on the beat. Faster in frustration. Slow in family and payoff.</li>
         <li><b>Sound:</b> Soft room tone, distant kids, keyboard, bottle, capsules. Vocals clear and intimate.</li>
         <li><b>Claims:</b> Energy, less afternoon crash, drive, presence with family. No extreme lab claims.</li>
         <li><b>Tone:</b> Honest and grounded. Emotion earned, not hyped.</li>
@@ -241,7 +259,6 @@
 
   <p><a href="./marsmen-insight-report.html">→ Full product & customer insight report</a></p>
 </div>
-
 
 <button class="life-toggle" id="lifeToggle" type="button" aria-pressed="false">Ignite</button>
 <script>
